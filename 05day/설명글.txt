@@ -1,0 +1,7 @@
+Here's a lovely picture of Dartmoor in Devon,England, where the ponies roam wild.On a sunny summer's day, it is a wonderful place to hike and enjoy the incredible views.When the mist and rain roll in,Darmoor can be a lonely and scary place where it's easy to lose your Way-it's where Sherlock Holmes met the Hound of the Baskervilles, Because this text is longer tham the Devon cottage is over to the left side as part of a new paragraph, which is exactly what we want to have happen.
+
+ 
+My sister lived in this delightful cottage by a stream in Devon until very recently-my daughter said she saw fairies in the garden one summer night.Because this text is short, the next image and text also move up next to the floated image of the cottage.
+
+ 
+The Queen of England prefers somewhere a little more spacious and secure. Windsor Castle is her favorite place to hang out with the family and her Corgi dogs.With the clearing element added,this text now clears(moves below) the previous floated elements and sits correctly alonside this image.

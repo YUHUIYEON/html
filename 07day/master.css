@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*basic style*/
+*{margin: 0; padding: 0;}
+body{font-family: "Noto Sans", sans-serif;}
+ul{list-style: none;}
+a:link,
+a:active,
+a:visited{
+    color: #333333;
+    text-decoration: none;
+}
+
+/*header-bottom style*/
+#header-bottom{
+    border-bottom:1px solid #e7a8bf;
+}
+h1{
+    position: absolute;
+    left: 30px;
+    top: 4px;
+} 
+.btn-area{
+    position: absolute;
+    right: 30px;
+    top: 9px;
+}
+.btn-area>li{
+    float: left;
+    margin-left:-30px;
+}
+.btn-area>li:last-child{
+    margin-left: 30px;
+}
+
+/*nav style*/
+.mbc-nav{
+    /* border: 1px solid red;  */
+    width: 1367px; 
+    margin: 0 auto;
+    overflow: hidden;
+}
+.mbc-nav>li{
+    float: left; 
+    /* background: orange; */
+    padding: 0 5px; 
+} 
+.mbc-nav>li>a{
+    /* background: olive; */
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 5px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    position: relative;
+}
+.mbc-nav>li>a:before{
+    content: ' ';
+    width: 100%;
+    height: 2px;
+    background-color: #F33D7F;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: none;
+}
+.mbc-nav>li>a:hover{
+    color: #F33D7F;
+}
+.mbc-nav>li>a:hover::before{
+    display: block;
+}

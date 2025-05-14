@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진달래꽃 시</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            /* text-align: center; */
+            margin: 0;
+        }
+
+        /* 전체 margin 초기화 */
+        /* *은 문서 전체라는 뜻. 어딘가의 속성에서 똑같은게 있으면 그건 제외하고 적용됨. 
+        근데 이거썼을때 img도 중앙으로 갔음. 인라인 태그지만 계층구조로 인해 가능 */
+        body {
+            font-family: "Noto Sans", sans-serif;
+            font-style: normal;
+            font-size: 15px;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        /* img는 인라인 태그. 여백이 자동으로 생긴다. 정확한 컨트롤을 위해 필수요소. 정렬하려는 요소를 다른 인라인 요소에 상대적으로 정렬함 */
+        div {
+            border: 1px solid #cccccc;
+            width: 300px;
+            padding: 10px;
+            margin: 0 auto;
+            /* 브라우저의 가운데로 이동. 여백 계산이 필요할때는 width 라는 기준(조건)이 있어야 한다. */
+        }
+
+        /* 이미지 사이즈에 맞춰서 넓이 변경 */
+        h3,
+        p {
+            background: rgb(243, 241, 139);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* p 태그의 바탕색 노란색 변경, 여백 추가, 아래로 10px씩 추가 */
+        h3 {
+            text-align: center;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* p의 마지막 자식. 마지막 문단의 여백을 클래스로 잡고 여백을 0으로 변경 */
+        .poet {
+            font-size: 13px;
+            border-bottom: 1px solid #999999;
+            padding-bottom: 10px;
+            text-align: right;
+            background: none;
+        }
+
+        /* 여백 추가 */
+        span {
+            color: #50AAE2;
+        }
+    </style>
+    <!-- 내부 스타일
+     select{속성:값;}
+     border-bottom / padding-bottom -> 김소월 글자 밑에 여백과 상자의 밑 부분만 표시
+    -->
+</head>
+
+<body>
+    <div>
+        <h3>진달래꽃</h3>
+
+        <p class="poet">김소월</p>
+
+        <img src="Image/flower.jpg" width="300" height="200" alt="진달래꽃" title="진달래꽃">
+
+        <p>
+            나 보기가 역겨워<br>
+            가실 때에는<br>
+            말없이 고이 보내 드리우리다
+        </p>
+        <p>
+            <span>영변</span>에 <span>약산</span>(藥山)<br>
+            진달래꽃<br>
+            아름 따다 가실 길에 뿌리우리다
+        </p>
+        <p>
+            가시는 걸음걸음<br>
+            놓인 그 꽃을<br>
+            사뿐히 즈려밟고 가시옵소서
+        </p>
+        <p>
+            나 보기가 역겨워<br>
+            가실 때에는<br>
+            죽어도 아니 눈물 흘리우리다
+        </p>
+    </div>
+</body>
+
+</html>
+<!--주석
+제목글 작성 태그는 <h1></h1> ~ <h6></h6> 사용
+웹폰트 사용법 https://fonts.google.com/
+-->
