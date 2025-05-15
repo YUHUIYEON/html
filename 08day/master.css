@@ -37,7 +37,7 @@ a{
 }
 .header-middle>.best{/*2*/
     position: absolute;
-    left: 10px;
+    left: 25px;
     top: 15px;
 }
 .header-middle>.menu-group{/*3*/
@@ -68,6 +68,17 @@ a{
     left: -5px;
     top: 3px;
 }
+.header-middle>.menu-group>.lnb>li:nth-child(3)>a:after{ /* 3번째 li*/
+    content: ' ';
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background: orange;
+    position: absolute;
+    right: -1px;
+    top: -5px;
+}
+
 .month{
     display: inline-block; /*그냥 block 아닌 inline-block */
     width: 20px;
@@ -76,10 +87,12 @@ a{
     text-align: center;
     line-height: 20px;
     font-size: 13px;
-    border-radius: 10px; /*원모양_크기의 반지름*/
+    border-radius: 10px; /*원모양_크기의 반지름을 넣는다.*/
     color: #000;
 }
-
+span{
+    vertical-align: middle; /*아이콘과 택스트의 높이를 맞춤*/
+}
 
 
 
