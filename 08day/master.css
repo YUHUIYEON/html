@@ -1,0 +1,128 @@
+/*basic style*/
+*{margin: 0; padding: 0;}/*1*/
+body{
+    font:700 13px 'AppleSDGothicNeoH', sans-serif;/*10 -> 순서를 지켜서 넣으면 따로 안넣어도 된다. 폰트 두께 / 폰트 크기*/
+}
+ul{list-style: none;}/*2*/
+a{
+    color: #333; /*3*/
+    text-decoration: none;/*4*/
+}
+.header-middle, /*중복이라 위로 올림*/
+.header-bottom{
+    background: #272727;
+    position: relative;
+}
+
+
+
+
+
+
+
+
+/*header-middle style*/ /*1부터 시작*/
+.header-middle{
+    height: 60px;
+    padding: 10px 0;
+}
+.header-middle{/*4*/
+    overflow: hidden;
+    height: 60px;
+    padding: 10px 0;
+}
+.header-middle>h1{ 
+    text-align: center; /*1*/
+    padding: 20px 0;
+}
+.header-middle>.best{/*2*/
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+.header-middle>.menu-group{/*3*/
+    position: absolute;
+    right: 10px;
+    top: 20px;
+}
+.header-middle>.menu-group>.gnb{
+    float: right;
+    margin-top: 10px;
+}
+.header-middle>.menu-group>ul>li{
+    float: left;
+    margin: 0 5px;    
+}
+.header-middle>.menu-group>ul>li>a{
+    color: #fff;
+    font-size: 11px;
+    position: relative;
+    /* border-left: 1px solid #fff; */
+}
+.header-middle>.menu-group>.lnb>li>a:before{
+    content: ' ';
+    width: 1px;
+    height: 10px;
+    background: #666;
+    position: absolute;
+    left: -5px;
+    top: 3px;
+}
+.month{
+    display: inline-block; /*그냥 block 아닌 inline-block */
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 139, 127);
+    text-align: center;
+    line-height: 20px;
+    font-size: 13px;
+    border-radius: 10px; /*원모양_크기의 반지름*/
+    color: #000;
+}
+
+
+
+
+
+/*header-bottom style*/ /*1부터 시작*/
+.header-bottom{    
+    border-top: 1px solid #424242;/*18*/
+    border-bottom: 1px solid #424242;/*16*/
+}
+a.togle_w{ /*a 태그 자신의 이름이 토글이다. 라는 뜻 / a는 생략 가능*/
+    position: absolute;/*20*/
+    left: 20px;/*21*/
+    top: 10px;/*22*/
+}
+.ezenac-nav{
+    /*border: 1px solid green;*/ /*11*/
+    overflow: hidden;/*12*/
+    width: 971px;/*13*/
+    margin: 0 auto;/*14*/
+}
+.ezenac-nav>li{
+    float: left;/*5*/
+    margin: 0 5px;/*6*/
+}
+.ezenac-nav>li>a{
+    display: block;/*7*/
+    height: 45px;/*8*/
+    line-height: 45px;/*9 -> 줄 간격(줄 사이의 여백)*/
+    color: #fff;/*19*/
+    position: relative;
+}
+.ezenac-nav>li>a:before{/*23*/
+    content: ' ';
+    width: 0%;
+    height: 2px;
+    border-top: 3px solid rgb(0, 139, 127);
+    position:absolute;
+    left: 0;
+    top: 0;
+    /* display: none;  */ /*애니메이트 효과를 위해 주석처리*/
+    transition: width .5s ease-in;   
+}
+.ezenac-nav>li>a:hover:before{/*24*/
+    /* display: block; */ /*애니메이트 효과를 위해 주석처리*/
+    width: 100%;
+}
