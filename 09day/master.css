@@ -8,7 +8,11 @@ a{
     color: #333; /*3*/
     text-decoration: none;/*4*/
 }
-.header-middle, /*중복이라 위로 올림*/
+.header-middle{
+    background: #040606;
+    position: relative;
+} 
+.header-top,
 .header-bottom{
     background: #272727;
     position: relative;
@@ -16,50 +20,71 @@ a{
 
 
 
+/*header-top style*/
+.header-top>.location{
+    overflow: hidden; 
+    width: 950px;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+.header-top>.location>li{
+    float: left;    
+    padding: 0 10px;
+}
+.header-top>.location>li>a{
+    color: #8C8C9B;
+    font-size: 11px;   
+}
+.header-top>.location>li:first-child>a{
+    color: #fff;
+    font-size: 11px;
+}
 
 
 
-
-
-/*header-middle style*/ /*1부터 시작*/
-.header-middle{
+/*header-middle style*/
+.header-middle-inner{ 
+    /* border: 1px solid red; */
+    width: 971px;
+    margin: 0 auto;
+    position: relative;
     height: 60px;
     padding: 10px 0;
 }
-.header-middle{/*4*/
+.header-middle-inner{
     overflow: hidden;
     height: 60px;
     padding: 10px 0;
 }
-.header-middle>h1{ 
-    text-align: center; /*1*/
+.header-middle-inner>h1{ 
+    text-align: center; 
     padding: 20px 0;
 }
-.header-middle>.best{/*2*/
+.header-middle-inner>.best{
     position: absolute;
     left: 25px;
     top: 15px;
 }
-.header-middle>.menu-group{/*3*/
+.header-middle-inner>.menu-group{
     position: absolute;
     right: 10px;
     top: 20px;
 }
-.header-middle>.menu-group>.gnb{
+.header-middle-inner>.menu-group>.gnb{
     float: right;
     margin-top: 10px;
 }
-.header-middle>.menu-group>ul>li{
+.header-middle-inner>.menu-group>ul>li{
     float: left;
     margin: 0 5px;    
 }
-.header-middle>.menu-group>ul>li>a{
+.header-middle-inner>.menu-group>ul>li>a{
     color: #fff;
     font-size: 11px;
     position: relative;
     /* border-left: 1px solid #fff; */
 }
-.header-middle>.menu-group>.lnb>li>a:before{
+.header-middle-inner>.menu-group>.lnb>li>a:before{
     content: ' ';
     width: 1px;
     height: 10px;
@@ -68,7 +93,7 @@ a{
     left: -5px;
     top: 3px;
 }
-.header-middle>.menu-group>.lnb>li:nth-child(3)>a:after{ /* 3번째 li*/
+.header-middle-inner>.menu-group>.lnb>li:nth-child(3)>a:after{ /* 3번째 li*/
     content: ' ';
     width: 6px;
     height: 6px;
@@ -78,7 +103,6 @@ a{
     right: -1px;
     top: -5px;
 }
-
 .month{
     display: inline-block; /*그냥 block 아닌 inline-block */
     width: 20px;
@@ -91,8 +115,9 @@ a{
     color: #000;
 }
 span{
-    vertical-align: middle; /*아이콘과 택스트의 높이를 맞춤*/
+    vertical-align: middle /*아이콘과 택스트의 높이를 맞춤*/
 }
+
 
 
 
