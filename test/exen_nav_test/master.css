@@ -8,7 +8,8 @@ a{
     color: #333;
     text-decoration: none;
 }
-.header-top{
+.header-top,
+.header-bottom{
     background: #272727;
 }
 .header-middle{
@@ -38,9 +39,15 @@ a{
 .header-middle-inner{
     height: 60px;
     padding: 10px 0;
-    overflow: hidden;
     width: 950px;
     margin: 0 auto;
+    width: 950px;
+    position: relative;
+}
+.header-middle-inner{
+    overflow: hidden;
+    height: 60px;
+    padding: 10px 0;
 }
 .header-middle-inner>.best{
     position: absolute;
@@ -60,5 +67,19 @@ a{
     float: right;
 }
 .header-middle-inner>.menu-group>ul>li>a{
+    color: #fff;
+}
+
+/* header-bottom style */
+.header-bottom>.ex-nav{
+    overflow: hidden;
+    width: 950px;
+    margin: 0 auto;
+}
+.header-bottom>.ex-nav>li{
+    float: left;
+    margin: 0 10px;
+}
+.header-bottom>.ex-nav>li>a{
     color: #fff;
 }
