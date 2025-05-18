@@ -83,3 +83,17 @@ a{
 .header-bottom>.ex-nav>li>a{
     color: #fff;
 }
+
+
+/* top2 */
+.top2{
+    background: #333;
+    overflow: hidden;
+}
+.top2>.top2-1>li{
+    float: left;
+    padding: 0 10px;
+}
+.top2>.top2-1>li>a{
+    color: #fff;
+}
