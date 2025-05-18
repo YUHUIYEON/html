@@ -127,16 +127,29 @@ a{
     line-height: 1;
     margin-bottom: 3px;
     /* border: 1px solid red; */
-
 }
 .top2>.top2-1>li>a{
     color: #8C8C9B;    
     display: inline-block;
     line-height: 20px;
+    position: relative;
 }
 .top2>.top2-1>li:first-child>a{
     color: chocolate;
 }
 .top2>.top2-1>li:last-child>a{
     color: aqua;
+}
+.top2>.top2-1>li>a:before{
+    content: ' ';
+    width: 0%;
+    height: 20px;
+    border-bottom: 3px solid goldenrod;
+    position:absolute;    
+    left: 0;
+    top: 0;
+    transition: width .5s ease-in;     
+}
+.top2>.top2-1>li>a:hover::before {
+    width: 100%;
 }
