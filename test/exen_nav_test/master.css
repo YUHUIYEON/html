@@ -85,15 +85,16 @@ a{
 }
 
 
-/* top2 
+/* top2 */
+/*
 .top2{
-    background: #333;
+    background: #333;    
 }
 .top2>.top2-1{
-    overflow: hidden;
-    width: 900px;
+   overflow: hidden; 
+    width: 950px;
     margin: 0 auto;
-    padding: 5px;
+    padding: 5px 0;
 }
 .top2>.top2-1>li{
     float: left;
@@ -101,26 +102,40 @@ a{
 }
 .top2>.top2-1>li>a{
     color: #8C8C9B;
+    font-size: 12px; 
 }
 .top2>.top2-1>li:last-child>a{
     color: aqua;
 }
 */
+
+
 .top2{
     background: #333;
+    
 }
 .top2>.top2-1{
-    width: 900px;
-    margin: 0 auto;
-    padding: 5px;
+    padding: 5px 0;
     text-align: center;
+    /* border: 1px solid blue; */
+
 }
 .top2>.top2-1>li{
     display: inline-block;
     padding: 0 10px;
+    vertical-align: middle; 
+    line-height: 1;
+    margin-bottom: 3px;
+    /* border: 1px solid red; */
+
 }
 .top2>.top2-1>li>a{
-    color: #8C8C9B;
+    color: #8C8C9B;    
+    display: inline-block;
+    line-height: 20px;
+}
+.top2>.top2-1>li:first-child>a{
+    color: chocolate;
 }
 .top2>.top2-1>li:last-child>a{
     color: aqua;
