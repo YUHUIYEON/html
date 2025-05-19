@@ -4,11 +4,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>게시글 만들기</title>
+    <style>
+        table{
+            width: 800px;
+            margin: 0 auto;
+            /* border: 1px solid red; */
+        }
+        thead>tr>th{
+            padding: 10px;
+        }
+        tbody>tr>td{
+            text-align: center;
+            padding: 10px;
+        }
+        tbody>tr>td>a:hover{
+            color: blue;
+        }
+        th, td{
+            border-bottom: 1px solid skyblue;
+        }
+        thead>tr>th:nth-child(2){
+            text-align: left;
+        }
+        tbody>tr>td:nth-child(2){
+            text-align: left;
+        }       
+        .pageN{
+            text-align: center;
+        }
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+        .pageN>a{
+            display:inline-block;
+            border: 1px solid skyblue;
+            padding: 5px;
+            margin-right: 5px;
+        }
+        .pageN>a:hover{
+            color: #fff;
+            background: skyblue;
+        }
+
+    </style>
 </head>
 <body>
     <table>
         <caption>게시글 작성</caption>
+            <!-- 
+            col -> 칸을 새로 방향으로 묶어서 너비나 특정스타일을 지정
+            colgroup -> col이 여러개일 때 묶어줌.
+            -->     
+            <colgroup>
+                <col width="10%">
+                <col width="*"> <!--100%에서 나머지를 다. 70%-->
+                <col width="20%">
+                <col width="10%">
+            </colgroup>                   
+
+        <!-- 표의 머릿말 -->
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>제목</th>
+                <th>날짜</th>
+                <th>조회</th>
+            </tr>
+        </thead>
+
+        <!-- 표의 본문 -->
+        <tbody>
+            <tr>
+                <td>20</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>19</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>18</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>52</td>
+            </tr>
+           <tr>
+                <td>17</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>64</td>
+            </tr>
+            <tr>
+                <td>16</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>15</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>13</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>12</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>11</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td><a href="#">안녕하세요. 웹디자인 과정입니다.</a></td>
+                <td>2025-05-19</td>
+                <td>50</td>
+            </tr>
+
+        </tbody>
+
+        <!-- 표의 꼬릿말 -> 생략 가능/내용의 요약, 데이터의 핵심 작성시 사용
+         <tfoot>
+        </tfoot>
+        -->
         
     </table>
+    <p class="pageN">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#">9</a>
+        <a href="#">10</a>
+    </p>
+    
 </body>
 </html>
+<!-- 
+<thead>, <tfoot> -> 한 번만 정의 할 수 있다.
+<tbody> -> 여러번 정의할 수 있다.    
+-->
