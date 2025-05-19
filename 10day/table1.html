@@ -9,10 +9,13 @@
             /* border: 1px solid #000; */
             width: 400px;
             height: 300px;
-            border-collapse: collapse; /*셀과 셀 사이의 여백을 제거 */
+            border-collapse: collapse; /*표과 셀 사이의 여백을 제거 */
        }
        th, td{ /*td에 넣어줘야 줄이 생긴다.*/
             border: 1px solid green;
+       }
+       td{
+        text-align: center;
        }
     </style>
 </head>
@@ -23,16 +26,15 @@
             <th colspan="4">2학기 기말고사 성적표</th> 
         </tr>
         <tr>
-            <td>2*1</td>
-            <td>2*2</td>
-            <td>2*3</td>
-            <td>2*4</td>
+            <th rowspan="2">과목별 점수</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
         </tr>
-        <tr>
-            <td>3*1</td>
-            <td>3*2</td>
-            <td>3*3</td>
-            <td>3*4</td>
+        <tr>            
+            <td>99</td>
+            <td>80</td>
+            <td><img src="image/flower.png"></td>
         </tr>
     </table>
 </body>
@@ -48,6 +50,6 @@ table은 특정 데이터를 간결하게 정렬하고자 할 때 사용
     </tr>
 </table>
 
-줄방향 합치기 -> rowspan / rowspan="합칠 갯수"
-칸방향 합치기 -> columnspan / colspan="합칠 갯수"
+줄(행)방향 합치기 -> rowspan / rowspan="합칠 갯수"
+칸(열)방향 합치기 -> columnspan / colspan="합칠 갯수"
  -->
