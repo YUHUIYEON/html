@@ -7,20 +7,65 @@
     <title>서브메뉴 띄우기</title>
     <link rel="stylesheet" href="master.css">
     <style>
-        *{margin: 0;}
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
         a{
             color: #333;
             text-decoration: none;
         }
-        ul{list-style: none;}
+  
+        /* 
+        - 4.가로방향 정렬(li)
+        - 5.각 메뉴마다 여백지정하기(a:인라인 속성이므로 block으로 속성 변경)
+        - 6.::before, ::after를 이용해서 상단 줄효과주기(a::content ''지정필요)
+        - 7.서브메뉴(absolute)를 부모메뉴(relative)를 기준으로 위치이동하기()
+        */
+        .mainMenu{
+            background: #333;
+            overflow: hidden;            
+        }        
+        .mainMenu>li{
+            float: left;
+            margin: 0 10px;   
+        }      
+        .mainMenu>li>a{ /* 5번*/
+            display: block;
+            padding: 0 15px;
+            line-height: 50px;
+            color: #fff;
+            position: relative; /*a:before absolute의 기준*/
+            width: 150px;
+        }
+        .mainMenu>li>a:before{
+            content: ' ';
+            width: 0%;
+            height: 5px;            
+            background:  orange;
+            position: absolute;
+            left: 0;
+            top: 0;
+            transition: width .5s ease-in;   
+        }
+        .mainMenu>li>a:hover:before{
+            width: 100%;
+        }
+        .mainMenu>li>.subMenu>li>a{
+             color: #fff;
+             line-height: 30px;
+        }
+        .subMenu{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
     </style>
 </head>
 
 <body>
-    <ul>
+    <ul class="mainMenu">
         <li>
             <a href="#">아트웍</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">기초시각디자인</a></li>
                 <li><a href="#">드로잉(인체/컨셉)</a></li>
                 <li><a href="#">스케치(실내/건축/제품)</a></li>
@@ -30,7 +75,7 @@
         </li>
         <li>
             <a href="#">SW개발</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">C언어</a></li>
                 <li><a href="#">자바(Java)</a></li>
                 <li><a href="#">정보처리 자격증</a></li>
@@ -41,7 +86,7 @@
         </li>
         <li>
             <a href="#">웹디자인</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">웹퍼블리셔(자바스크립트,제이쿼리,반응형웹디자인)기본</a></li>
                 <li><a href="#">Adobe XD를 활용한 인터렉티브 UI 제작</a></li>
                 <li><a href="#">그래픽 디자인(일러+포토)</a></li>
@@ -52,7 +97,7 @@
         </li>
         <li>
             <a href="#">편집디자인</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">재직자+일반포토샵 (Photoshop)</a></li>
                 <li><a href="#">일러스트레이터 (Illustrator) 향상과정</a></li>
                 <li><a href="#">인디자인(InDesign)</a></li>
@@ -62,7 +107,7 @@
         </li>
         <li>
             <a href="#">건축·산업디자인</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">캐드(AutoCAD)</a></li>
                 <li><a href="#">스케치업 (SketchUp)</a></li>
                 <li><a href="#">맥스(3D-MAX, V-ray)</a></li>
@@ -72,7 +117,7 @@
         </li>
         <li>
             <a href="#">게임/영상/마야</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">디지털 영상편집디자인(프리미어, 에프터이펙트)</a></li>
                 <li><a href="#">CG&VFX 프로젝트</a></li>
                 <li><a href="#">영상편집(프리미어,에프터이펙트)</a></li>
@@ -82,7 +127,7 @@
         </li>
         <li>
             <a href="#">세무회계/OA</a>
-            <ul>
+            <ul class="subMenu">
                 <li><a href="#">재경관리사(재무회계,원가관리회계,세무회계)자격증 취득과정</a></li>
                 <li><a href="#">전산회계1급 자격취득-세무</a></li>
                 <li><a href="#">전산세무1급 자격취득 과정</a></li>
