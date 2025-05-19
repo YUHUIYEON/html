@@ -26,14 +26,14 @@
         }
         .mainMenu{            
             /* overflow: hidden; */
-            height: 50px; /*메인 nav의 높이값은 변경이 잘 안되니까 overflow: hidden 대신 높이값을 준다.*/
+            height: 50px; /*메인 nav의 높이값은 변경을 잘 안하니까 overflow: hidden 대신 높이값을 지정한다.*/
             /* border: 1px solid red; */
-            width: 916px;
+            width: 1020px;
             margin: 0 auto;
         }        
         .mainMenu>li{
             float: left;
-            margin: 0 10px;
+            margin: 0 20px;
             position: relative; /*.subMen의 absolute*/
         }      
         .mainMenu>li>a{ /* 5번*/
@@ -56,16 +56,29 @@
         }
         .mainMenu>li>a:hover:before{
             width: 100%;
-        }
-        .mainMenu>li>.subMenu>li>a{
-            font-size: 13px;
-             /* color: #fff; */
-             /* line-height: 30px; */
-        }
+        }       
         .subMenu{
             position: absolute;
             left: 0;
             top: 50px;
+            width: 360px;
+            border: 1px solid skyblue;
+            padding: 10px 15px;
+            background: #fff;
+            border-radius: 0 0 20px 20px; /* 2개면 사선의 값 */
+            display: none;
+        }
+         .mainMenu>li>.subMenu>li>a{
+            font-size: 13px;
+            color: skyblue;
+            display: block;
+            line-height: 30px;
+        }
+        .mainMenu>li:hover .subMenu{
+            display: block;
+        }
+        .mainMenu>li:last-child>.subMenu{
+            left: -290px; !important;
         }
     </style>
 </head>
