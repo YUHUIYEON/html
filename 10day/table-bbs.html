@@ -9,35 +9,34 @@
             width: 800px;
             margin: 0 auto;
             /* border: 1px solid red; */
+            border-collapse: collapse; /*테이블 하위의 여백(틈)을 제거*/
         }
-        thead>tr>th{
+        caption{
+            display: none;
+        }
+        th, 
+        td{
             padding: 10px;
-        }
-        tbody>tr>td{
             text-align: center;
-            padding: 10px;
+            border-bottom: 1px solid lightskyblue;            
+        }
+        thead>tr>th:nth-child(2),
+        tbody>tr>td:nth-child(2){
+            text-align: left;
         }
         tbody>tr>td>a:hover{
             color: blue;
         }
-        th, td{
-            border-bottom: 1px solid skyblue;
-        }
-        thead>tr>th:nth-child(2){
-            text-align: left;
-        }
-        tbody>tr>td:nth-child(2){
-            text-align: left;
-        }       
-        .pageN{
-            text-align: center;
-        }
+        
         a{
             color: #333;
             text-decoration: none;
         }
+        .pageN{
+            text-align: center;
+        }
         .pageN>a{
-            display:inline-block;
+            /* display:inline-block; */
             border: 1px solid skyblue;
             padding: 5px;
             margin-right: 5px;
@@ -45,6 +44,11 @@
         .pageN>a:hover{
             color: #fff;
             background: skyblue;
+            text-decoration: underline;
+        }
+        .pageN>a:first-child{
+            background: skyblue;
+            color: #fff;
         }
 
     </style>
@@ -59,7 +63,7 @@
             <colgroup>
                 <col width="10%">
                 <col width="*"> <!--100%에서 나머지를 다. 70%-->
-                <col width="20%">
+                <col width="15%">
                 <col width="10%">
             </colgroup>                   
 
