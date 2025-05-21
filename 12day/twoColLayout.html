@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 레이아웃</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /*basic style*/
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{
+            color: #333;
+            text-decoration: none;
+        }
+        body{
+            font: 400 14px "Nanum Gothic, sans-serif";
+        }
+
+        /*layout style*/       
+        #wrapper{
+            width: 720px;
+            margin: 0 auto;
+        }
+        #header{            
+            background: #555;
+            position: relative; 
+        }
+        #contents{
+            /* background: green; */
+            overflow: hidden;
+        }       
+        #nav{
+            width: 180px;           
+            /* background: #fff; */
+            float: left;
+        }
+        #maincontent{
+            width: 500px;
+            /* background: blueviolet; */
+            float: right;
+        }
+        #footer{          
+            background: #555;
+            clear: both;
+        }
+        #header,
+        #contents,
+        #maincontent,
+        #footer{
+            padding: 10px;
+        }
+
+        
+        /*header style*/  
+        #header>h1{
+            padding: 10px;
+        }    
+        #header>p{     
+            position: absolute;       
+            right: 50px;
+            top: 30px;
+            color: #fff;
+        }
+
+        /*lnb style*/
+        #nav>ul>li{
+            margin : 5px 0;
+            padding: 10px 0;
+        }
+        #nav>ul>li{
+            position: relative;
+        }
+        #nav>ul>li:before{
+            content: ' ';
+            width: 150px;
+            height: 1px;
+            border-top: 1px solid rgb(0, 139, 127);
+            position: absolute;
+            left: 0;
+            top: 40px;
+        }
+        #nav>ul>li:hover{
+            background: #c5c5c5;  
+            width: 150px; 
+        }
+        #nav>ul>li:hover>a{
+            color: #fff;   
+        }
+
+        /* maincontent style */
+        #maincontent{
+            padding-bottom: 50px;
+        }
+        #maincontent>h2{
+            margin-bottom: 15px;
+        }
+        #maincontent>p{
+            margin-bottom: 15px;
+            text-indent: 14px;
+            line-height: 23px;
+            word-spacing: 2px; /*단어 사이의 여백*/
+        }
+
+        /* footer style */
+        #footer>p{
+            text-align: center;
+            color: #fff;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">    
+        <div id="header">
+           <h1 title="mbc아카데미">     
+            <a href="#">
+                <img class="logo" src="MBC logo_w.png" alt="mbc아카데미로고" width="120px">
+            </a>
+            </h1>
+            <p>머릿말 입니다.</p>
+        </div>         
+        <div id="contents">
+            <nav id="nav">
+                <ul>
+                    <li><a href="#">회사 소개</a></li>
+                    <li><a href="#">서비스 소개</a></li>
+                    <li><a href="#">강의 소개</a></li>
+                    <li><a href="#">찾아오시는 길</a></li>
+                 </ul>
+            </nav>
+            <div id="maincontent">
+                <h2>레이아웃에 대해서</h2>
+                <p>
+                    화면표현을 위한 마크업을 만들 필요없이 완벽하게 페이지 레이아웃을 짤 수 있다는 것은 css의 가장 큰장점 중 하나 입니다 하지만 css로 레이아웃을 만드는 것이 보통 어려운 일이 아니라고
+                    알려져 있습니다. 특히 처음 접한 사람들이 이런 얘기를 많이 하게 되죠. 이런얘기가 나오게 되는 이유는 웹브러우저 마다 다른 특성을 보이기 때문이기도 하지만 대부분은 웹상에서 구할 수 있는
+                    레이아웃기법이 저마다 다 다른 방식을 취하고 있기 때문입니다. 많은 css개발자들이 자신만의 다단 레이아웃 기법을 새롭게 선보이는데, css 입문자들이 이런 기법이 어떻게 동작하는지 정확하게
+                    이해하지 못하고 사용하는데서 원인을 찾을 수도 있겠습니다. 이렇게 css 레이아웃 기법에 대해서 블렉박스처럼 사용하게 되면 원하는 결과는 금방 얻을 수 있지만 이언어를 이해할 수는 없습니다.
+                </p>
+
+                <h2>디자인을 가로 중간에 배치하기</h2>
+                <p>
+                    한줄이 길게 표시되는 텍스트는 읽기가 어렵고 때론 짜증나는 일입니다. 큰 모니터의 보급이 높아지면서 화면 가독성 이 중요하다는 인식도 높아지고 있습니다.내용이 화면 중앙에 오도록하는 디자인은 이런 문제를 해결할 수 있는 방법 중의 하나겠죠. 화면 가로폭 전체에 표시되도록 하지 않고 짧게 줄인 내용을 가운데로 배치하면 한줄 한줄을 쉽게 읽을 수 있습니다.
+                </p>
+                <p>
+                    중간에 배치되는 디자인이 예쁘기 때문에 많은 개발자들이css를 처음 배울때 이방법을 가장 먼저 알고 싶어합니다. 중간에 오도록 하는 디자인을 하는 방법엔 크게 두가지가 있습니다. 하나는 auto 마진을 이용한 방법이고 다른 하나는 포지셔닝과 마진에 음수값을 지정하는 방법입니다. 둘다 조건은 width값이 지정되어야 합니다.
+                </p>
+            </div>
+        </div>  
+        <div id="footer">
+           <p>copyright 2025 ⓒ (주)MBC아카데미 . all rights reserved.</p>
+            <p>단 레이아웃</p>
+        </div>
+    </div>
+</body>
+</html>
