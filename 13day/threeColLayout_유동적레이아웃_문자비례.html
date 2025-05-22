@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3단 레이아웃</title>
+    <title>3단 레이아웃_유동적 레이아웃_문자비례</title>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* basic style */
@@ -14,15 +14,14 @@
             text-decoration: none;
         }
         body{
-            font: 400 14px "Nanum Gothic, sans-serif";
+            font: 100%/24px "Nanum Gothic, sans-serif"; /*font 사이즈 60%, 줄간격을 24로 하겠다.*/
         }
 
         /* layout style */
         #wrapper{ /* 여기에 패딩을 주면 총 길이가 늘어나니까 그 안에 다른 자식들에게 패딩을 줌 */
-            width: 720px;
-            position: relative;
-            left: 50%;
-            margin-left: -360px;
+            width: 72em;
+            max-width: 100%;
+            margin: 0 auto;
         }
 
 
@@ -55,19 +54,25 @@
             padding-bottom: 50px;
         }
         #contents>#nav{
-            width: 180px;
+            width: 18em;
+            max-width: 23%;
             float: left;
+            padding: 1%;
         }
         #maincontent{
-            width: 500px;            
+            width: 52em;
+            max-width: 73%;            
             float: right;
+            padding: 1%;
         }
         #maincontent>.main{
-            width: 280px;
+            width: 32em;
+            max-width: 66%;
             float: left;
         }
         #maincontent>.promo{
-            width: 180px;
+            width: 18em;
+            max-width: 23%;
             float: right;
         }
         
@@ -180,3 +185,8 @@
     </div>      
 </body>
 </html>
+<!-- 
+레이아웃에 단위를 
+px로 사용하면 고정적인 레이아웃.
+% 단위를 사용하면 유동적인 레이아웃.
+-->
