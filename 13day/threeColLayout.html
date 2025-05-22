@@ -18,10 +18,32 @@
         }
 
         /* layout style */
-        #wrapper{
+        #wrapper{ /* 여기에 패딩을 주면 총 길이가 늘어나니까 그 안에 다른 자식들에게 패딩을 줌 */
             width: 720px;
-            margin: 0 auto;
+            position: relative;
+            left: 50%;
+            margin-left: -360px;
         }
+
+
+        /* height 추가 */        
+        /* #header{
+            height: 77px;
+        }
+        #contents{
+            height: 500px;
+        }
+        #footer{
+            height: 90px;
+        }
+        #contents>#nav{
+            height: 40px;
+        }
+        #maincontent{
+            height: 300px;
+        } */
+
+
         #header,
         #contents,
         #footer{
@@ -34,14 +56,14 @@
             float: left;
         }
         #maincontent{
-            width: 500px;
+            width: 500px;            
             float: right;
         }
-        #maincontent>#main{
+        #maincontent>.main{
             width: 280px;
             float: left;
         }
-        #maincontent>#promo{
+        #maincontent>.promo{
             width: 180px;
             float: right;
         }
@@ -52,7 +74,9 @@
         }
         #header>p{
             float: left;
-            padding: 15px 0 0 100px;
+            /* padding: 15px 0 0 100px; */
+            margin-left: 20px;
+            padding-top: 15px;
         }
 
         /*lnb style*/        
@@ -70,12 +94,12 @@
         }
 
         /* maincontent style */
-        #main>h2,
-        #promo>h2{
+        .main>h2,
+        .promo>h2{
             margin: 20px 15px;
         }
-        #main>p,
-        #promo>p{
+        .main>p,
+        .promo>p{
             margin: 0 0 20px 10px;
             text-indent: 14px;
             word-spacing: 2px; /*단어 사이의 여백*/
@@ -108,7 +132,7 @@
                  </ul>
             </nav>
             <div id="maincontent">
-                <div id="main">                   
+                <div class="main">                   
                     <h2>레이아웃에 대해서</h2>
                     <p>
                         화면표현을 위한 마크업을 만들 필요없이 완벽하게 페이지 레이아웃을 짤 수 있다는 것은 css의 가장 큰장점 중 하나 입니다 하지만 css로 레이아웃을 만드는 것이 보통 어려운 일이 아니라고
@@ -125,7 +149,7 @@
                         중간에 배치되는 디자인이 예쁘기 때문에 많은 개발자들이css를 처음 배울때 이방법을 가장 먼저 알고 싶어합니다. 중간에 오도록 하는 디자인을 하는 방법엔 크게 두가지가 있습니다. 하나는 auto 마진을 이용한 방법이고 다른 하나는 포지셔닝과 마진에 음수값을 지정하는 방법입니다. 둘다 조건은 width값이 지정되어야 합니다.
                     </p>
                 </div>    
-                <div id="promo">            
+                <div class="promo">            
                     <h2>플로트기반의 레이아웃만들기</h2>
                     <p>
                         css기반으로 레이아웃을 만드는 데는 절대 위치지정 방식이나 음수 마진값사용 방식이 있습니다. 그 중에서 플로트를 기반으로 한 레이아웃이 가장 쉬운 방식이라 할 수 있습니다.
