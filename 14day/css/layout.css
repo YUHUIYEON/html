@@ -65,3 +65,6 @@ html5에는 inner를 안줘도 가능.
 .footer-inner{
     padding: 1em .5em;
 }
+.footer-inner{
+    text-align: center;
+}
