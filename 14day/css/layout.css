@@ -1,0 +1,31 @@
+#wrapper{
+    min-width: 732px;
+    max-width: 880px;
+    padding: 10px;
+    margin: auto;
+    background: url(../images/cover_circles.jpg) no-repeat 300px 0; /*nav 이미지가 있어서 왼쪽으로 이동한거*/
+    border: 1px solid red;
+}
+#header{
+    background: url(../images/gray_header.gif) no-repeat 0 0;
+    color: #fff;
+}
+#lnb{
+    height: 40px;
+}
+#contents{
+    width: 100%; /*부모인 wrapper의 치수를 받음. 반고정, 반유동 사이트라 %를 넣음*/
+    float: left;
+    background: url(../images/full_arc.gif) no-repeat 0 0;
+}
+.content{
+    width: 100%;
+    float: left;
+    margin-right: -180px; /*content와 promo가 형제라 promo가 들어갈 자리를 만든 것 */
+}
+.promo{
+    width: 180px;
+    float: left;
+}
+
+
