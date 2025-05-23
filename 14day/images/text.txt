@@ -1,0 +1,30 @@
+Stylin' with CSS: A Designer's Guide,Second Edition
+A New Riders Book by Charles Wyke-smith
+What's New
+Table of Contents
+CSS Link
+Contact Us
+Register Now
+to download the step-by-step Stylin'code examples!
+As a bonus, you getStylib,a CSS library with page templates and ready-styled components such as lists, multi-level menus, forms and tables.
+User Name
+Password
+ sign-in
+회원가입
+비밀번호찾기
+smith
+In Stylin' with CSS, Charles Wyke-Smith takes you rapidly from CSS basics to advanced page styling. Whether you are taking your first steps into the world of standards-based Web site design,or are a seasoned pro, Stylin' provides you with essential CSS information, examples and techniques.
+Stylin' with CSS shows you how to:
+Create fixed-width and liquid page layouts.
+Create your own drop-down menus, or use the multi-level version in the Stylib library.
+Write for today's browsers while working around the quirks of IE6.
+Accelerate site development with the Stylib page templates interface and components.
+Use CSS like a pro by understanding key concepts and techniques such as document flow, absolute andrelative positioning, and floating and clearing.
+book
+Buythis Book
+Read Reviews of this Book
+Other Books by this Author
+About the Author
+The Author's Conference Schedule
+Other Books We Recommend
+ⓒ 2007 - Stylin' with CSS: A Designer's Guide, Second Edition by Charles Wyke-Smith
