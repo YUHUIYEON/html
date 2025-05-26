@@ -1,0 +1,47 @@
+학습내용
+-form 관련 tag알아보기
+ input,textarea,select........
+
+ form이란?회원가입양식,로그인양식의 웹문서를 말합니다.
+ 개인정보를 입력할수 있는 입력박스로 이루어진 웹문서
+
+ 교재 66페이지 참고
+
+ <네이버 로그인 페이지 작성하기>
+ <회원가입페이지작성하기>
+  1. body에 문자크기 12px지정
+  2.form에 배경이미지 넣기
+     box-shadow:0 0 5px #ccc;
+     <!--
+       그림자주기 x y 번지는값 색
+                      box-shadow:inset 0 0 5px #ccc;
+      -->
+  3.label에 글자 굵게
+  4.formsection에 border-bottom주기
+     padding: 10px 0 5px 10px;
+  5.input왼쪽에 margin지정
+  6.input 전송,취소,확인,검색을 가운데로 정렬
+    전송,취소,확인 각각 배경색 바꾸기
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
