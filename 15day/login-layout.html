@@ -4,58 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>네이버 로그인</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@100..900&display=swap" rel="stylesheet">
     <style>
         /* basic style */
-        *{margin: 0; padding: 0;}
-        ul{
-            list-style: none;
+        *{margin:0; padding:0;}
+        ul,ol{list-style:none;}
+        a,a:link{text-decoration:none; color:#868686;}
+        img{border:0; vertical-align:top;}
+        body{
+            font-family:"Nanum Gothic, sans-serif";
+            font-size:14px;
+            color: #868686;
         }
-        a{
-            color: #333;
-            text-decoration: none;
+        
+        /* layout style */
+        form#wrap{
+            width: 435px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 20px 23px 15px;
+        }
+        .first-line,
+        .Second-line{
+            overflow: hidden;
+        }
+        .formsection{
+            margin-bottom: 15px;
+            float: left;
         }
 
-        /* form style */
-        .wrap{
-            width: 435px;
-            margin: 20px auto;
-            border: 1px solid #333;
-            padding: 20px;
-        } 
-        .formsection input[type="submit"]{
-            background: #00c73c;
-            color: #fff;
+        /* first-line style */
+        fieldset{border: none;}
+        legend, 
+        .input-group>label{
+            display: none;
+        }
+        .input-group{
+            width: 198px;
+            float: left;
+        }        
+        input[type="text"],
+        input[type="password"]{
+            width:92%;
+            height: 42px;
+            outline-style: none;
+            border: 1px solid #ccc;     
+            padding-left: 15px;       
+        }
+        input[type="password"]{
+            border-top: none;
+        }
+        input[type="submit"]{
+            float: left;
+            background: #10c34b;
             border: none;
-            width: 100px;
-            height: 100px;
+            width: 94px;
+            height: 87px;
+        }
+        input[value]{
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 2px 2px 0 #0d9c3c;
+        }
+        .first-line ul{
+            width: 131px;
+            margin-left: 10px;
+            float: left;
+        }
+        .first-line ul li{
+            border: 1px solid #ccc;
+            line-height: 41.5px;
+            text-indent: 15px;
+        }
+        .first-line ul>li:last-child{
+            border-top: none;
+        }
+
+        /* Second-line style */
+        .join{
+            margin-left: 50px;
+        }
+        .find{
+            float: right;
         }
     </style>
 </head>
 <body>
-    <form method="post" name="login" class="wrap">
-        <div class="first-line">
-            <div class="formsection input-group">
-                <label for="uid">아이디</label>
-                <input type="text" id="uid" size="10" maxlength="10" placeholder="아이디" required>
-                <label for="upw">비밀번호</label>
-                <input type="text" id="upw" size="10" maxlength="10" placeholder="비밀번호" required>
-            </div>   
-            <div class="formsection">
-                <input type="submit" value="로그인">
-            </div>
-            <ul class="formsection">
-                <li><a href="#">P보안</a></li>
-                <li><a href="#">일회용 로그인</a></li>
-            </ul>
-        </div> <!--first-line end-->          
-        <div class="Second-line">
-            <div class="formsection chack-in">
-                <input type="checkbox" name="check" id="log">
-                <label for="log">로그인 상태 유지</label>
-                <span class="join"><a href="#">회원가입</a></span>
-            </div>
-            <p class="join"><a href="#">아이디/비밀번호 찾기</a></p>
-        </div> <!--Second-line end-->
+    <form method="post" name="login" id="wrap">
+        <fieldset>
+            <legend>로그인</legend>
+            <div class="first-line">
+                <div class="formsection input-group">
+                    <label for="uid">아이디</label>
+                    <input type="text" id="uid" size="10" maxlength="10" placeholder="아이디" required>
+                    <label for="upw">비밀번호</label>
+                    <input type="password" id="upw" size="10" maxlength="10" placeholder="비밀번호" required>
+                </div>   
+                <div class="formsection">
+                    <input type="submit" value="로그인">
+                </div>
+                <ul class="formsection">
+                    <li><a href="#">P보안</a></li>
+                    <li><a href="#">일회용 로그인</a></li>
+                </ul>
+            </div> <!--first-line end-->          
+            <div class="Second-line">
+                <div class="formsection chack-in">
+                    <input type="checkbox" name="check" id="log">
+                    <label for="log">로그인 상태 유지</label>
+                    <span class="join"><a href="#">회원가입</a></span>
+                </div>
+                <p class="formsection find">
+                    <a href="#">아이디/비밀번호 찾기</a>
+                </p>
+            </div> <!--Second-line end-->
+        </fieldset>
     </form>
 </body>
 </html>
