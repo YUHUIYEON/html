@@ -15,6 +15,7 @@ body{
 #nanum-bbs>#header{
     width: 100%;
     height: 366px;
+    background: url(./image/bg.jpg);
 }
 .header-box{
     width: 900px;
@@ -46,25 +47,22 @@ body{
 }
 .right{
     width: 640px;
-    height: 720px;
     float: right;
 }
 .location{
-    height: 40px;
     margin-bottom: 38px;
 }
 .bbs{
-    height: 400px;
+    margin-top: 35px;
 }
 #footer1{
-    background: #FDDECE;
     width: 100%;
     height: 10px;
+    border-top: 1px solid #9f9f9f;
 }
 #footer2{
-    background: #F9A778;
     width: 900px;
-    height: 60px;
+    padding: 20px 0 40px;
     margin: 0 auto;
 }
 
@@ -145,14 +143,81 @@ h1{
     text-align: center;
 }
 
+/* right style */
+.location{
+    float: right;
+    padding-top: 5px;
+}
+.location>a{
+    font-size: 10px;
+    color: #afb0b0;
+}
+.location>a:first-child{
+    padding-left: 8px;
+    background: url(./image/bullet.gif)no-repeat 0 7px;
+}
+
 /* bbs style */
-th,
-td{
+.bbs>table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.bbs>table>caption{
+    display: none;
+}
+.bbs>table>thead>tr{
+    height: 27px;
+    background: url(./image/bbs_bar.jpg) no-repeat 0 0;
+    background: url(./image/bbs_bar.png) no-repeat 0 0 !important;
+    color: #fff;
+}
+/* .bbs>table>thead>tr>th{
+    border-bottom: 1px dotted #cecdcd;
+} */
+.bbs>table>tbody>tr>td{
     text-align: center;
+    color: #898989;
+    height: 42px;
+    line-height: 42px;
+    background: url(./image/dot.gif) repeat-x 0 100%;
 }
-thead{
-    background: url(./image/bbs_bar.jpg) no-repeat;
+.bbs>table>tbody>tr>td:nth-child(2){
+    text-align: left;
+    padding-left: 20px;
 }
-.bbsN{
+.bbs>table>tbody>tr:last-child>td{
+    background: none;
+    border-bottom: 1px solid #bcbcbc;
+}
+.pageN{
+    text-align: center; 
+    margin-top: 15px;       
+    position: relative;
+}
+.pageN>a{
     display: inline-block;
+    padding: 0 8px;
+    font-size: 11px;
+    color: #9f9f9f;
+    border-right: 1px solid #9f9f9f;
+}
+.pageN>a:first-child,
+.pageN>a:nth-child(11),
+.pageN>a:last-child{
+    border-right: none;
+}
+.pageN>a:hover{
+    color: #132f5c;
+}
+
+/* footer style */
+#footer2>p{
+    font-size: 10px;
+    color: #727884;
+}
+#footer2>.footer-left{
+    float: left;
+}
+#footer2>.footer-right{
+    float: right;
 }
