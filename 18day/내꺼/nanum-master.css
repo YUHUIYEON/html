@@ -10,18 +10,38 @@ body{
     font-size:12px;
     color: #898888;
 }
+img{
+    vertical-align: top;
+}
 
 /* layout style */
+#nanum-main>#header{
+    width: 944px;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
 #nanum-bbs>#header{
     width: 100%;
-    height: 366px;
     background: url(./image/bg.jpg);
+    overflow: hidden;
 }
 .header-box{
     width: 900px;
-    height: 366px;
     margin: 0 auto;
     position: relative;
+}
+nav.lnb{
+    width: 100%;
+    height: 60px;
+    background: url(images/barbg.jpg) repeat-x 0 0;
+}
+#nanum-main>#content{
+    width: 944px;
+    height: 350px;
+    margin: 0 auto;
+    border: 1px solid red;
 }
 #nanum-bbs>#content{
     width: 900px;
@@ -102,6 +122,43 @@ h1{
 .gnb>li:first-child>a::before{
     width: 0;
 }
+.info{
+    width: 296px;
+    height: 160px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background: url(images/box.png) no-repeat 0 0;
+}
+
+.lnb>.mainMenu{
+    float: left;
+    margin: 0 auto;
+}
+.info>a{
+    position: absolute;
+    left: 30px;
+    top: 85px;
+}
+
+/* nanum-main nav style */
+.mainMenu{
+    width: 942px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid red;
+}
+.mainMenu>li{
+    float: left;
+    width: 157px;
+    height: 32px;
+    position: relative;
+}
+.mainMenu>li>a{
+    text-align: center;
+    display: block;color: #fff;
+    line-height: 32px;
+}
 
 /* content style */
 .conTop>h2{
@@ -139,7 +196,7 @@ h1{
 .conBottom>ul>li:last-child>a{
     border-bottom: none;
 }
-.conIn{
+.colIn{
     text-align: center;
 }
 
@@ -215,9 +272,9 @@ h1{
     font-size: 10px;
     color: #727884;
 }
-#footer2>.footer-left{
+#footer2>p.footer-left{
     float: left;
 }
-#footer2>.footer-right{
+#footer2>p.footer-right{
     float: right;
 }
