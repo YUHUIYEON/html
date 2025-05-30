@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반동위선택자/인접선택자</title>
+    <style>
+        /* 일반동위 선택자 -> 형제자매 요소중 선택한 선택자의 뒤로오는 형제자매 모두를 선택한다. */
+        h3.title1~div{
+            color: brown;
+        }
+        ul>li:first-child~li{
+            border-bottom: 1px solid lightpink;
+        }
+
+        /* 인접 선택자 -> 형제자매 요소중 선택한 선택자의 막바로 뒤에있는 형제자매 하나를 선택한다. */
+        ul>li:nth-child(2){
+            background: lightseagreen;
+        }
+        ul>li:nth-child(2)+li{
+            background: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div>첫번째 div 앨리먼트</div>
+    <p>두번째 p 앨리먼트</p>
+    <h3 class="title1">세번째 h3 앨리먼트</h3>
+    <div>네번째 div 앨리먼트</div>
+    <p>다섯째 p 앨리먼트</p>
+    <h3>여섯째 div 앨리먼트</h3>
+    <div>일곱번째 div 앨리먼트</div>
+    <ul>
+        <li>목록의 li 첫번째</li>
+        <li>목록의 li 두번째</li>
+        <li>목록의 li 세번째</li>
+        <li>목록의 li 네번째</li>
+        <li>목록의 li 다섯번째</li>
+    </ul>
+    <div>8번째 div 앨리먼트</div>
+</body>
+</html>
