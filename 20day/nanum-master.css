@@ -35,7 +35,6 @@ nav.lnb{
     padding: 20px 0;
     overflow: hidden;
     margin:0 auto;
-    border:1px solid red;
 }
 #nanum-bbs>#contents{
     width:900px; 
@@ -52,13 +51,11 @@ nav.lnb{
     float: left;
     width: 330px;
     margin: 0 30px;
-    background: lightblue;
 }
 .conRight{
     float: left;
     width: 253px;
     margin-right: 24px;
-    background: lightblue;
 }
 
 .left{
@@ -238,9 +235,28 @@ h1{
     background: #2966a1;
     color: #fff;
 }
-
-
-
+.tablist>li>a{
+    display: block; /* a는 인라인이니까 블럭을 먼저 잡아야. */
+    font-size: 14px;
+    line-height: 24px;
+    border-bottom: 1px dotted #545454;
+    color: #545454;
+    padding-left: 11px;
+    background: url(image/bullet.gif) no-repeat 0 50%;
+}
+#nanum-main .conCenter h2,
+#nanum-main .conRight h2{
+    margin-bottom: 30px;
+}
+#nanum-main .conCenter ul li{
+    float: left;
+}
+#nanum-main .conCenter ul li a img{
+    padding: 3px;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin-right: 3px;
+}
 
 
 
