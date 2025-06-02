@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나눔복지관메인페이지</title>
     <link rel="stylesheet" href="nanum-master.css">
+    <style>
+        /* modal style */
+        .login-back{
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .login-page{
+            width: 50%;
+            background: #fff;
+            position: absolute;
+            left: 50%;
+            margin-left: -25%;
+            top: 200px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+        }
+        form{
+            width: 300px;
+            margin: 60px auto;
+        }
+        h3{
+            text-align: center;
+            margin: 30px 0;
+        }
+        .formsection{
+            padding: 5px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .formsection:nth-child(3){
+            border-bottom: none;
+            text-align: center;
+            margin: 40px 0;
+        }
+        input{
+            outline-style: none;
+            border: none;
+        }
+        input[type="submit"]{
+            border: 1px solid #ccc;
+            width: 100%;
+            padding: 10px 0;
+        }
+        .find{
+            overflow: hidden;
+        }
+        .find>li{
+            float: left;
+            margin-left: 25px;
+        }
+        .find>li>a{
+            font-size: 13px;
+            padding: 0 10px;
+        }
+        .find>li>a:hover{
+            color: #3270b8;            
+        }
+    </style>
 </head>
 <body id="nanum-main">
     <div id="header">
@@ -15,7 +79,9 @@
         </h1>
         <ul class="gnb">
             <li title="home"><a href="nanum-main.html">HOME</a></li>
-            <li title="login"><a href="#">LOGIN</a></li>
+            <li title="login" class="login_btn">
+                <a href="#">LOGIN</a>
+            </li>
             <li title="join"><a href="#">JOIN</a></li>
             <li title="contact us"><a href="#">CONTACT US</a></li>
         </ul>
@@ -95,7 +161,34 @@
         <p class="footer-right">
             COPYRIGHT (C) 2009 ASAWELFARE ALL RIGHTS RESERVED. 
         </p>
-    </div>    
+    </div>
+
+    <!-- modal start -->
+    <div class="login-back"></div> <!-- 검정색 막-->
+    <div class="login-page">
+        <h3>로그인</h3>
+        <form method="post">
+            <div class="formsection">
+                <label for="u-id">아이디 : </label>
+                <input type="text" id="u-id">
+            </div>
+            <div class="formsection">
+                <label for="u-pw">비밀번호 : </label>
+                <input type="password" id="u-pw">
+            </div>
+            <div class="formsection">                
+                <input type="submit" value="로그인">
+            </div>
+            <ul class="find">
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">아이디/비밀번호 찾기</a></li>
+            </ul>
+        </form>
+    </div>
+    <!-- modal end -->
+
+    <script src="login.js"></script>
+   
 </body>
 </html>
 <!-- 
@@ -107,4 +200,17 @@ video 대신 embed를 넣어도 된다.
 width="100" height="100" -> 100%로 안가져오면 잘린다.
 위 그대로 써야 한다.
 요즘 많이 쓰임.
+-->
+<!-- 
+1.modal창 작성 및 디자인
+    동적인 기능은 스크립트, 제이쿼리 작성, 리액터로 작성한다.
+    작성시 html element의하단에 작성하는게 편리하다.
+
+2.script작성/style과 동일
+    -내부 : </head> 위에 <script></script>
+    -외부 : *.js 파일을 만들고 작성해서서 html 문서에 <script src="*.js"></script>
+    -인라인
+
+3. 선언문을 포함한 실행문은 </head>에 선언을 하지만
+실행문만 가지고 있을 경우는 </body> 안에 작성한다.
 -->
