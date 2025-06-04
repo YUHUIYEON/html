@@ -1,0 +1,135 @@
+/* basic style */
+*{margin: 0; padding: 0;}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+body{
+    font:70%  Verdana, Helvetica, sans-serif;
+    background: #CAC78A url(images/background.gif) repeat-x fixed
+}
+
+
+/* layout style */
+#wrapper{
+    width: 750px;
+    margin: 0 auto;
+    background:#d7d493;
+    padding: 0 10px 10px 10px;
+}
+#header{
+    height: 170px;
+    background: url(./images/header.gif) no-repeat 0 0;
+    position: relative;
+}   
+#oneCollayout #primaryContent{
+    height: 700px;
+    margin:  0 0 20px 0;
+}
+#footer{
+    height: 85px;
+    background: url(./images/footer.gif) no-repeat 0 0;
+}
+.box{
+    padding: 5px 10px;
+    background: url(./images/diags.gif);
+    margin-bottom: 20px;
+}
+.cbb{
+    background: #fff;
+}
+
+/* text style */
+h1{
+    display: none;
+}
+h2{
+    background: #e3e2aa;
+    color: #999860;
+}
+
+
+/* header style*/
+.lnb{
+    position: absolute;
+    left: 10px;
+    top:100px;
+}
+.lnb>li{
+    float:left;
+    margin: 0 10px;
+    position: relative;
+}
+#header>.lnb>li>a{
+    color: #999860;
+    display: block;
+    font-size: 10px;
+    font-weight: bold;
+}
+.lnb>li>a::before{
+    content: '';
+    width: 1px;
+    height: 13px;
+    position: absolute;
+    right: -10px;
+    top: 1px;
+    border-right: 1px solid #ccc;
+}
+
+/* primaryContent style */
+h3,
+p,
+form{
+    position: relative;
+    margin-left: 45px;
+}
+h3{
+    display: inline-block;
+    background: #efd044;
+    font-size: 10px;
+    margin-bottom: 5px;
+}
+img{
+    position: absolute;
+}
+.box>.cbb{
+    padding: 10px;
+}
+em{
+    font-weight: bold;
+}
+p{
+    line-height: 18px;
+}
+input,
+textarea{
+    background: #d6e9e7;
+    border-style: none;
+}
+.formsection{
+    margin-bottom: 5px;
+}
+.formsection label{
+    display: block;
+    font-weight: bold;
+}
+input[type="email"],
+input[type="text"]{
+    width: 250px;
+    /* padding: 3px; */
+}
+
+
+/* footer style */
+#footer{
+    padding: 50px 36px;
+}
+#footer>a{
+    color : #cbc78a;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 5px;
+}
