@@ -1,10 +1,7 @@
 /* basic style */
 *{margin: 0; padding: 0;}
 ul{list-style: none;}
-a{
-    text-decoration: none;
-    color: #333;
-}
+a{text-decoration: none; color: #333;}
 body{
     font:70%  Verdana, Helvetica, sans-serif;
     background: #CAC78A url(images/background.gif) repeat-x fixed
@@ -27,28 +24,40 @@ body{
 }
 #twoCollayout #primaryContent{
     width: 555px;
+    float: right;
+}
+#threeColLayout #primaryContent{
+    width: 270px;
+    height: 500px;
     float: left;
-    margin: 0 0 20px 0;
+    margin: 0 0 20px 15px;
+}
+#threeColLayout #secondaryContent{
+    width: 270px;
+    height: 500px;
+    float: left;
+    margin: 0 0 20px 15px;
 }
 #sideContent{
     width: 180px;
     float: left;
 }
 #footer{
+    clear: both;
     height: 85px;
     background: url(./images/footer.gif) no-repeat 0 0;
-    clear: both;
 }
 .box{
     padding: 5px 10px;
-    background: url(./images/diags.gif);
+    background: url(./images/diags.gif) repeat 0 0;
     margin-bottom: 20px;
 }
 .cbb{
     background: #fff;
     padding: 5px 10px 15px;
 }
-.cbside{
+
+.cbSide{
     background: #fff;
     padding:5px 10px 15px;
     margin-top: 5px;
@@ -69,7 +78,7 @@ nav.lnb>ul>li>a{
 nav.lnb>ul>li>a::before{
     content: '';
     width: 1px;
-    height: 13px;
+    height: 14px;
     position: absolute;
     left: 0px;
     top: 6px;
@@ -104,16 +113,15 @@ h3{
     margin-left: 8px;
 }
 p{margin: 5px 0 0 45px;}
-span{color: #616161;}
 #sideContent p{margin-left: 0 !important;}
-.addresText{margin-top: 20px;}
-.PageN>a{
+.address-text{margin-top: 20px;}
+.pageN>a{
     text-decoration: underline;
     border-left: 1px solid #4a4a4a;
     padding: 0 5px;
     color: #616161;
 }
-.PageN>a:first-child{
+.pageN>a:first-child{
     border-left: 0; 
     text-decoration: none;
 }
@@ -126,6 +134,10 @@ span{color: #616161;}
     margin-right: 5px;
     text-decoration: underline;    
 }
+.gonews{
+    text-decoration: underline;
+}
+
 
 
 /* img style */
@@ -158,21 +170,16 @@ img{float: left;}
 }
 
 /* form style */
-#oneCollayout form{margin-left: 45px;}
-#oneCollayout form>ul>li{margin: 3px 0;}
-#oneCollayout label{
-    display: block;
-    margin-bottom: 3px;
+#oneCollayout form{margin-left:45px;}
+#oneCollayout form>ul>li{margin:3px 0}
+#oneCollayout label{display: block; margin-bottom:3px;}
+input,textarea{
+    outline-style: none; 
+    border:none; 
+    background:#d8e8e7;   
 }
-input,
-textarea{
-    outline-style: none;
-    border: none;
-    background: #d6e9e7; 
-}
-input{padding: 3px;}
+input{padding:3px; }
 textarea{resize: none;}
-
 
 /* twoCollayout form style */
 fieldset{
@@ -186,10 +193,12 @@ legend{
     margin-bottom: 5px;
 }
 #twoCollayout label{display: none;}
+#threeColLayout label{display: none;}
 /* 접근성에서는 legend에서 사이트검색을 읽어주니까 label에서 text-indent 대신 display: none을 씀 */
 input[type="image"]{
-    background: #d7d493;
-    margin-bottom: -5px;
-    padding: 1px !important;
+    background:#d7d493;
+    margin-left: 3px;
+    margin-bottom:-5px;
+    padding:1px !important;
 }
 
