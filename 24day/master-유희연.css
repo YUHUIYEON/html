@@ -31,9 +31,8 @@ body{
     float: left;
     margin: 0 0 20px 15px;
 }
-#threeColLayout #secondaryContent{
+#secondaryContent{
     width: 270px;
-    height: 500px;
     float: left;
     margin: 0 0 20px 15px;
 }
@@ -54,6 +53,9 @@ body{
 .cbb{
     background: #fff;
     padding: 5px 10px 15px;
+}
+#threeColLayout .cbb{
+    border-radius: 20px;
 }
 
 .cbSide{
@@ -105,15 +107,53 @@ h1{text-indent: -9999em;}
 h2{
     background: #e3e2aa;
     color: #999860;
+    padding: 2px;
 }
 h3{
     background: #efd044;
     display: inline;
     margin-left: 8px;
+    padding: 1px 2px;
+}
+.interview h3{
+    background: #d6d592;
+    margin-left: 0;
+}
+.newEvent h3{
+    background: #b590d3;
+    margin-left: 0;
+}
+.newInterview h3{
+    background: #c5ddc3;
+    margin-left: 2px;
+}
+.job h3{
+    background: #ff5de4;
+    margin-left: 3px;
 }
 p{margin: 5px 0 0 45px;}
+.interview p,
+.newEvent p{
+    margin-top: 0;
+}
 #sideContent p{margin-left: 0 !important;}
 .address-text{margin-top: 20px;}
+
+.linkText a,
+.underline{    
+    display: block;
+    color: #686765;    
+}
+.underline a{
+    margin: 5px 0 15px 0;
+    padding-bottom: 5px;
+    display: block;
+    border-bottom: 1px solid #686765;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+span{font-size: 10px;}
 .pageN>a{
     text-decoration: underline;
     border-left: 1px solid #4a4a4a;
@@ -133,10 +173,6 @@ p{margin: 5px 0 0 45px;}
     margin-right: 5px;
     text-decoration: underline;    
 }
-.gonews{
-    text-decoration: underline;
-}
-
 
 
 /* img style */
@@ -167,9 +203,14 @@ img{float: left;}
     left: -4px;
     top:-4px;
 }
-#threeColLayout .cbb ul li{
-    margin: 0 !important;
+.bigImg{
+    margin: 3px 0;
+    float: none; /* 위의 img{float: left;}때문에 bigImg 사이즈가 작으면 위로 올라가서 none을 줌 */
 }
+.interview img,
+.newEvent img,
+.job img,
+.newInterview img{border: 3px solid #bfbbb8;}
 
 
 /* form style */
