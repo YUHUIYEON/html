@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>박스모델링</title>
+<style>
+  #wrap{
+    width: 900px;
+    height: 600px;
+    background: #e5a0cb;
+    overflow: hidden;
+  }
+  .box{
+    width: 70px;
+    height: 70px;
+    background-color: #923d3d;
+    margin: 10px;
+    text-align: center;
+    color: #ffffff;
+    line-height: 70px;
+  }  
+  .box{
+    float: left;
+    line-height: 70px;
+  }
+  .box-inner{
+    float: left;
+    width: 480px;
+    /* border: 1px solid #cccccc; */
+  }
+  .box1{float: left;}
+  .box2{float: right; margin-right: 10px;}
+  .box3{float: right;}
+  
+</style>
+</head>
+<body>    
+    <div id="wrap">
+        <div class="box-inner">    
+            <div class="box box1">Box1</div>
+            <div class="box box2">Box2</div>
+        </div>    
+        <div class="box box3">Box3</div>
+    </div>
+</body>

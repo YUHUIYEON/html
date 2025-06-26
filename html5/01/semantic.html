@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱태그로 기본레이아웃 구성하기</title>
+    <link rel="stylesheet" href="master.css">
+</head>
+<body>
+<header id="mainHeader">
+    <h1>머릿말입니다.</h1>
+    <!-- 검색창 네비 로고 타이틀 등이 들어감 / 본문의 머리글로도 사용 가능  -->
+</header>    
+<nav id="mainNav">
+    <ul>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">HTML5</a></li>
+        <li><a href="#">HTML5</a></li>
+    </ul>
+    <!-- ul tag 다음에는 반드시 li tag 만 들어올 수 있음 / list가 여러개일때만 사용 -->
+    <!-- 주메뉴인 네비게이션을 의미합니다. -->
+</nav>
+<div id="contents">
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">서비스메뉴</a></li>
+                <li><a href="#">찾아오시는길</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- 
+        aside은 contents 즉 주내용과 별개인 내영을 작성할 때 필수요소가 아니므로 광고과 링크모음을 문서의 내용으로 넣을 때 씀 
+    -->
+    <main>
+        <article>
+            <header>
+                <hgroup>
+                    <h2>본문의 머릿말에 해당</h2>
+                    <h3>본문의 머릿말에 해당</h3>
+                </hgroup>
+                <!-- 제목태그들을 묶음처리할 때 사용 -->
+                <time>2025-06-26</time> 
+                <!-- 날짜표기 태그 -->
+            </header>
+            <section>
+                웹페이지의 색션에 해당하는 태그로 본문내용을 묶어주는 기능을 하는 태그입니다.
+            </section>
+            <figure>
+                <img src="Lighthouse.jpg" width="280" height="200" alt="등대">
+                <figcaption>Lighthouse</figcaption>
+            </figure>
+            <!-- figure 그림,도표,다이어그램 등의 글의 이해를 돕기위한 내용들을 나타내는 태그 -->
+            
+            <article>
+                웹페이지의 내용에 사용하는 태그입니다. 문서나 페이지, 사이트에서 독립적으로 배포 혹은 재사용할 수 있는 색션에 사용합니다.
+            </article>
+            <!-- 본문에서 주제에 맞는 내용을 기사 내용처럼 묶어서 작성, 단독으로 분리해서 재사용이 가능합니다. -->
+        </article>
+    </main>
+</div>
+<!-- 본문에는 section article aside tag가 있음 -->
+<footer>
+    <p>꼬릿말입니다.</p>
+</footer>
+</body>
+</html>
