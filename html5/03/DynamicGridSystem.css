@@ -1,0 +1,63 @@
+.container {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  overflow: hidden;
+  width: 100%;
+}
+.row [class*=span] {
+  float: left;
+  margin-left: 2%;
+}
+.row [class*=span]:first-child {
+  margin-left: 0;
+}
+.span_1 {
+  width: 6.5%;
+  *width: -43.5%;
+}
+.span_2 {
+  width: 15%;
+  *width: -35%;
+}
+.span_3 {
+  width: 23.5%;
+  *width: -26.5%;
+}
+.span_4 {
+  width: 32%;
+  *width: -18%;
+}
+.span_5 {
+  width: 40.5%;
+  *width: -9.5%;
+}
+.span_6 {
+  width: 49%;
+  *width: -1%;
+}
+.span_7 {
+  width: 57.5%;
+  *width: 7.5%;
+}
+.span_8 {
+  width: 66%;
+  *width: 16%;
+}
+.span_9 {
+  width: 74.5%;
+  *width: 24.5%;
+}
+.span_10 {
+  width: 83%;
+  *width: 33%;
+}
+.span_11 {
+  width: 91.5%;
+  *width: 41.5%;
+}
+.span_12 {
+  width: 100%;
+  *width: 50%;
+}
