@@ -1,0 +1,102 @@
+Rint Development
+
+HTML5+CSS3 Basic
+
+Web
+Mobile
+Game
+Simulation
+Data
+HTML5
+CSS3
+Javascript
+jQuery
+Node.js
+Here's a lovely picture of Dartmoor
+
+Here's a lovely picture of Dartmoor in Devon,England, where the ponies roam wild.On a sunny summer's day, it is a wonderful place to hike and enjoy the incredible views.
+
+Here's a lovely picture of Dartmoor
+
+Here's a lovely picture of Dartmoor in Devon,England, where the ponies roam wild.On a sunny summer's day, it is a wonderful place to hike and enjoy the incredible views.
+
+Here's a lovely picture of Dartmoor
+
+Here's a lovely picture of Dartmoor in Devon,England, where the ponies roam wild.On a sunny summer's day, it is a wonderful place to hike and enjoy the incredible views.
+
+  
+First Second
+<img src="http://placehold.it/45x45">
+HTML5 Canvas
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+HTML5 Video
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+HTML5 Audio
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+HTML5 Semantic Web
+2019-07-02
+ 
+<img src="http://placehold.it/45x45">
+CSS3 Transition
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+CSS3 Animation
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+CSS3 Border
+2019-07-02
+
+<img src="http://placehold.it/45x45">
+CSS3 Box
+2019-07-02
+
+HTML5+CSS3
+
+더조은컴퓨터학원
+주소 : 경기도 안양시 만안구 안양로 336 금강빌딩 8층
+
+낮은버전의 익스플로러에서 html5 tag을 인식시켜주는 기능
+<!--[if lt IE 9]> 조건주석시작
+<script src="http://html5shiv.googlecode.com/trunk/html5.js"></script>
+<![endif]-->조건주석 끝
+
+조건주석작성하는 방법
+</head>위에 아래와 같이 작성을 합니다.
+<!--[if condition]>  :  조건주석시작하기
+<![endif]-->         :  조건주석끝
+
+조건주석문을 작성하는 이유
+구버전의 ie에서 html5 tag가 제대로 작동하지 않는 문제 해결
+
+연산자 기호 알아보기
+!(not부정의 의미:아니다)
+lt(less than :작다),lte(작거나 같다.)
+gt(크다),gte(크거나 같다)
+&(and 그리고),&&(좌항과 우항이 둘다 참일때 실행)
+|(or : 또는) 둘중에 하나라도 참이면 참이다.
+
+
+
+
+웹폰트 사용하기
+https://fonts.google.com/
+search: Henny Penny
+html 문서에 넣기 코드
+<link href="https://fonts.googleapis.com/css?family=Henny+Penny" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Henny+Penny');
+</style>
+
+css문서에 넣기 코드
+@import url('https://fonts.googleapis.com/css?family=Henny+Penny');
+
+사용방법
+font-family: 'Henny Penny', cursive;

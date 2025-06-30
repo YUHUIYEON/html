@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>모바일 레이아웃</title>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="mainHeader">
+            <h1>Mobile</h1>
+            <a href="#" class="mbtn">Main</a>
+            <label for="toggle">Toggle</label>
+        </header>
+
+        <div class="toggle-wrap">
+            <div class="toggle">
+                <ul>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- width에 고정값을 지정하면 유동적으로 너비 조절이 안된다. -->
+
+        <nav class="top-gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>    
+        <!-- %로 지정을 함. 짝수일때는 %로 계산하기 쉽다. -->
+
+        <nav class="button-gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>    
+        <!-- display 속성으로 값을 table로 전환한다.  -->
+        
+        <section id="contents">
+            <header>
+                <h2>Lorem ipsum</h2>
+                <time>2025-06-30</time>
+            </header>
+            <article>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus. Nunc quis 
+                </p>
+                <br>
+                <p>
+                    lacus magna. Aliquam blandit, sapien ut viverra fermentum, elit tortor ornare nisi, in luctus sem massa pulvinar turpis. Cras tincidunt dictum urna ut ultricies. Nullam diam nibh, pellentesque non laoreet ut, bibendum nec mauris. Maecenas pulvinar 
+                </p>
+                <br>
+                <p>
+                    porttitor laoreet. Vivamus bibendum purus nisl, eget aliquam lectus. Maecenas justo libero, euismod sit amet suscipit eu, 
+                </p>
+                <br>
+                <p>
+                    vulputate eget neque. Aliquam quam est, blandit nec iaculis non, suscipit vel nunc. Proin et odio aliquam erat pharetra accumsan et quis neque. Vivamus interdum accumsan leo eu adipiscing.  
+                </p>
+                <br>
+                <p>
+                    Integer accumsan elit non turpis faucibus porttitor. Aliquam scelerisque nisi et turpis pretium at ultricies turpis pharetra. 
+                </p>
+                <br>
+            </article>
+        </section>
+
+        <footer id="mainFooter">
+            <p>HTML5+CSS3 Basic</p>
+            <p><em>Website Layout Basic</em></p>
+        </footer>
+    </div>
+</body>
+</html>
