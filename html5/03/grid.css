@@ -43,7 +43,7 @@
 	margin-bottom:1%;
 	border:1px solid green;
 	box-sizing:border-box;
-
+	
 }
 
 /* Grid >> Children (Alpha ~ First, Omega ~ Last)
@@ -343,7 +343,7 @@
 	display: inline-block;
 }
 
-/* 인터넷 버전이 낮을 때 사용 */
+/* 인터넷 버전이 낮을 때 */
 * html .clearfix {
 	height: 1%;
 }
