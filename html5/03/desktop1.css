@@ -1,0 +1,12 @@
+@media screen and (min-width:768px) and (max-width:1024px){
+    body{
+        font-family: serif;
+        font-size: 30px;
+        color: #fff;
+        background: green;
+    }
+    h2{
+        font-size: 60px;
+        color: #fff;
+    }
+}
