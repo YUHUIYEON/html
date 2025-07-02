@@ -7,7 +7,7 @@
     src:url('font/NanumGothic.woff') format('woff');     
 }
 @font-face{
-    font-family:'NanumGothicExtraBold';
+    font-family:'NGothicEB';
     src:url('font/NanumGothicExtraBold.woff') format('woff');
 }
 
@@ -67,9 +67,9 @@ img{vertical-align: top;}
         color: #fff;
         display: block;
     }
-    #lnb>ul>li:hover>a.mm{
+    /* #lnb>ul>li:hover>a.mm{
         background: url(../images/over_icon.gif)no-repeat 50% 100%;
-    }
+    } */
     #lnb>ul>li>ul{
         position: absolute;
         left:40px;
@@ -77,7 +77,7 @@ img{vertical-align: top;}
         padding: 5px 0;
         display: none;
     }
-    #lnb>ul>li:hover>ul{display: block;}
+    /* #lnb>ul>li:hover>ul{display: block;} */
     #lnb>ul>li.m1>ul{left:38px;}
     #lnb>ul>li.m2>ul{left:230px;}
     #lnb>ul>li.m3>ul{left:402px;}
@@ -110,14 +110,55 @@ img{vertical-align: top;}
         left: 50%;
         top: 105px;
         margin-left: -459px;
-        /* display: none; */
+        display: none;
         z-index: 100;
     }
+    #allMenu_box>ul{width: 100%;}
+    #allMenu_box>ul::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    /* afterf를 이용한 clear: both. 내용은 없지만 가상으로 있다고 생각하고 display를 넣으면 영역이 잡혀서 치고올라오지않음. 끝나는 부분은 항상 넣는다. 안치고 올라와도 준다.  */
+
+    #allMenu_box>ul>li{
+        float: left;
+        width: 140px;
+        padding: 0 30px;
+    }
+    #allMenu_box>ul>li>a{
+        font: 16px 'NGothicEB', 'Gulim';
+        color: #555;
+    }
+    #allMenu_box>ul>li>ul{
+        padding-top: 20px;
+        width: 100%;
+    }
+    #allMenu_box>ul>li>ul>li{
+        width: auto;
+        padding: 5px 0;
+        border-bottom: 1px dashed #ccc;
+    }
+    #allMenu_box>ul>li>ul>li>a{
+        font: 14px 'NGothicEB', 'Gulim';
+        color: #aaa;
+    }
+    .all_close{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
+        background: #369;
+        color: #fff;
+    }
+    .all_close:hover{color: #ccc;}
+    
+
+
+
+
+
 }
-
-
-
-
 
 /*768~1023 일때=>테블릿*/
 @media screen and (min-width:768px) and (max-width:1023px){
