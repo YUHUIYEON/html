@@ -27,12 +27,29 @@
             //주메뉴에서 마우스를 아웃했을 때 안보이게 함
             //mouseleave=아웃 / 이벤트가 1개일 때는 바로 써도됨. 위에는 이벤트가 2개여서 .bind를 함.
             $('#lnb').mouseleave(function(){ 
-                $('#lnb>ul>li>ul').stop().slideUp(50); //slideUp=천천히 올라감 / ()안에는 데이터(값)가 들어감. 여기서는 50이 시간임. 
+                $('#lnb>ul>li>ul').stop().slideUp(50); //slideUp=천천히 올라감 / ()안에는 데이터(값)가 들어감. 여기서는 50이 시간임(ms). / .stop은 다른 메뉴에 마우스가 갔을 때 기존꺼는 멈춘다.
                 $('#lnb>ul>li>a').css({  
                     'height':'29px', 
                     'background':'none'    
                 });            
             }); 
+
+            //allMenu_view 클릭했을 때 allMenu_box가 보이게
+            $('.allMenu_view>a').click(function(){
+                $('.allMenu_view').slideUp(50,function(){
+                    $('#allMenu_box').slideDown('slow'); //시간 대신 slow 넣음
+                })
+            });
+
+            //all_close 클릭했을 때 allMenu_box가 안보이게 
+            $('.all_close').click(function(){
+                $('#allMenu_box').slideUp('slow',function(){    
+                    $('.allMenu_view').slideDown(50);
+                });                
+            });
+
+            //btn_next를 클릭했을 때 #bannNum++ ->bannNum+1씩 증가라는 뜻(증가연산) / ++이 앞에오면 +1이 먼저임 / 한번쓸때는 결과 똑같다. / -는(증감연산)
+            
         });
     </script>
 </head>
@@ -125,7 +142,67 @@
         </ul>
         <a href="#" class="all_close">전체매뉴닫기</a>
     </nav>
-</header>    
+</header>   
+
+<section id="recomn-book"> <!--1003px viewer frame -->
+    <div id="book_frame" title="신간추천"> <!-- 2006px slide 대상/1개당 1003px-->
+        <div id="book_content1" class="bookcon">
+            <h2>
+                <img src="images/newbook1_tit.gif" alt="안드로이드로 용돈벌기">
+            </h2>
+            <ul>
+                <li class="pic">
+                    <img src="images/new_book1.jpg" alt="초보가 고수되기1 안드로이드로 용돈벌기">
+                </li>
+                <li class="smr">
+                    <img src="images/newbook1_exp.gif" alt="구글 안드로이드 마켓에 등록된 4가지 상용앱 '핑거러너 / 기웃 / 동물원 / 랭킹' 등의 풀 소스를 활용하여 설명하고, 여러 Tip과 Note를 함께 제공합니다.">
+                </li>
+                <li class="detail">
+                    <a href="#">
+                        <img src="images/detile_view.gif" alt="자세히 알아보기">
+                    </a>                    
+                </li>
+            </ul>
+        </div>
+        <div id="book_content2" class="bookcon">
+            <h2>
+                <img src="images/newbook2_tit.gif" alt="아이폰으로 용돈벌기">
+            </h2>
+            <ul>
+                <li class="pic">
+                    <img src="images/new_book2.jpg" alt="초보가 고수되기2 아이폰으로 용돈벌기">
+                </li>
+                <li class="smr">
+                    <img src="images/newbook2_exp.gif" alt="앱스토어에 등록된 4가지 상용앱 'Dailypen/Back&Wall/Weatherboy/기웃 등의 풀 소스를 활용하여 설명하고, 여러 Tip과 Note를 함께 제공합니다.">
+                </li>
+                <li class="detail">
+                    <a href="#">
+                        <img src="images/detile_view.gif" alt="자세히 알아보기">
+                    </a>                    
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="arrow"> <!--화살표 좌우-->
+        <a href="#" class="prev"><img src="images/btn_prev.gif"></a>
+        <a href="#" class="next"><img src="images/btn_next.gif"></a>
+    </div>
+    <div id="book_roll"> <!--페이지 넘기기 버튼-->
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="images/state_over.png" class="firstactive">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/state_out.png" class="firstactive">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+
 </body>
 </html>
 <!-- 

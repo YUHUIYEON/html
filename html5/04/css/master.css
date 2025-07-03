@@ -152,13 +152,81 @@ img{vertical-align: top;}
         color: #fff;
     }
     .all_close:hover{color: #ccc;}
-    
 
+    /* banner slider style */
+    #recomn-book{
+        position: relative;
+        width: 1003px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        overflow: hidden;
+        border: 1px solid salmon;
+    }
+    #book_frame{
+        position: relative;
+        width: 200%;
+        left: 0;
+    }
+    #book_frame::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .bookcon{
+        float: left;
+        width: 50%;
+        padding-top: 30px;
+    }
+    .bookcon::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .bookcon>h2{
+        text-align: right;
+        padding-right: 48px;
+    }
+    .bookcon>ul{width: 100%;}
+    .bookcon>ul::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .bookcon>ul>li.pic{
+        position: relative;
+        float: left;
+        left: 40px; /*-50이었는데 40으로 바꿨음*/
+        bottom: 30px; /*추가했음*/
+        width: 273px;
+        padding-left: 50px;
+    }
+    .bookcon>ul>li.smr{
+        float: right;
+        width: 489px;
+        padding: 50px 50px 0 0;
+    }
+    .bookcon>ul>li.detail{
+        float: right;
+        width: 471px;
+        padding: 50px 65px 0;
+    }
+    #arrow>a{
+        position: absolute;
+        top: 130px;
+    }
+    #arrow>a.prev{left: 0;}
+    #arrow>a.next{right: 0;}
+    #book_roll{
+        position: absolute;
+        left: 49%;
+        bottom: 10px;
+    }
+    #book_roll>ul>li{
+        float: left;
+        margin-right: 5px;
+    }
 
-
-
-
-}
+}   
 
 /*768~1023 일때=>테블릿*/
 @media screen and (min-width:768px) and (max-width:1023px){
