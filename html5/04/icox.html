@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="css/master.css">
     <script src="js/jquery.js"></script> <!--1. 제이쿼리 라이브러리 넣기-->
     <script>
-        //2. wrapper 선언하기(스크립트 묶어주는 용도) 
-        // 간략형 : $(function(){실행할 문장작성;})
+        /* 2. wrapper 선언하기(스크립트 묶어주는 용도) 
+        간략형 : $(function(){실행할 문장작성;})
+        구문형식 : $('제어대상').메서드(); */
         $(function(){
-            ;
+            $('#lnb>ul>li>a').bind('mouseover focus', function(){
+                $('#lnb>ul>li>ul').hide(); //서브메뉴의 초기값
+                $('').css();
+                $().show();
+            });
         })
     </script>
 </head>
