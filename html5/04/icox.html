@@ -13,10 +13,17 @@
         $(function(){
             $('#lnb>ul>li>a').bind('mouseover focus', function(){
                 $('#lnb>ul>li>ul').hide(); //서브메뉴의 초기값
-                $('').css();
-                $().show();
+                $('#lnb>ul>li>a').css({  //master.css / {}=그룹핑하는 것
+                    'height':'29px', //'속성':'값',
+                    'background':'none'
+                });
+                $('#lnb>ul>li>ul').show();
+                $('#lnb>ul>li>a').css({ 
+                    'height':'32px', 
+                    'background':'url(images/over_icon.gif)no-repeat 50% 100%'
+                });
             });
-        })
+        });
     </script>
 </head>
 <body>
