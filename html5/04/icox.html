@@ -61,6 +61,8 @@
                     $('#book_roll img').eq($bannNum).attr('src','images/state_over.png'); //변경값
                 });
             });
+
+            // btn_prev을 클릭했을 때 $bannNum--(1씩 감소) 1003px 감소
             $('.prev').click(function(){
                 if($bannNum <=0) return false; 
                 $bannNum--;
@@ -219,6 +221,41 @@
                     <img src="images/state_out.png" class="firstactive">
                 </a>
             </li>
+        </ul>
+    </div>
+</section>
+
+<section id="content">
+    <div id="login-banner">
+        <div id="login-area">
+            <h2><img src="images/userlogin.gif" alt="user login"></h2>
+            <form method="post" class="iform">
+                <fieldset>
+                    <legend class="skip">로그인</legend>
+                    <p class="formsection">
+                        <label class="skip" for="u_id">아이디</label>
+                        <input type="text" placeholder="아이디 입력" id="u_id" class="tbox">
+                    </p>
+                    <p class="formsection">
+                        <label class="skip" for="u_pw">패스워드</label>
+                        <input type="password" placeholder="패스워드 입력" id="u_pw" class="tbox">
+                    </p>
+                    <p class="formsection login-btn">
+                        <!-- <input type="image" src="images/btn_login.gif" alt="로그인"> -->
+                        <a href="#">로그인</a>
+                    </p>
+                    <ul>
+                        <li class="find"><a href="#">아이디/비밀번호 찾기</a></li>
+                        <li class="join"><a href="#">회원가입</a></li>
+                    </ul>
+                </fieldset>
+            </form>
+        </div>
+        <ul id="banner-area">
+            <li><a href="#"><img src="images/banner1.gif" alt="독자문의"></a></li>
+            <li><a href="#"><img src="images/banner2.gif" alt="자격증 시험일정"></a></li>
+            <li><a href="#"><img src="images/banner3.gif" alt="도서목록 다운로드"></a></li>
+            <li><a href="#"><img src="images/banner4.gif" alt="저자모집"></a></li>
         </ul>
     </div>
 </section>
