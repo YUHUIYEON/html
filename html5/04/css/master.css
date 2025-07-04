@@ -160,7 +160,7 @@ img{vertical-align: top;}
         margin: 0 auto;
         padding-bottom: 10px;
         overflow: hidden;
-        border: 1px solid salmon;
+        /* border: 1px solid salmon; */
     }
     #book_frame{
         position: relative;

@@ -11,6 +11,8 @@
         간략형 : $(function(){실행할 문장작성;})
         구문형식 : $('제어대상').메서드(); */
         $(function(){
+            var $bannNum=0; //변수선언 초기값
+
             //주메뉴에서 마우스를 호버했을 때 백그라운드와 '#lnb>ul>li>ul' 보임
             $('#lnb>ul>li>a').bind('mouseover focus', function(){
                 $('#lnb>ul>li>ul').hide(); //서브메뉴의 초기값
@@ -48,8 +50,17 @@
                 });                
             });
 
-            //btn_next를 클릭했을 때 #bannNum++ ->bannNum+1씩 증가라는 뜻(증가연산) / ++이 앞에오면 +1이 먼저임 / 한번쓸때는 결과 똑같다. / -는(증감연산)
-            
+            //btn_next를 클릭했을 때 $bannNum++ ->bannNum+1씩 증가라는 뜻(증가연산) / ++이 앞에오면 +1이 먼저임 / 한번쓸때는 결과 똑같다. / -는(증감연산)
+            $('.next').click(function(){
+                $bannNum++;
+                var $book_w=$('#recomn-book').width();
+                $('#book_frame').animate({left:-$book_w*$bannNum},400);
+            });
+            $('.prev').click(function(){
+                $bannNum--;
+                var $book_w=$('#recomn-book').width();
+                $('#book_frame').animate({left:-$book_w*$bannNum},400);
+            });
         });
     </script>
 </head>
@@ -213,4 +224,7 @@
 
 자바스크립트 라이브러리 및 프레임 워크는 제이쿼리, 뷰, 앵글러, 리액트 등등이 있다.
 제이쿼리는 자바스크립트 라이브러리 이므로 맨 먼저 라이브러리 경로 지정을 해야한다.
+
+매서드형식
+animate({CSS속성정의},시간,콜백함수);
 -->
