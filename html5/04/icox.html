@@ -52,14 +52,23 @@
 
             //btn_next를 클릭했을 때 $bannNum++ ->bannNum+1씩 증가라는 뜻(증가연산) / ++이 앞에오면 +1이 먼저임 / 한번쓸때는 결과 똑같다. / -는(증감연산)
             $('.next').click(function(){
+                if($bannNum >=1) return false; 
+                //if(조건식){참일때 실행할 문장;} / 조건이 참일 때만 실행, 거짓일때는 아무것도 실행안함
                 $bannNum++;
                 var $book_w=$('#recomn-book').width();
-                $('#book_frame').animate({left:-$book_w*$bannNum},400);
+                $('#book_frame').animate({left:-$book_w*$bannNum},400,function(){
+                    $('#book_roll img').attr('src','images/state_out.png'); //초기값
+                    $('#book_roll img').eq($bannNum).attr('src','images/state_over.png'); //변경값
+                });
             });
             $('.prev').click(function(){
+                if($bannNum <=0) return false; 
                 $bannNum--;
                 var $book_w=$('#recomn-book').width();
-                $('#book_frame').animate({left:-$book_w*$bannNum},400);
+                $('#book_frame').animate({left:-$book_w*$bannNum},400,function(){
+                    $('#book_roll img').attr('src','images/state_out.png'); //초기값
+                    $('#book_roll img').eq($bannNum).attr('src','images/state_over.png'); //변경값
+                });
             });
         });
     </script>
