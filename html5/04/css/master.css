@@ -226,6 +226,79 @@ img{vertical-align: top;}
         margin-right: 5px;
     }
 
+    /* content style */
+    #content{
+        width: 1003px;
+        margin:  0 auto;
+        border-top: 3px double #ccc;
+        padding: 30px 0;
+    }
+    #content::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+
+    /* login-banner style */
+    #login-banner{
+        width: 201px;
+        float: left;
+        padding: 0 0 35px 10px;
+    }
+    #login-area>h2{height: 33px;}
+    #login-area form{
+        position: relative;
+        width: 100%;
+    }
+    #login-area form fieldset{
+        padding: 10px 15px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    #login-area form .formsection{padding: 2px 0 3px;}
+    #login-area form .tbox{
+        width: 94px;
+        height: 22px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+    }
+    #login-area form .login-btn{
+        position: absolute;
+        right: 15px;
+        top: 11px;        
+    }
+    #login-area form .login-btn>a{
+        width: 54px;
+        height: 37px;
+        padding-top: 20px;
+        display: block;
+        background: #09f;
+        background-image: linear-gradient(top,#09f,#07a); 
+        /*(방향, 첫번째 컬러, 마지막 컬러)* 접두사를 넣어야함. 크롬은 -webkit */
+        background-image:-webkit-linear-gradient(top,#09f,#07a);
+        border-radius: 7px;
+        border: 1px solid #069;
+        color: #fff;
+        text-align: center;
+    }
+    #login-area form ul{padding: 10px 0 5px;}
+    #login-area form ul::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    #login-area form ul li.find{float: left;}
+    #login-area form ul li.join{float: right;}
+    #login-area form ul li a{
+        font: 12px "NGothic",Gulim;
+        color: #999;
+    }
+    #login-area form ul li a:hover{color: #333;}
+    #banner-area{padding-top: 10px;}
+    #banner-area li{
+        padding-top: 5px;
+        text-align: center;
+    }
 }   
 
 /*768~1023 일때=>테블릿*/
