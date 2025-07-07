@@ -290,7 +290,7 @@ img{vertical-align: top;}
     #login-area form ul li.find{float: left;}
     #login-area form ul li.join{float: right;}
     #login-area form ul li a{
-        font: 12px "NGothic",Gulim;
+        font: 12px "NanumGothic",Gulim;
         color: #999;
     }
     #login-area form ul li a:hover{color: #333;}
@@ -299,6 +299,88 @@ img{vertical-align: top;}
         padding-top: 5px;
         text-align: center;
     }
+
+    /* newBooks-news style */
+    #newBooks-news{
+        float: left;
+        width: 470px;
+        margin-left: 35px;
+        position: relative;
+    }
+    #newBooks-news .tit{
+        position: absolute;
+        top: 0;
+    }
+    #newBooks-news .t1{right:131px;}
+    #newBooks-news .t2{right: 11px;}
+    .item1{
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
+    }
+    a.rss{
+        display: inline-block;
+        margin-top: 40px;
+    }
+    .booklist{
+        font: 13px/18px "NanumGothic", Gulim;
+    }
+    .booklist::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .booklist h3{
+        float: left;
+        width: 85px;
+        padding: 0 0 0 10px;
+    }
+    .booklist p.subtit{
+        float: right;
+        width: 340px;
+        padding-right: 10px;
+        color: #333;
+    }
+    .booklist p.smr{
+        float: right;
+        width: 340px;
+        padding: 10px 10px 10px 0;
+        color: #999;
+    }
+    .booklist footer{
+        float: right;
+        width: 340px;
+        padding-right: 10px;
+    }
+    .booklist footer strong{color: #f60;}
+    .item2{display: none;}    
+    #new_list{
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
+        padding-top: 40px;
+    }
+    #new_list ul{padding: 0 10px;}
+    #new_list ul li{
+        position: relative;
+        width: 100%;
+        padding: 8px 0;
+        border-bottom: 1px solid #ccc;
+        font: 13px "NanumGothic", Gulim;
+    }
+    #new_list ul li a{
+        padding-left: 10px;
+        color: #999;
+        background: url(../images/bul_icon.gif) no-repeat 0 50%;
+    }
+    #new_list ul li span{
+        position: absolute;
+        right: 10px;
+        color: #868686;
+    }
+    #new_list ul li a:hover{color: #069;}
+    
+
+
+
 }   
 
 /*768~1023 일때=>테블릿*/

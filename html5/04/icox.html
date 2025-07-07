@@ -72,7 +72,19 @@
                     $('#book_roll img').eq($bannNum).attr('src','images/state_over.png'); //변경값
                 });
             });
-        });
+
+            // tab menu
+            $('.t1>a, .t2>a').bind('focus click', function(e){
+                e.preventDefault(); //새창띄우기를 기본값으로
+                $('.item1, .item2').hide(); //초기값
+                $(this).parent().next().show(); //변경값
+                $('.tit>a>img').each(function(){ //반복실행 메서드 each
+                    $(this).attr('src',$(this).attr('src').replace('_over.gif','.gif')); 
+                }); 
+                $btnImg=$(this).children('img');
+                $btnImg.attr('src', $btnImg.attr('src').replace('.gif','_over.gif'));
+            });
+        });        
     </script>
 </head>
 <body>
@@ -258,6 +270,104 @@
             <li><a href="#"><img src="images/banner4.gif" alt="저자모집"></a></li>
         </ul>
     </div>
+    
+    <div id="newBooks-news">
+        <section>
+            <h2 class="tit t1">
+                <a href="#">
+                    <img src="images/tit_newbook_over.gif" alt="새로나온 책">
+                </a>
+            </h2>
+            <div class="items item1">
+                <a href="#" class="rss">
+                    <article id="newbook_list1" class="booklist">
+                        <header>
+                            <h3>
+                                <img src="images/newbook1.gif" alt="안드로이드로 용돈벌기">
+                            </h3>
+                        </header>
+                        <p class="subtit">
+                            <strong>PHP/JSP/ASP와 같은 스크립트 언어...</strong>
+                        </p>
+                        <p class="smr">
+                            가히 아이폰, 안드로이드 앱이 “문화를 바꾸었다”고 할 수 있을 정도로, 이제 휴대폰과 앱은 따로 분리해서 생각하기 어려워졌으며 스마트폰의 유저는 본인이 원하는...
+                        </p>
+                        <footer>
+                            <span>작성자 : </span>
+                            <span>한혜진님</span>
+                            <span><img src="images/star.gif" alt="구독자 별점"></span>
+                            <span><strong>5점</strong></span>
+                        </footer>
+                    </article>                    
+                </a>
+                <a href="#" class="rss">
+                    <article id="newbook_list2" class="booklist">
+                        <header>
+                            <h3>
+                                <img src="images/newbook2.gif" alt="아이폰으로 용돈벌기">
+                            </h3>
+                        </header>
+                        <p class="subtit">
+                            <strong>iOS의 다양한 오픈소스를 활용하는 방...</strong>
+                        </p>
+                        <p class="smr">
+                            iOS 개발이 개발자들 사이에서 인기를 얻기 시작하면서 시중에 많은 책들이 등장했지만, 막상 실제 앱을 개발하려고 하면 어려운 점이 많습니다. 일례로 개발지식만 다...
+                        </p>
+                        <footer>
+                            <span>작성자 : </span>
+                            <span>김승민님</span>
+                            <span><img src="images/star.gif" alt="구독자 별점"></span>
+                            <span><strong>5점</strong></span>
+                        </footer>
+                    </article>                    
+                </a>
+            </div>
+
+            <h2 class="tit t2">
+                <a href="#">
+                    <img src="images/tit_news.gif" alt="새로나온 소식">
+                </a>
+            </h2>
+            <div class="items item2">
+                <div id="new_list">
+                    <ul>
+                        <li>
+                            <a href="#">성공적인 프로젝트을 위해 기획...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">좋은 책의 의미와 선택에 대한...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">고수가 되어라! 그러면 변화는...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">'초보자 고수되기' 시리즈 출간...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">여행과 지식을 함께 하는 삶의...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">열심히 일한 당신을 위한 휴식...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">집에서 직장을 겸하는 재택근무...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                        <li>
+                            <a href="#">새로운 기획에 확실한 기회가...</a>
+                            <span>2025-07-07</span>
+                        </li>
+                    </ul>     
+                </div>                      
+            </div>
+        </section>
+    </div>
 </section>
 
 </body>
@@ -272,5 +382,17 @@
 제이쿼리는 자바스크립트 라이브러리 이므로 맨 먼저 라이브러리 경로 지정을 해야한다.
 
 매서드형식
+// 애니메이션 메서드
 animate({CSS속성정의},시간,콜백함수);
+
+
+*each() 메서드 / array 데이터를 반복실행
+// 유틸리티 메서드
+$.each(object, function(index, item){
+});
+
+// 일반 메서드
+$(selector).each(function(index, item){
+})
+
 -->
