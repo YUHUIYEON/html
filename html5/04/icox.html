@@ -26,6 +26,7 @@
                     'background':'url(images/over_icon.gif)no-repeat 50% 100%'
                 });
             });
+
             //주메뉴에서 마우스를 아웃했을 때 안보이게 함
             //mouseleave=아웃 / 이벤트가 1개일 때는 바로 써도됨. 위에는 이벤트가 2개여서 .bind를 함.
             $('#lnb').mouseleave(function(){ 
@@ -35,6 +36,8 @@
                     'background':'none'    
                 });            
             }); 
+
+
 
             //allMenu_view 클릭했을 때 allMenu_box가 보이게
             $('.allMenu_view>a').click(function(){
