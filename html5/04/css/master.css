@@ -378,9 +378,52 @@ img{vertical-align: top;}
     }
     #new_list ul li a:hover{color: #069;}
     
+    /* down-author style */
+    #down-author{
+        float: right;
+        width: 248px;
+        padding: 0 10px 0 0;
+    }
+    #author_column h2{padding: 10px 0;}
+    #down-author ul li a{
+        font: 12px "NanumGothic", Gulim;
+        color: #999;
+    }
+    .nscreen{padding-top: 10px;}
+    .nscreen span{
+        font-family: "NGothicEB";
+        display: block;
+    }
 
-
-
+    /* footer style */
+    #realFooter{
+        background: url(../images/foot_bg.gif) repeat-x 0 0;
+    }
+    .foot{
+        width: 1003px;
+        margin: 0 auto;
+        padding: 20px 0;
+    }
+    .foot::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    .foot>div{
+        float: left;
+        width: 500px;
+        color: #999;
+    }
+    .foot>div>p{font: 12px/20px "NanumGothic", Gulim;}
+    .foot>div>.copy{
+        padding-top: 20px;
+        display: block;
+    }
+    .foot ul{float: right;}
+    .foot ul li{
+        display: inline;
+        margin: 0 15px;
+    }
 }   
 
 /*768~1023 일때=>테블릿*/
