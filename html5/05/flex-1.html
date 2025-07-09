@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 알아보기</title>
+</head>
+<style>
+    .container{
+        width: 700px;
+        background: #eee;
+        border: 1px solid #222;
+        margin-bottom: 30px;
+        display: flex;
+        /* 자식 요소를 가로, 세로 방향으로 정렬할 때는 부모요소에 flex을 지정합니다. */
+    }
+    .box{
+        width: 150px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        margin: 20px 10px;
+        background: orange;
+    }
+    .box2{background: green;}
+    .box3{background: salmon;}
+
+    #opt1{flex-direction: row;} /* 기본값/생략가능 */
+    #opt2{flex-direction: row-reverse;}
+    #opt3{flex-direction: column;}
+    #opt4{flex-direction: column-reverse;}
+    /* flex-direction은 주축의 방향(x(row),y(column))을 바꿔준다. */
+</style>
+<body>
+    <div class="container" id="opt1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
