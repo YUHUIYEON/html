@@ -26,7 +26,7 @@ img{vertical-align: top;}
         margin:0 auto;
         position: relative;
     }
-    header#firstHeader>h1{padding:12px 0 35px;}
+    header#firstHeader>h1{padding:30px 0 35px;}
     #sform{
         position: absolute;
         right: 0;
@@ -67,9 +67,9 @@ img{vertical-align: top;}
         color: #fff;
         display: block;
     }
-    /*#lnb>ul>li:hover>a.mm{
+    /* #lnb>ul>li:hover>a.mm{
         background: url(../images/over_icon.gif)no-repeat 50% 100%;
-    }*/
+    } */
     #lnb>ul>li>ul{
         position: absolute;
         left:40px;
@@ -77,7 +77,7 @@ img{vertical-align: top;}
         padding: 5px 0;
         display: none;
     }
-    /*#lnb>ul>li:hover>ul{display: block;}*/
+    /* #lnb>ul>li:hover>ul{display: block;} */
     #lnb>ul>li.m1>ul{left:38px;}
     #lnb>ul>li.m2>ul{left:230px;}
     #lnb>ul>li.m3>ul{left:402px;}
@@ -89,325 +89,346 @@ img{vertical-align: top;}
         height: auto;
     }
     #lnb>ul>li>ul>li>a{display: block;}
-    .allMenu_view{float:left; width:178px;}
+    .allMenu_view{
+        float: left;
+        width: 178px;        
+    }
     .allMenu_view>a{
         display: block;
-        width:100%;
+        width: 100%;
         line-height: 39px;
-        background:#3da6d9 url(../images/btn_allmenu.gif)no-repeat 50% 0;
+        background: #3da6d9 url(../images/btn_allmenu.gif)no-repeat 50% 0;
         text-align: center;
         color: #fff;
     }
     #allMenu_box{
-        width:850px;
-        padding:15px 30px;
-        border:4px solid #369;
+        width: 850px;
+        padding: 15px 30px;
+        border: 4px solid #369;
         background: #fff url(../images/allMenu_bg.gif)repeat-x 0 0;
         position: absolute;
-        left:50%;
-        top:105px;
-        margin-left:-459px;
+        left: 50%;
+        top: 105px;
+        margin-left: -459px;
         display: none;
         z-index: 100;
     }
-    #allMenu_box>ul{width:100%}
-    #allMenu_box>ul:after{
+    #allMenu_box>ul{width: 100%;}
+    #allMenu_box>ul::after{
         content: '';
-        clear:both;
+        clear: both;
         display: block;
     }
+    /* afterf를 이용한 clear: both. 내용은 없지만 가상으로 있다고 생각하고 display를 넣으면 영역이 잡혀서 치고올라오지않음. 끝나는 부분은 항상 넣는다. 안치고 올라와도 준다.  */
+
     #allMenu_box>ul>li{
         float: left;
-        width:140px;
-        padding:0 30px;
+        width: 140px;
+        padding: 0 30px;
     }
     #allMenu_box>ul>li>a{
-        font:16px 'NGothicEB','Gulim';
-        color:#555;
+        font: 16px 'NGothicEB', 'Gulim';
+        color: #555;
     }
     #allMenu_box>ul>li>ul{
-        padding-top:20px;
-        width:100%;
+        padding-top: 20px;
+        width: 100%;
     }
     #allMenu_box>ul>li>ul>li{
-        width:auto;
-        padding:5px 0;
-        border-bottom:1px dashed #ccc;
+        width: auto;
+        padding: 5px 0;
+        border-bottom: 1px dashed #ccc;
     }
     #allMenu_box>ul>li>ul>li>a{
-        font:14px 'NGothicEB','Gulim';
-        color:#aaa;
+        font: 14px 'NGothicEB', 'Gulim';
+        color: #aaa;
     }
     .all_close{
         position: absolute;
-        right:0;
-        bottom:0;
-        padding:5px;
+        right: 0;
+        bottom: 0;
+        padding: 5px;
         background: #369;
-        color:#fff;
+        color: #fff;
     }
-    .all_close:hover{color:#ccc;}
+    .all_close:hover{color: #ccc;}
 
-    /*banner slider style*/
+    /* banner slider style */
     #recomn-book{
-       position: relative; 
-       width:1003px;
-       margin:0 auto;
-       padding-bottom: 10px;
-       /*overflow: hidden;*/
-       /*border:1px solid red;*/
+        position: relative;
+        width: 1003px;
+        margin: 0 auto;
+        padding-bottom: 10px;
+        overflow: hidden;
+        /* border: 1px solid salmon; */
     }
     #book_frame{
         position: relative;
-        width:200%;
-        left:0;
+        width: 200%;
+        left: 0;
     }
     #book_frame::after{
-        content:'';
-        clear:both;
+        content: '';
+        clear: both;
         display: block;
-     }
+    }
     .bookcon{
-        float:left;
-        width:50%;
-        padding-top:30px;
+        float: left;
+        width: 50%;
+        padding-top: 30px;
     }
     .bookcon::after{
-        content:'';
-        clear:both;
+        content: '';
+        clear: both;
         display: block;
     }
     .bookcon>h2{
-        text-align: right; 
+        text-align: right;
         padding-right: 48px;
     }
-    .bookcon>ul{width:100%;}
-    .bookcon>ul:after{
-        content:'';
-        clear:both;
+    .bookcon>ul{width: 100%;}
+    .bookcon>ul::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .bookcon>ul>li.pic{
         position: relative;
-        float:left;
-        left:-50px;
-        width:273px;
-        padding-left:50px;
+        float: left;
+        left: 40px; /*-50이었는데 40으로 바꿨음*/
+        bottom: 30px; /*추가했음*/
+        width: 273px;
+        padding-left: 50px;
     }
     .bookcon>ul>li.smr{
-        float:right;
-        width:489px;
-        padding:50px 50px 0 0;
+        float: right;
+        width: 489px;
+        padding: 50px 50px 0 0;
     }
     .bookcon>ul>li.detail{
-        float:right;
-        width:471px;
-        padding:50px 65px 0;
+        float: right;
+        width: 471px;
+        padding: 50px 65px 0;
     }
     #arrow>a{
         position: absolute;
-        top:160px;
+        top: 130px;
     }
-    #arrow>a.prev{left:0;}
-    #arrow>a.next{right:0;}
+    #arrow>a.prev{left: 0;}
+    #arrow>a.next{right: 0;}
     #book_roll{
         position: absolute;
-        left:49%;
-        bottom:10px;
+        left: 49%;
+        bottom: 10px;
     }
     #book_roll>ul>li{
-        float:left;
-        margin-right:3px;
+        float: left;
+        margin-right: 5px;
     }
 
-    /*content style*/
+    /* content style */
     #content{
-        width:1003px;
-        margin:0 auto;
-        border-top:3px double #ccc;
-        padding:30px 0;
+        width: 1003px;
+        margin:  0 auto;
+        border-top: 3px double #ccc;
+        padding: 30px 0;
     }
-    #content:after{
-        content:'';
-        clear:both;
+    #content::after{
+        content: '';
+        clear: both;
         display: block;
     }
 
-    /*login-banner style*/
+    /* login-banner style */
     #login-banner{
-        width:201px;
-        float:left;
-        padding:0 0 35px 10px;
+        width: 201px;
+        float: left;
+        padding: 0 0 35px 10px;
     }
-    #login-area>h2{height:33px;}
+    #login-area>h2{height: 33px;}
     #login-area form{
         position: relative;
-        width:100%;
+        width: 100%;
     }
     #login-area form fieldset{
-        padding:10px 15px;
-        border:1px solid #ccc;
+        padding: 10px 15px;
+        border: 1px solid #ccc;
         box-sizing: border-box;
     }
-    #login-area form .formsection{padding:2px 0 3px;}
+    #login-area form .formsection{padding: 2px 0 3px;}
     #login-area form .tbox{
-        width:94px;
+        width: 94px;
         height: 22px;
-        border-radius:4px;
-        border:1px solid #ccc;
-
+        border-radius: 4px;
+        border: 1px solid #ccc;
     }
     #login-area form .login-btn{
         position: absolute;
-        right:15px;
-        top:11px;
+        right: 15px;
+        top: 11px;        
     }
     #login-area form .login-btn>a{
-        width:54px;
+        width: 54px;
         height: 37px;
-        padding-top:20px;
+        padding-top: 20px;
         display: block;
-        background:#09f;
-        background-image: linear-gradient(top,#09f,#07a);
-        background-image: -webkit-linear-gradient(top,#09f,#07a);
-        border-radius:7px;
-        border:1px solid #069;
-        color:#fff;
+        background: #09f;
+        background-image: linear-gradient(top,#09f,#07a); 
+        /*(방향, 첫번째 컬러, 마지막 컬러)* 접두사를 넣어야함. 크롬은 -webkit */
+        background-image:-webkit-linear-gradient(top,#09f,#07a);
+        border-radius: 7px;
+        border: 1px solid #069;
+        color: #fff;
         text-align: center;
     }
-    #login-area form ul{padding:10px 0 5px;}
-    #login-area form ul:after{
-        content:'';
-        clear:both;
+    #login-area form ul{padding: 10px 0 5px;}
+    #login-area form ul::after{
+        content: '';
+        clear: both;
         display: block;
     }
-    #login-area form ul li.find{float:left;}
-    #login-area form ul li.join{float:right;}
-    #login-area form ul li a{font:12px "NanumGothic",Gulim; color:#999;}
-    #login-area form ul li a:hover{color:#333;}
-    #banner-area{padding-top:10px;}
-    #banner-area li{padding-top:5px; text-align: center;}
+    #login-area form ul li.find{float: left;}
+    #login-area form ul li.join{float: right;}
+    #login-area form ul li a{
+        font: 12px "NanumGothic",Gulim;
+        color: #999;
+    }
+    #login-area form ul li a:hover{color: #333;}
+    #banner-area{padding-top: 10px;}
+    #banner-area li{
+        padding-top: 5px;
+        text-align: center;
+    }
 
-    /*newBooks-news style*/
+    /* newBooks-news style */
     #newBooks-news{
         float: left;
-        width:470px;
+        width: 470px;
         margin-left: 35px;
         position: relative;
     }
-    #newBooks-news .tit{position: absolute; top:0;}
+    #newBooks-news .tit{
+        position: absolute;
+        top: 0;
+    }
     #newBooks-news .t1{right:131px;}
-    #newBooks-news .t2{right:11px;}
+    #newBooks-news .t2{right: 11px;}
     .item1{
-        margin-top:37px;
-        border-top:1px solid #aaa;
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
     }
     a.rss{
         display: inline-block;
         margin-top: 40px;
     }
     .booklist{
-        font:13px/18px "NanumGothic",Gulim;
+        font: 13px/18px "NanumGothic", Gulim;
     }
-    .booklist:after{
-         content:'';
-        clear:both;
+    .booklist::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .booklist h3{
-        float:left;
-        width:85px;
-        padding:0 0 0 10px;
+        float: left;
+        width: 85px;
+        padding: 0 0 0 10px;
     }
     .booklist p.subtit{
-        float:right; 
-        width:340px; 
-        padding-right:10px; 
-        color:#333;
+        float: right;
+        width: 340px;
+        padding-right: 10px;
+        color: #333;
     }
     .booklist p.smr{
-        float:right;
-        width:340px;
-        padding:10px 10px 10px 0; 
-        color:#999;
+        float: right;
+        width: 340px;
+        padding: 10px 10px 10px 0;
+        color: #999;
     }
     .booklist footer{
-        float:right; 
-        width:340px; 
-        padding-right:10px;
+        float: right;
+        width: 340px;
+        padding-right: 10px;
     }
-    .booklist footer strong{color:#f60;}
-    .item2{display: none;}
+    .booklist footer strong{color: #f60;}
+    .item2{display: none;}    
     #new_list{
-        margin-top:37px;
-        border-top:1px solid #aaa;
-        padding-top:40px;
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
+        padding-top: 40px;
     }
-    #new_list ul{padding:0 10px;}
+    #new_list ul{padding: 0 10px;}
     #new_list ul li{
         position: relative;
-        width:100%;
+        width: 100%;
         padding: 8px 0;
-        border-bottom:1px solid #ccc;
-        
-        font:13px "NanumGothic",Gulim;
+        border-bottom: 1px solid #ccc;
+        font: 13px "NanumGothic", Gulim;
     }
     #new_list ul li a{
-        padding-left:10px;
-        color:#999;
-        background:url(../images/bul_icon.gif)no-repeat 0 50%;
+        padding-left: 10px;
+        color: #999;
+        background: url(../images/bul_icon.gif) no-repeat 0 50%;
     }
-    #new_list ul li span{position: absolute; right:10px; color:#868686;}
-    #new_list ul li a:hover{color:#069;}
-
-    /*down-author style*/
+    #new_list ul li span{
+        position: absolute;
+        right: 10px;
+        color: #868686;
+    }
+    #new_list ul li a:hover{color: #069;}
+    
+    /* down-author style */
     #down-author{
-        width:248px;
-        float:right;
-        padding:0 10px 0 0;
+        float: right;
+        width: 248px;
+        padding: 0 10px 0 0;
     }
-    #author_column h2{padding:10px 0;}
-    #author_column ul li a{
-        font:12px "NanumGothic",Gulim;
-        color:#999;
+    #author_column h2{padding: 10px 0;}
+    #down-author ul li a{
+        font: 12px "NanumGothic", Gulim;
+        color: #999;
     }
-    .nscreen{padding-top:10px;}
+    .nscreen{padding-top: 10px;}
     .nscreen span{
-        font-family:'NGothicEB';
+        font-family: "NGothicEB";
         display: block;
     }
 
-    /*footer style*/
+    /* footer style */
     #realFooter{
-        background:url(../images/foot_bg.gif)repeat-x 0 0;
+        background: url(../images/foot_bg.gif) repeat-x 0 0;
     }
     .foot{
-        width:1003px;
-        margin:0 auto;
-        padding:20px 0;
+        width: 1003px;
+        margin: 0 auto;
+        padding: 20px 0;
     }
-    .foot:after{
-        content:'';
-        clear:both;
+    .foot::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .foot>div{
         float: left;
-        width:500px;
-        color:#999;
+        width: 500px;
+        color: #999;
     }
-    .foot>div>p{ font:12px/20px "NanumGothic",Gulim;}
+    .foot>div>p{font: 12px/20px "NanumGothic", Gulim;}
     .foot>div>.copy{
-        padding-top:20px;
+        padding-top: 20px;
         display: block;
     }
-    .foot>ul{float: right;}
-    .foot>ul li{display: inline; padding: 0 15px;}
-}
+    .foot ul{float: right;}
+    .foot ul li{
+        display: inline;
+        margin: 0 15px;
+    }
+}   
 
 /*768~1023 일때=>테블릿*/
 @media screen and (min-width:768px) and (max-width:1023px){
- body{
+    body{
         background: url(../images/body_bg.gif)repeat-x 0 0;
     }
 
@@ -418,7 +439,7 @@ img{vertical-align: top;}
         position: relative;
     }
     header#firstHeader>h1{
-        padding:26px 0 17px; 
+        padding:26px 0 17px;
         height: 62px;
     }
     #sform{
@@ -444,9 +465,12 @@ img{vertical-align: top;}
         position: relative;
         width:95%;
         height: 70px;
-        margin:0 auto;
+        margin: 0 auto;
     }
-    #lnb>ul{float:left; width:80%;}
+    #lnb>ul{
+        float:left;
+        width: 80%;
+    }
     #lnb>ul>li{
         float:left;
         width:25%;
@@ -465,386 +489,413 @@ img{vertical-align: top;}
     }
     #lnb>ul>li:hover>a.mm{
         height: 32px;
-        /*background: url(../images/over_icon.gif)no-repeat 50% 100%;*/
-    }
+        /* background: url(../images/over_icon.gif)no-repeat 50% 100%; */
+    } 
     #lnb>ul>li>ul{
         position: absolute;
         left:0;
         top:45px;
         display: none;
     }
-    /*#lnb>ul>li:hover>ul{display: block;}*/
-    #lnb>ul>li.m1>ul{left:30px;}
-    #lnb>ul>li.m2>ul{left:22.5%; width:170px;}
-    #lnb>ul>li.m3>ul{left:38.6%; width:280px;}
-    #lnb>ul>li.m4>ul{left:61.5%; width:200px;}
+    /* #lnb>ul>li:hover>ul{display: block;} */
+    #lnb>ul>li.m1>ul{left:15px;}
+    #lnb>ul>li.m2>ul{left:20.5%; width: 170px;}
+    #lnb>ul>li.m3>ul{left:36%; width: 280px;}
+    #lnb>ul>li.m4>ul{left:59%; width: 200px;}
     #lnb>ul>li>ul>li{
         float:left;
         padding:0 10px;
         width: auto; 
         height: auto;
-        background:none;
+        background: none;
     }
-    #lnb>ul>li>ul>li>a{display: block; font-size: 12px;}
-    .allMenu_view{float:left; width:20%;}
+    #lnb>ul>li>ul>li>a{
+        display: block;
+        font-size: 12px;
+    }
+    .allMenu_view{
+        float: left;
+        width: 20%;        
+    }
     .allMenu_view>a{
         display: block;
-        width:100%;
+        width: 100%;
         line-height: 39px;
-        background:#3da6d9 url(../images/btn_allmenu.gif)no-repeat 50% 0;
+        background: #3da6d9 url(../images/btn_allmenu.gif)no-repeat 50% 0;
         text-align: center;
         color: #fff;
     }
     #allMenu_box{
-        width:85%;
-        padding:15px 0 0 0;
-        border:4px solid #369;
+        width: 85%;
+        padding: 15px 0 0 0;
+        border: 4px solid #369;
         background: #fff;
         position: absolute;
-        left:50%;
-        top:105px;
-        margin-left:-42.5%;
+        left: 50%;
+        top: 105px;
+        margin-left: -42.5%;
         display: none;
         z-index: 100;
     }
-    #allMenu_box>ul{width:95%; margin:0 auto; padding-bottom:15px;}
-    #allMenu_box>ul:after{
+    #allMenu_box>ul{
+        width: 95%;
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+    #allMenu_box>ul::after{
         content: '';
-        clear:both;
+        clear: both;
         display: block;
     }
+    /* afterf를 이용한 clear: both. 내용은 없지만 가상으로 있다고 생각하고 display를 넣으면 영역이 잡혀서 치고올라오지않음. 끝나는 부분은 항상 넣는다. 안치고 올라와도 준다.  */
+
     #allMenu_box>ul>li{
         float: left;
-        width:100%;
-        padding:5px 0;
-        border-bottom:1px dashed #ccc;
+        width: 100%;
+        padding: 5px 0 ;
+        border-bottom: 1px dashed #ccc;
     }
-    #allMenu_box>ul>li:last-child{border-bottom:none;}
-    #allMenu_box>ul>li:after{
+    #allMenu_box>ul>li:last-child{border-bottom: none;}
+    #allMenu_box>ul>li::after{
         content: '';
-        clear:both;
+        clear: both;
         display: block;
     }
     #allMenu_box>ul>li>a{
-        font:16px/1.8 'NGothicEB','Gulim';
-        color:#555;
+        font: 16px/1.8 'NGothicEB', 'Gulim'; /*1.8은 em*/
+        color: #555;
         background: #eee;
-        width:33%;
-        float:left;
+        width: 33%;
+        float: left;
         text-align: center;
     }
     #allMenu_box>ul>li>ul{
-        float:left;
-        padding:0 0 0 2%;
-        width:65%;
+        float: left;
+        padding: 0 0 0 2%;
+        width: 65%;
     }
     #allMenu_box>ul>li>ul>li{
-        float:left;
-        width:auto;
-        padding:5px 5% 5px 0;
+        float: left;
+        width: auto;
+        padding: 5px 5% 5px 0; /*세로 화면이 기니까 세로는 고정하고  가로만 %를 준다.*/
     }
     #allMenu_box>ul>li>ul>li>a{
-        width:auto;
-        font:14px 'NGothicEB','Gulim';
-        color:#aaa;
+        width: auto;
+        font: 14px 'NGothicEB', 'Gulim';
+        color: #aaa;
         text-align: left;
     }
     .all_close{
         display: block;
-        padding:5px 0;
-        background: #369;
-        color:#fff;
+        padding: 5px 0;
         text-align: center;
+        background: #369;
+        color: #fff;
     }
-    .all_close:hover{color:#ccc;}
+    .all_close:hover{color: #ccc;}
 
-    /*banner slider style*/
+    /* banner slider style */
     #recomn-book{
-        position: relative; 
-        width:95%;
-        margin:0 auto;
+        position: relative;
+        width: 95%;
+        margin: 0 auto;
         padding-bottom: 15px;
         overflow: hidden;
+        /* border: 1px solid salmon; */
     }
     #book_frame{
         position: relative;
-        width:200%;
-        left:0;
+        width: 200%;
+        left: 0;
     }
     #book_frame::after{
-        content:'';
-        clear:both;
+        content: '';
+        clear: both;
         display: block;
     }
     .bookcon{
-        float:left;
-        width:50%;
+        float: left;
+        width: 50%;
     }
     .bookcon::after{
-        content:'';
-        clear:both;
+        content: '';
+        clear: both;
         display: block;
     }
     .bookcon>h2{
-        text-align: right; 
-        padding:2% 0 0 0;
+        text-align: right;
+        padding: 2% 0 0 0;
     }
-    .bookcon>h2>img{width:60%;}
-    .bookcon>ul{width:100%;}
-    .bookcon>ul:after{
-        content:'';
-        clear:both;
+    .bookcon>h2>img{width: 60%;}
+    .bookcon>ul{width: 100%;}
+    .bookcon>ul::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .bookcon>ul>li.pic{
         position: relative;
-        float:left;
-        top:-45px;
-        width:27.2%;
-        padding-left:6.48%;
-        margin-bottom:-45px; 
+        float: left;
+        top: -45px; 
+        width: 27.2%;
+        padding-left: 6.48%;
+        margin-bottom: -45px;
     }
     .bookcon>ul>li.smr{
-        float:right;
+        float: right;
         width:48.75%;
-        padding:5% 11% 0 0;
+        padding: 5% 11% 0 0;
     }
     .bookcon>ul>li.detail{
-        float:right;
-        width:48.75%;
-        padding:3% 6.3% 0 0;
+        float: right;
+        width: 48.75%;
+        padding: 4% 6.3% 0 0;
     }
-    .bookcon>ul>li.detail img{width:50%;}
+    .bookcon>ul>li.detail img{width: 50%;}
     #arrow>a{
         position: absolute;
-        top:30%;
+        top: 30%;
     }
-    #arrow>a>img{width:80%;}
-    #arrow>a.prev{left:0;}
-    #arrow>a.next{right:0;}
+    #arrow>a>img{width: 80%;}
+    #arrow>a.prev{left: 0;}
+    #arrow>a.next{right: 0;}
     #book_roll{
         position: absolute;
-        left:50%;
-        bottom:10px;
+        left: 50%;
+        bottom: 10px;
     }
     #book_roll>ul>li{
-        float:left;
-        margin-right:3px;
+        float: left;
+        margin-right: 3px;
     }
-    #book_roll>ul>li>a>img{width:80%}
+    #book_roll>ul>li>a>img{width: 80%;}
 
-    /*content style*/
+    /* content style */
     #content{
-        width:95%;
-        margin:0 auto;
-        border-top:3px double #ccc;
-        padding:30px 0;
+        width: 95%;
+        margin:  0 auto;
+        border-top: 3px double #ccc;
+        padding: 30px 0;
     }
-    #content:after{
-        content:'';
-        clear:both;
+    #content::after{
+        content: '';
+        clear: both;
         display: block;
     }
 
-    /*login-banner style*/
+    /* login-banner style */
     #login-banner{
-        width:22%;
-        float:left;
-        padding:0 0 20px 10px;
+        width: 22%;
+        float: left;
+        padding: 0 0 20px 10px;
     }
     #login-area form{
         position: relative;
-        width:100%;
+        width: 100%;
     }
     #login-area form fieldset{
-        padding:8px 4px;
-        border:1px solid #ccc;
+        padding: 8px 4px;
+        border: 1px solid #ccc;
         box-sizing: border-box;
     }
-    #login-area form .formsection{padding:2px 0 3px;}
+    #login-area form .formsection{padding: 2px 0 3px;}
     #login-area form .tbox{
-        width:54%;
+        width: 54%;
         height: 22px;
-        border-radius:4px;
-        border:1px solid #ccc;
-
+        border-radius: 4px;
+        border: 1px solid #ccc;
     }
     #login-area form .login-btn{
         position: absolute;
-        right:4px;
-        top:11px;
+        right: 4px;
+        top: 11px;        
     }
     #login-area form .login-btn>a{
-        width:54px;
+        width: 54px;
         height: 37px;
-        padding-top:20px;
+        padding-top: 20px;
         display: block;
-        background:#09f;
-        background-image: linear-gradient(top,#09f,#07a);
-        background-image: -webkit-linear-gradient(top,#09f,#07a);
-        border-radius:7px;
-        border:1px solid #069;
-        color:#fff;
+        background: #09f;
+        background-image: linear-gradient(top,#09f,#07a); 
+        background-image:-webkit-linear-gradient(top,#09f,#07a);
+        border-radius: 7px;
+        border: 1px solid #069;
+        color: #fff;
         text-align: center;
     }
-    #login-area form ul{padding:10px 0 5px;}
-    #login-area form ul:after{
-        content:'';
-        clear:both;
+    #login-area form ul{padding: 10px 0 5px;}
+    #login-area form ul::after{
+        content: '';
+        clear: both;
         display: block;
     }
     #login-area form ul li a{
-        font:12px "NanumGothic",Gulim; 
-        color:#999;
-        padding-left:5px;
-        background:url(../images/bul_icon.gif)no-repeat 0 50%;
+        font: 12px "NanumGothic",Gulim;
+        color: #999;
+        padding-left: 5px;
+        background: url(../images/bul_icon.gif)no-repeat 0 50%;
     }
-    #login-area form ul li a:hover{color:#333;}
-    #banner-area{padding-top:8px;}
-    #banner-area li{padding-top:2px; text-align: center;}
+    #login-area form ul li a:hover{color: #333;}
+    #banner-area{padding-top: 8px;}
+    #banner-area li{
+        padding-top: 2px;
+        text-align: center;
+    }
 
-    /*newBooks-news style*/
+    /* newBooks-news style */
     #newBooks-news{
         float: right;
-        width:73%;
+        width: 73%;
         position: relative;
     }
-    #newBooks-news .tit{position: absolute; top:0;}
-    #newBooks-news .t1{left:10px;}
-    #newBooks-news .t2{left:130px;}
+    #newBooks-news .tit{
+        position: absolute;
+        top: 0;
+    }
+    #newBooks-news .t1{left: 10px;}
+    #newBooks-news .t2{left: 130px;}
     .item1{
-        margin-top:37px;
-        border-top:1px solid #aaa;
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
     }
     a.rss{
         display: inline-block;
         margin-top: 30px;
     }
     .booklist{
-        font:13px/18px "NanumGothic",Gulim;
-        min-height: 111px;
+        font: 13px/18px "NanumGothic", Gulim;
+        min-width: 111px;
         position: relative;
     }
-    .booklist:after{
-        content:'';
-        clear:both;
+    .booklist::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .booklist h3{
         position: absolute;
-        left:10px;
-        width:111px;
-        padding:0;
+        left: 10px;
+        width: 111px;
+        padding: 0;
     }
-    .booklist h3 img{max-width:83px; width:100%;}
+    .booklist h3 img{
+        max-width: 83px;
+        width: 100%;
+    }
     .booklist p.subtit{
-        width:77%;
-        margin-left:111px; 
-        padding-right:10px; 
-        color:#333;
-        font:13px "NanumGothic",Gulim;
+        width: 77%;
+        margin-left: 111px;
+        padding-right: 10px;
+        color: #333;
+        font: 13px "NanumGothic", Gulim;
     }
     .booklist p.smr{
-        width:77%;
-        margin-left:111px;  
-        padding:10px 10px 10px 0; 
+        width: 77%;
+        margin-left: 111px;
+        padding: 10px 10px 10px 0;
         line-height: 150%;
-        color:#999;
+        color: #999;
     }
     .booklist footer{
-        width:77%;
-        margin-left:111px; 
-        padding-right:10px; 
+        width: 77%;
+        margin-left: 111px;
+        padding-right: 10px;
     }
-    .booklist footer strong{color:#f60;}
-    .item2{display: none;}
+    .booklist footer strong{color: #f60;}
+    .item2{display: none;}    
     #new_list{
-        margin-top:37px;
-        border-top:1px solid #aaa;
-        padding-top:25px;
+        margin-top: 37px;
+        border-top: 1px solid #aaa;
+        padding-top: 25px;
     }
-    #new_list ul{padding:0 10px;}
+    #new_list ul{padding: 0 10px;}
     #new_list ul li{
         position: relative;
-        width:100%;
+        width: 100%;
         padding: 8px 0;
-        border-bottom:1px solid #ccc;        
-        font:13px "NanumGothic",Gulim;
+        border-bottom: 1px solid #ccc;
+        font: 13px "NanumGothic", Gulim;
     }
     #new_list ul li a{
-        padding-left:10px;
-        color:#999;
-        background:url(../images/bul_icon.gif)no-repeat 0 50%;
+        padding-left: 10px;
+        color: #999;
+        background: url(../images/bul_icon.gif) no-repeat 0 50%;
     }
-    #new_list ul li span{position: absolute; right:10px; color:#868686;}
-    #new_list ul li a:hover{color:#069;}
-
-    /*down-author style*/
-    #down-author{
-        clear:both;
-        width:100%;
-        /*float:none;*/
-        position: relative;
-        border-top:3px double #ccc;
-    }
-    #down-author>p{
+    #new_list ul li span{
         position: absolute;
-        left:0;
-        top:0;
-        width:22%;
-        max-width: 201px;
-        padding:20px 0 0 10px;
+        right: 10px;
+        color: #868686;
     }
-    #author_column{width:71%; margin-left:28%;}
-    #author_column h2{padding:20px 0 10px;}
-    #author_column ul:after{
-        content:'';
-        display: block;
-        clear:both;
+    #new_list ul li a:hover{color: #069;}
+    
+    /* down-author style */
+    #down-author{
+        clear: both;
+        /* float: none; */
+        width: 100%;
+        position: relative;
+        border-top: 3px double #ccc;
     }
-    #author_column ul li{float:left;}
-    #author_column ul li a{
-        font:12px "NanumGothic",Gulim;
-        color:#999;
+    #down-author>P{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 22%;
+        max-width: 201px; /*반고정 반유동적*/
+        padding: 20px 0 0 10px;
     }
-    .nscreen{
-        width:40%;
-        line-height: 160%;
-        padding:15px 0 0 15px;
+    #author_column{
+        width: 71%;
+        margin-left: 28%; /* 28% 중 #down-author>P의 22%가 중복되니까 6%를 차지하는 것 */
     }
+    #author_column h2{padding: 10px 0;}
+    #down-author ul li a{
+        font: 12px "NanumGothic", Gulim;
+        color: #999;
+    }
+    .nscreen{padding-top: 10px;}
     .nscreen span{
+        font-family: "NGothicEB";
         display: block;
-        color:#333;
-        font-family:'NGothicEB';
-        margin-bottom:10px;
     }
 
-    /*footer style*/
+    /* footer style */
     #realFooter{
-        background:url(../images/foot_bg.gif)repeat-x 0 0;
+        background: url(../images/foot_bg.gif) repeat-x 0 0;
     }
     .foot{
-        width:95%;
-        margin:0 auto;
-        padding:20px 0;
+        width: 1003px;
+        margin: 0 auto;
+        padding: 20px 0;
     }
-    .foot:after{
-        content:'';
-        clear:both;
+    .foot::after{
+        content: '';
+        clear: both;
         display: block;
     }
     .foot>div{
         float: left;
-        width:350px;
-        color:#999;
+        width: 500px;
+        color: #999;
     }
-    .foot>div>p{ font:12px/20px "NanumGothic",Gulim;}
+    .foot>div>p{font: 12px/20px "NanumGothic", Gulim;}
     .foot>div>.copy{
-        padding-top:20px;
+        padding-top: 20px;
         display: block;
     }
-    .foot>ul{float: right;}
-    .foot>ul li{display: inline; padding: 0 5px;}    
+    .foot ul{float: right;}
+    .foot ul li{
+        display: inline;
+        margin: 0 15px;
+    }
+
+
+
+
+
+
+
+
 }
 
 /*767 이하일때=>모바일*/
@@ -1121,9 +1172,9 @@ img{vertical-align: top;}
         color:#999;
     }
     .booklist footer{
-        margin-left: 95px;
-        padding-left:15px; 
-        padding-top:15px; 
+        margin-left:95px; 
+        padding-left:15px;
+        padding-top:15px;  
     }
     .booklist footer strong{color:#f60;}
     .item2{display: none;}
@@ -1156,36 +1207,28 @@ img{vertical-align: top;}
         position: relative;
         border-top:3px double #ccc;
     }
-    #down-author>p{
-        position: absolute;
-        left:0;
-        top:0;
-        width:22%;
-        max-width: 201px;
-        padding:20px 0 0 10px;
-    }
-    #author_column{width:71%; margin-left:28%;}
+    #down-author>p{display: none;}
     #author_column h2{padding:20px 0 10px;}
     #author_column ul:after{
         content:'';
         display: block;
         clear:both;
     }
-    #author_column ul li{float:left;}
+    #author_column ul li:first-child{text-align: center;}
+    #author_column ul li video{width:90%; height: 250px;}
     #author_column ul li a{
         font:12px "NanumGothic",Gulim;
         color:#999;
     }
     .nscreen{
-        width:40%;
         line-height: 160%;
-        padding:15px 0 0 15px;
+        padding:20px 0 0 0;
     }
     .nscreen span{
         display: block;
         color:#333;
         font-family:'NGothicEB';
-        margin-bottom:10px;
+        padding:5px 0;
     }
 
     /*footer style*/
@@ -1203,16 +1246,15 @@ img{vertical-align: top;}
         display: block;
     }
     .foot>div{
-        float: left;
-        width:350px;
         color:#999;
     }
-    .foot>div>p{ font:12px/20px "NanumGothic",Gulim;}
+    .foot>div>p{ font:11px/18px "NanumGothic",Gulim;}
     .foot>div>.copy{
-        padding-top:20px;
+        padding-top:10px;
         display: block;
     }
-    .foot>ul{float: right;}
-    .foot>ul li{display: inline; padding: 0 5px;}     
+    .foot>ul{padding-top:10px;}
+    .foot>ul li{width:50%; float:left;} 
+    .foot>ul li img{width:75%;}    
 }
 
