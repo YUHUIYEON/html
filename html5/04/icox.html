@@ -10,11 +10,20 @@
         /* 2. wrapper 선언하기(스크립트 묶어주는 용도) 
         간략형 : $(function(){실행할 문장작성;})
         구문형식 : $('제어대상').메서드(); */
+
+        var $devWidth; //변수명 선언
+        var $limitSize=767;
+
         $(function(){
             var $bannNum=0; //변수선언 초기값
+            $(window).resize(function(){ //body의 width 값을 불러온다.
+                $devWidth=$('body').width();
+                console.log($devWidth);
+            });
 
             //주메뉴에서 마우스를 호버했을 때 백그라운드와 '#lnb>ul>li>ul' 보임
             $('#lnb>ul>li>a').bind('mouseover focus', function(){
+                if($devWidth < $limitSize)return false; //if(조건식){참일 때 실행할 문장}
                 $('#lnb>ul>li>ul').hide(); //서브메뉴의 초기값
                 $('#lnb>ul>li>a').css({  //master.css / {}=그룹핑하는 것
                     'height':'29px', //'속성':'값',
@@ -30,14 +39,13 @@
             //주메뉴에서 마우스를 아웃했을 때 안보이게 함
             //mouseleave=아웃 / 이벤트가 1개일 때는 바로 써도됨. 위에는 이벤트가 2개여서 .bind를 함.
             $('#lnb').mouseleave(function(){ 
+                if($devWidth < $limitSize)return false;
                 $('#lnb>ul>li>ul').stop().slideUp(50); //slideUp=천천히 올라감 / ()안에는 데이터(값)가 들어감. 여기서는 50이 시간임(ms). / .stop은 다른 메뉴에 마우스가 갔을 때 기존꺼는 멈춘다.
                 $('#lnb>ul>li>a').css({  
                     'height':'29px', 
                     'background':'none'    
                 });            
             }); 
-
-
 
             //allMenu_view 클릭했을 때 allMenu_box가 보이게
             $('.allMenu_view>a').click(function(){
