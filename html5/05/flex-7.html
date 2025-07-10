@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 알아보기</title>
+</head>
+<style>
+    .container{
+        width: 1200px;
+        height: 250px;
+        background: #eee;
+        border: 1px solid #222;
+        display: flex;
+    }
+    .box{
+        padding: 20px 40px;
+        margin: 10px 5px;
+        background: orange;
+    }
+    .box:nth-child(even){background: green;}
+
+    #box1{align-self: auto;}
+    #box2{align-self: normal;}
+    #box3{align-self: flex-start;}
+    #box4{align-self: flex-end;}
+    #box5{align-self: self-start;} /* flex-start랑 같으니까 흰색으로 나옴 */
+    #box6{align-self: self-end;} /* flex-end와 같음 */
+    #box7{align-self: baseline;} /* 다른 기준이 있어야함 */
+    #box8{align-self: center;}
+    #box9{align-self: stretch;}
+
+</style>
+<body>
+    <div class="container">
+        <div class="box" id="box1">auto</div>
+        <div class="box" id="box2">normal</div>
+        <div class="box" id="box3">flex-start</div>
+        <div class="box" id="box4">flex-end</div>
+        <div class="box" id="box5">self-start</div>
+        <div class="box" id="box6">self-end</div>
+        <div class="box" id="box7" style="font-size: 30px; color: #fff;">baseline</div>
+        <div class="box" id="box8">center</div>
+        <div class="box" id="box9">stretch</div>    
+    </div>
+
+</body>
+</html>
