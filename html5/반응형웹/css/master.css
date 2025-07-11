@@ -1,0 +1,82 @@
+@import 'normalize.css';
+@import 'response.css';
+
+/*basic style*/
+*{margin:0; padding:0;}
+a{text-decoration: none;}
+body{font:14px/1.5 "Time New Roman",serif;}
+
+/*header style*/
+body .row{max-width:960px;}
+body header{
+    background: url(../images/header-bg.jpg) no-repeat 50% 50%;
+    background-size: cover; /*지정한 요소를 다 덮도록 배경 이미지를 확대*/
+}
+body header>.row{
+    height: 500px;
+    position: relative;
+    margin-bottom: 0;
+}
+#brand{
+    width: 194px;
+    height: 194px;
+    background: url(../images/header-brand-logo.png) no-repeat 0 0;
+    /* border:  1px solid red; */
+    position: absolute;
+    left: 0;
+    top: 94px;
+    border-radius: 100px;
+    text-indent: -9999px;
+    transition: all .4s ease;
+}
+#brand>a{
+    display: block;
+    height: 194px;
+}
+#brand:hover{background-color: rgba(0,0,0,0.5);}
+#brand::before{
+    content: '';
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    margin-left: -8.5px;
+    /* border: 1px solid salmon; */
+    background: url(../images/header-brand-star.png) no-repeat 0 0;
+    transition: all .6s ease-out;
+}
+#brand:hover:before{
+    top: 35px;
+    transform: rotate(360deg);
+}
+#gnb{
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+#gnb>ul{
+    display: flex;
+    column-gap: 15px;
+}
+#gnb>ul>li>a{
+    color: #282020;
+    text-shadow: 0 2px 3px #8b8b8b;
+    transition: all 0.3s ease-in-out;
+}
+#gnb>ul>li>a:hover,
+#gnb>ul>li>a:focus{ /*웹접근성을 위해 focus도 추가 */
+    color: #fff;
+    text-shadow: none;
+}
+
+/* header-bar style::javascript start */
+#header-bar{
+    position: relative;
+    top: -47px;
+    padding: 13px 0;
+    background: rgba(38,38,38,0.4);
+    transition: all 0.4s;
+}
+#header-bar>.row{margin-bottom: 0 ;}
+#header-bar>.row>p>a{display: none;}

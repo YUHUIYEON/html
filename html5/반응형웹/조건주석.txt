@@ -1,0 +1,5 @@
+<!--[if lt IE 9]><script src="include/js/libs/CFInstall.min.js"></script>
+<script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})});</script><![endif]-->
+
+<!--[if IE 6]><script src="include/js/libs/DD_belatedPNG.min.js"></script>
+<script>DD_belatedPNG.fix('.png_bg, img');</script><![endif]-->
