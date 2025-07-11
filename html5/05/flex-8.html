@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>플렉스 알아보기</title>
+</head>
+<style>
+    .container{
+        width: 450px;
+        height: 300px;
+        background: #eee;
+        border: 1px solid #222;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* flex-flow: row wrap; */
+        /* gap : 10px; */
+        row-gap: 10px; /* 줄방향*/
+        column-gap: 10px; /*칸방향*/
+        /* align-items: center; */  /*stretch 값을 지정했을 때는 이거 적용안됨*/
+    }
+    .box{
+        padding: 20px 40px;
+        /* margin: 10px 5px; */
+        background: orange;
+    }
+    .box:nth-child(even){background: green;}
+
+    #opt1{align-content: flex-start;}
+    #opt2{align-content: flex-end;}
+    #opt3{align-content: center;}
+    #opt4{align-content: space-between;}
+    #opt5{align-content: space-around;}
+    #opt6{align-content: stretch;}
+
+</style>
+<body>
+    <div class="container" id="opt1">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="container" id="opt2">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="container" id="opt3">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="container" id="opt4">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="container" id="opt5">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+    <div class="container" id="opt6">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+    </div>
+</body>
+</html>
