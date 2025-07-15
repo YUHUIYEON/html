@@ -6,27 +6,27 @@
     <title>Document</title>
     <style>
         .container{
+            width: 600px;
             display: grid;
-            /* grid-template-columns: 100px 200px; */
-            /* grid-template-columns: 1fr 2fr; */
-            grid-template-columns:repeat(3, 2fr);
-            /* grid-template-rows: 50px 100px 200px ; */
-            grid-auto-rows: 150px
+            border: 1px solid #000;
+            grid-template-columns:repeat(3, 1fr);
+            gap: 20px 30px
         }
+
         .items{
             border: 1px solid #000;
-            padding: 10px;
+            /* padding: 10px; */
             text-align: center;
-            font-size: 20px;
+            font-size: 10px;
         }
         .items:nth-child(even){background: orange;}
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="items">1</div>
+    <div class="container container-1">
+        <div class="items">Interesting and surprising!</div>
         <div class="items">2</div>
-        <div class="items">3</div>
+        <div class="items">Interesting and surprising!Interesting and surprising!</div>
         <div class="items">4</div>
         <div class="items">5</div>
         <div class="items">6</div>
