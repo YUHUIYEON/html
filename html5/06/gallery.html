@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그리드 레이아웃을 사용한 갤러리 만들기</title>
+</head>
+<style>
+    .gallery img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover; 
+        /* img, video 태그의 크기를 컨테이너에 맞게 조절 
+        cover->가로,세로 비율중 큰 쪽에 맞춰져서 커짐 
+        contain->작은쪽에 맞춰져서 작아짐 */
+    }
+
+    .gallery{
+        width: 700px;
+        margin: 20px auto;
+        display: grid;
+        gap: 5px;
+        grid-template-areas: 
+        "photo1 photo1 photo2"
+        "photo1 photo1 photo3"
+        "photo4 photo5 photo6";
+    }  
+    .photo1{grid-area: photo1;}
+    .photo2{grid-area: photo2;}
+    .photo3{grid-area: photo3;}
+    .photo4{grid-area: photo4;}
+    .photo5{grid-area: photo5;}
+    .photo6{grid-area: photo6;}
+</style>
+<body>
+    <div class="gallery">
+        <img class="photo1" src="images/photo-1.jpg" alt="겨울풍경">
+        <img class="photo2" src="images/photo-2.jpg" alt="펭귄">
+        <img class="photo3" src="images/photo-3.jpg" alt="시골 풍경">
+        <img class="photo4" src="images/photo-4.jpg" alt="밤 풍경">
+        <img class="photo5" src="images/photo-5.jpg" alt="눈 쌓인 배경">
+        <img class="photo6" src="images/photo-6.jpg" alt="새">
+    </div>
+</body>
+</html>
