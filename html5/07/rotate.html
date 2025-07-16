@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        width: 600px;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+    }
+    .origin{transition: 1s;}
+    #rotate1:hover{transform: rotate(80deg) scale(2.5);}
+    #rotate2:hover{transform: rotate(-40deg);}
+</style>
+<body>
+    <div class="container">
+        <div class="origin" id="rotate1">
+            <img src="images/home.png">
+        </div>
+        <div class="origin" id="rotate2">
+            <img src="images/home.png">
+        </div>
+    </div>
+</body>
+</html>
