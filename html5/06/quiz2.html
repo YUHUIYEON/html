@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz2</title>
+</head>
+<style>
+    .boxing{
+        width: 800px; 
+        height: 600px;
+        background: #000;
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        align-items: center;
+    }
+    .container{
+        width: 600px;
+        height: 500px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+        gap:20px;
+        background: #000;
+    }
+    .container>.box{
+        background: yellow;
+        text-align: center;
+        padding: 20px;
+        /* font-size: 1.5em; */
+    }
+    .box1{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .box2{
+        grid-column: 3/5;
+        grid-row: 1/2;
+    }
+    .box3{
+        grid-column: 3/4;
+        grid-row: 2/4;
+    }
+    .box4{
+        grid-column: 4/5;
+        grid-row: 2/4;
+    }
+    .box5{
+        grid-column: 1/3;
+        grid-row: 3/4;
+    }
+    </style>
+<body>
+    <div class="boxing">
+        <div class="container">
+            <div class="box box1">1</div>
+            <div class="box box2">2</div>
+            <div class="box box3">3</div>
+            <div class="box box4">4</div>
+            <div class="box box5">5</div>
+        </div>
+    </div>
+    
+</body>
+</html>
