@@ -3,7 +3,7 @@
 (틀이 짜여져있는)+동적인 요소(자바스크립트+제이쿼리)+반응형웹페이지 레이아웃 구성
  웹페이지 디자인 프레임워크라고 합니다.
  참고사이트
- http://twitter.github.com/bootstrap/Download Bootstrap
+ https://getbootstrap.kr/
 
  부트스트랩 아이콘이름
  https://getbootstrap.com/2.3.2/base-css.html#icons
