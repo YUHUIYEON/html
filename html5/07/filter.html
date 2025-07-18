@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>필터filter를 알아보자</title>
+</head>
+<style>
+    .gallry{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+    }
+    .image-container{
+        border: 1px solid #ccc;
+        text-align: center;
+        padding: 10px;
+        background: #f9f9f9;
+        border-radius: 10px;
+    }
+    .title{
+        font-weight: bold;
+        margin-bottom: 20px;
+        font-size: 11px;
+    }
+    .gallry img{
+        width: 80%;
+        border-radius: 50%;
+    }
+    .blur{filter: blur(5px);} /* 이미지의 면적비례. 0값은 블러적용이 안됨 */
+    .brightness{filter: brightness(1.5);} /* 값 1(100%) 이상 사용해야 밝아짐. 평균값으로 밝아짐. */
+    .contrast{filter: contrast(200%);} /* 밝은것은 더 밝게, 어두운것은 좀 더 어둡게. 대조가 뚜렸함. */
+    .drop-shadow{filter: drop-shadow(16px 16px 10px orange);}
+    .grayscale{filter: grayscale(100%);} /* 회색조 */
+    .invert{filter: invert(100%);} /*색반전*/
+    .sepia{filter: sepia(50%);} /* 오징어 먹물을 의미하는 갈색. 이미지에 따라 적용이 잘 안될수있음*/
+    .opacity{filter: opacity(50%);} /* 투명도 */
+    .hue-rotate{filter: hue-rotate(30deg);} /* 색변경 */
+    .saturate{filter: saturate(500%);} /* 채도 */
+</style>
+<body>
+<div class="origin">
+    <img src="images/cat.jpg" style="border-radius: 50%;">
+</div>
+<div class="gallry">
+    <div class="image-container">
+        <div class="title">blur(5px)/흐리게</div>
+        <img src="images/cat.jpg" class="blur">
+    </div>
+    <div class="image-container">
+        <div class="title">brightness(1.5)/밝기</div>
+        <img src="images/cat.jpg" class="brightness">
+    </div>
+    <div class="image-container">
+        <div class="title">contrast(200%)/대비</div>
+        <img src="images/cat.jpg" class="contrast">
+    </div>
+    <div class="image-container">
+        <div class="title">drop-shadow(16px 16px 10px orange)/그림자 추가</div>
+        <img src="images/cat.jpg" class="drop-shadow">
+    </div>
+    <div class="image-container">
+        <div class="title">grayscale(100%)/회색조</div>
+        <img src="images/cat.jpg" class="grayscale">
+    </div>
+    <div class="image-container">
+        <div class="title">invert(100%)/전체 색상 반전</div>
+        <img src="images/cat.jpg" class="invert">
+    </div>
+    <div class="image-container">
+        <div class="title">sepia(100%)/세피아 톤(빈티지)</div>
+        <img src="images/cat.jpg" class="sepia">
+    </div>
+    <div class="image-container">
+        <div class="title">opacity(50%)/반투명</div>
+        <img src="images/cat.jpg"  class="opacity">
+    </div>
+    <div class="image-container">
+        <div class="title">hue-rotate(90deg)/휴값을 이동</div>
+        <img src="images/cat.jpg"  class="hue-rotate">
+    </div>
+    <div class="image-container">
+        <div class="title">saturate(200%)/채도</div>
+        <img src="images/cat.jpg" class="saturate">
+    </div>
+</div>
+</body>
+</html>
