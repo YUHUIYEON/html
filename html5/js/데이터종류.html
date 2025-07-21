@@ -40,7 +40,7 @@
     //문자
     // document.write("egoing's coding everybody"+'<br>'); 
     // alert("egoing's coding everybody"+'<br>'+"줄바꿈"); ->alert에서 줄바꿈 br은 문자로 인식하기때문에 안되고 \n으로 줄바꿈
-    alert('안녕\n\n하세요');
+    //alert('안녕\n\n하세요'); 2줄바꿈
     /*
         이스케이프 문자(특수한 기능을 수행하는 문자)
         \t : 수평 탭
@@ -52,6 +52,22 @@
         \f : 커서를 다음페이지로 이동
         \r : 커서를 그줄의 처음으로 이동
     */
+    document.write(typeof('1')+'<br>'); //typeof()->속성을 알아볼 때 라는 뜻 / 문자형(string)데이터
+    document.write(typeof(1)+'<br>'); //숫자형(number)데이터
+    document.write("coding".length+'<br>'); //length는 문자의 갯수를 나타냄
+    document.write("coding".indexOf('o')+'<br>'); //특정한 문자열의 값을 리턴. 0부터 시작.
+
+    var num="100";
+    document.write(num+' : '+typeof(num)+'<br>');
+    var t=Number(num); //문자를 숫자로 형변환
+    document.write(t+' : '+typeof(t)+'<br>');
+
+    num=100;
+    document.write(num+' : '+typeof(num)+'<br>');
+    var t2=String(num);
+    document.write(t2+ ' : '+typeof(t2)+'<br>')
+    var tag="<h1>String</h1>"
+    document.write(tag+' : '+typeof(tag)+'<br>')
 </script>
 </body>
 </html>
