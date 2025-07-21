@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트란?</title>
+    <script src="load.js"></script> <!--외부스크립트-->
+</head>
+<body>
+<h1 id="heading">자바스크립트란?</h1>    
+<pre>
+    개발자가 만든 문서에 방문자가 방문하여 어떤 동작을 취하면 그 동작에 대하여 반응이 일어날 수 있도록 해주는 언어->액션이 실행될 수 있도록.
+    1. 웹브라우저를 프로그램적으로 제어를 하기위한 언어
+    2. 웹페이지를 동적으로 만들어줌
+    3. 인터프리트 언어
+        -> 작성된 순서대로 구문을 분석하고 에러가 발생하면 그 다음부터 구문 분석을 하지 않음
+    4. 클라이언트 스크립트 언어
+        ->서버에서 실행되는 것이 아니라 <b>사용자 컴퓨터에서 실행</b>
+</pre>
+<h2>적용방식 3가지</h2>
+<pre>
+    1. 스크립트 태그 사이에 기술 후 적용 -><b>내부스크립트</b>
+    2. 태그에 직접 적용 -><b>인라인 스크립트</b>
+    3. 외부파일 로드 적용 -><b>외부스크립트</b>
+</pre>
+
+
+<script>    
+    //내부스크립트
+    alert('hello world'); //경고 메시지 창 띄우기
+    document.write('javascript'+'<br>');
+</script>
+<input type="button" value="click" id="btn1" onclick="alert('자바스크립트')"><!--인라인스크립트--> 
+<input type="button" value="click" id="btn2">
+<script>
+    //btn2를 클릭했을 때 'javascript world'를 문서내에 출력
+    //1. btn2를 인식하게 해야함. 변수에 할당하여 인식
+    //2.클릭이벤트에 적용(변수명.onclick=function(){실행할 문장작성})
+    var btn2=document.getElementById('btn2');
+    btn2.onclick=function(){
+        document.write("javascript world"+'<br>');
+    }    
+    let heading=document.querySelector('#heading');
+    heading.onclick=function(){
+        heading.style.color="red";
+    }
+    let name=prompt('이름을 입력하세요.');
+    //document.write("<b><big>"+name+"</big></b>님, 환영합니다.");
+    console.log(name+"님 환영합니다.");
+</script>
+</body>
+</html>

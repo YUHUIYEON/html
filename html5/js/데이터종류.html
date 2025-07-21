@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 종류를 알아보자</title>
+</head>
+<body>
+<h1>변수란?</h1>
+<pre>
+    변수(variables) : 변하는 데이터를 저장할 수 있는 메모리공간.
+    데이터를 담을 수 있는 그릇이라 할 수 있음.
+    변수에는 데이터가 오직 한개만 저장됨. 
+    그러다보니 <mark>새로운 데이터가 들어오면 기존에 있는 데이터는 메모리 공간에서 지워지게 됨.</mark><br>
+    <b>변수에 저장할 수 있는 데이터의 종류</b>
+    - 문자형(String)
+    - 숫자형(Number)
+    - 논리형(Boolean)
+    - 빈(Null)
+
+    <b>변수지정 사항</b>
+    - 변수를 선언할 때 <mark>var, let, const</mark> 키워드 변수명 앞에 붙인다.
+    - 변수명에는 한글을 사용할 수 없으며 <mark>영문과 숫자, 일부 특수문자(_ , $)</mark>만 포함 가능.
+    - 변수명에 <mark>첫글자로 숫자가 올 수 없음</mark>. 숫자는 뒤에 옴.
+    - 변수명에는 의미에 맞게 만드는 것이 좋음.
+    - 변수명을 단어의 조합으로 쓸 때는 두번째 단어부터 첫글자를 대문자로 표기함.
+
+    <b>변수선언 기본형</b>
+    1. var 변수명;
+        변수명=값;
+    2. var 변수명=값;
+</pre>
+<script>
+    var box;
+    box=100;
+    box=30;
+    document.write(box+'<br>');
+
+    //변수에 지정할 수 있는 자료형
+    //문자
+    // document.write("egoing's coding everybody"+'<br>'); 
+    // alert("egoing's coding everybody"+'<br>'+"줄바꿈"); ->alert에서 줄바꿈 br은 문자로 인식하기때문에 안되고 \n으로 줄바꿈
+    alert('안녕\n\n하세요');
+    /*
+        이스케이프 문자(특수한 기능을 수행하는 문자)
+        \t : 수평 탭
+        \n : 줄바꿈
+        \' : 작은따옴표
+        \" : 큰따옴표
+        \\ : 역슬래시
+        \b : 커서를 앞으로 한칸 이동
+        \f : 커서를 다음페이지로 이동
+        \r : 커서를 그줄의 처음으로 이동
+    */
+</script>
+</body>
+</html>
