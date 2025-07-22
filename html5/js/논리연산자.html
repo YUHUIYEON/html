@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>논리연산자</title>
+</head>
+<body>
+<h1>논리연산자</h1>    
+<pre>
+    ||(or)
+    &&(and)
+    !(net)
+    피연산자가 논리형 데이터인 true, false로 결과값을 반환
+
+    ||(or) -> 피연산자 중 하나라도 true면 true를 반환
+    &&(and) -> 피연산자 중 하나라도 false면 false를 반환
+    !(not) -> 논리부정연산자. 피연산자 true면 false로, false면 true를 반환. 반대의 결과값을 반환
+</pre>
+<h2>연산자 우선 순위</h2>
+<pre>
+    1. ()
+    2. 단항연산자(--, ++, !)
+    3. 산술연산자(+, -, *, /, %)
+    4. 비교연산자(>, >=, <, <=, ==, ===, !==)
+    5. 논리연산자(&&, ||)
+    6. 복합대입연산자(할당연산자)
+</pre>
+<script>
+    //&&(and) 논리곱연산자 : 좌항과 우항이 모두 참일 때만 참(1)을 반환
+    if(true && true){document.write(1+'<br>')} //값:1
+    if(true && false){document.write(1+'<br>')} //실행안함
+    if(false && true){document.write(1+'<br>')} //실행안함
+    if(false && false){document.write(1+'<br>')} //실행안함
+    if(1 && 1){document.write(1+'<br>')} //값:1
+    if(1 && 0){document.write(1+'<br>')} //실행안함
+    if(0 && 1){document.write(1+'<br>')} //실행안함
+    if(0 && 0){document.write(1+'<br>')} //실행안함
+
+    /*
+    변수명 id에 prompt(아이디를 입력하세요)를 하고, 변수명 pw에 prompt(비밀번호를 입력하세요)를 묻는다. 
+    if(){}else{} 문을 활용해서 두 항의 값이 참일 때 (id=='egoing', pw=='1234') 'egoing님 반값습니다.' 출력하고 그렇치 않으면 '인증에 실패했습니다.' 출력
+    */
+    // let id=prompt('아이디를 입력하세요');
+    // let pw=prompt('비밀번호를 입력하세요');
+    // if(id=='egoing' && pw=='1234'){
+    //     document.write(id+' 님 반값습니다.'+'<br>');
+    // } else {
+    //     document.write('인증에 실패했습니다.'+'<br>');
+    // }
+    
+    //||(or) 피연산자 중 하나라도 참이면 참을 반환
+    if(1 || 1){document.write(1+'<br>')} //값:1
+    if(1 || 0){document.write(2+'<br>')} //값:2
+    if(0 || 1){document.write(3+'<br>')} //값:3
+    if(0 || 0){document.write(4+'<br>')} //실행안함
+
+    //
+    let id=prompt('아이디를 입력하세요');
+    if(id=='egoing' || id=='k8805' || id=='sorialgi'){
+        document.write(id+' 님 인증했습니다..'+'<br>');
+    } else {
+        document.write('인증에 실패했습니다.'+'<br>');
+    }
+</script>
+</body>
+</html>

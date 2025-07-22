@@ -64,10 +64,46 @@
 
     num=100;
     document.write(num+' : '+typeof(num)+'<br>');
-    var t2=String(num);
-    document.write(t2+ ' : '+typeof(t2)+'<br>')
-    var tag="<h1>String</h1>"
-    document.write(tag+' : '+typeof(tag)+'<br>')
+    var t2=String(num); //숫자를 문자로 형변환
+    document.write(t2+ ' : '+typeof(t2)+'<br>');
+    var tag="<h1>String</h1>";
+    document.write(tag+' : '+typeof(tag)+'<br>');
+
+    /*
+    논리형(Boolean)
+    true 또는 false가 있음. 주로 2개의 데이터를 비교할 때 나오는 결과.
+    숫자 0, null, undefined, 빈문자(공백'') -> false 반환
+    위를 제외한 모든 데이터 -> true 반환
+    2항연산자, if 조건문과 함께 사용함.
+    */
+    var s=true;
+    document.write(s+'<br>'); //값:true
+    var t3=10>=100;    
+    document.write(t3+'<br>'); //값:false     
+    var k=Boolean('hello');
+    document.write(k+'<br>'); //값:true
+    var k=Boolean(0);
+    document.write(k+'<br>'); //값:false
+
+    var a=true;
+    var b=false;
+    var c=10>5;
+    var d=Boolean(null);
+    document.write(a+', '+b+', '+c+', '+d+'<br>');
+
+    /*
+    null & undefined 데이터
+    null은 변수에 저장된 데이터를 비우고자 할 때 사용하는 값
+    var, let 선언은 생략을 하기도함.
+    */
+    var s1;
+    document.write(s1,'<br>'); //값:undefined -> 변수선언만 하고 데이터를 할당하지 않았기때문에.
+
+    // let t4=hello;
+    // document.write(t4,'<br>'); //값:hello is not defined
+
+    t4=null;
+    document.write(t4,'<br>'); //null:변수에 저장된 값이 null인 경우
 </script>
 </body>
 </html>
