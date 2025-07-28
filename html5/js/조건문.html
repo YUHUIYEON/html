@@ -38,7 +38,75 @@
         document.write(3+'<br>');
         document.write(4+'<br>');
         document.write(5+'<br>');
+    } //if문은 조건이 참일때 실행, 거짓일때는 아무것도 실행하지 않음.
+
+    //2.if else문 : 조건식을 만족할 경우 true를 만족하지 않을 경우 false 실행코드가 실행되는 것.
+    /*
+    기본형식
+    if(조건식){
+        참일 때 실행하는 문장
+    }else{
+        거짓일 때 실행하는 문장
     }
+    */
+    if(true){
+        document.write(1+'<br>');
+    }else{
+        document.write(2+'<br>');
+    } //1 출력
+    if(false){
+        document.write(1+'<br>');
+    }else{
+        document.write(2+'<br>');
+    } //2 출력
+
+    /*
+    let num=prompt('당신이 좋아하는 숫자는?','0');
+    if(num %2 == 0){
+        document.write('당신이 좋아하는 숫자는 짝수입니다.'+'<br>');
+    }else{
+        document.write('당신이 좋아하는 숫자는 홀수입니다.'+'<br>');
+    }
+    */
+    
+    let userNumber=prompt('숫자를 입력하세요');
+    /*if(userNumber % 3 === 0){
+        document.write('3의 배수입니다.'+'<br>');
+    }else{
+        document.write('3의 배수가 아닙니다.'+'<br>');
+    }*/
+    if(userNumber !== null){
+    if(parseInt(userNumber)% 3 === 0){
+        document.write('3의 배수입니다.'+'<br>');
+    }else{
+        document.write('3의 배수가 아닙니다.'+'<br>');
+    }
+    }else{document.write('입력이 취소되었습니다'+'<br>')}
+
+    //3. else if문 : 여러개의 조건을 지정할 때 사용하며, 마지막에 있는 else문은 생략할 수 있음.
+    /*
+    기본형식:
+    if(조건식){
+        참일 때 실행할 문장;
+    }else if(조건식2){
+        조건식2가 참일 때 실행할 문장;
+    }else if(조건식3){
+        조건식3이 참일 때 실행할 문장;
+    }else{
+        거짓일 때 실행할 문장
+    }
+    */
+    if(true){
+        document.write('a<br>');
+    }else if(true){
+        document.write('b<br>');
+    }else if(true){
+        document.write('c<br>');
+    }else if(true){
+        document.write('d<br>');
+    }else{
+        document.write('e<br>');
+    }//조건식이 true면 조건식이 남아있어도 조건문을 끝냄.
 </script>
 </body>
 </html>
