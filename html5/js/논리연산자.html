@@ -28,14 +28,14 @@
 </pre>
 <script>
     //&&(and) 논리곱연산자 : 좌항과 우항이 모두 참일 때만 참(1)을 반환
-    if(true && true){document.write(1+'<br>')} //값:1
-    if(true && false){document.write(1+'<br>')} //실행안함
-    if(false && true){document.write(1+'<br>')} //실행안함
-    if(false && false){document.write(1+'<br>')} //실행안함
-    if(1 && 1){document.write(1+'<br>')} //값:1
-    if(1 && 0){document.write(1+'<br>')} //실행안함
-    if(0 && 1){document.write(1+'<br>')} //실행안함
-    if(0 && 0){document.write(1+'<br>')} //실행안함
+    if(true && true){document.write(1+'<br>')}; //값:1
+    if(true && false){document.write(1+'<br>')}; //실행안함
+    if(false && true){document.write(1+'<br>')}; //실행안함
+    if(false && false){document.write(1+'<br>')}; //실행안함
+    if(1 && 1){document.write(1+'<br>')}; //값:1
+    if(1 && 0){document.write(1+'<br>')}; //실행안함
+    if(0 && 1){document.write(1+'<br>')}; //실행안함
+    if(0 && 0){document.write(1+'<br>')}; //실행안함
 
     /*
     변수명 id에 prompt(아이디를 입력하세요)를 하고, 변수명 pw에 prompt(비밀번호를 입력하세요)를 묻는다. 
@@ -50,10 +50,10 @@
     // }
     
     //||(or) 피연산자 중 하나라도 참이면 참을 반환
-    if(1 || 1){document.write(1+'<br>')} //값:1
-    if(1 || 0){document.write(2+'<br>')} //값:2
-    if(0 || 1){document.write(3+'<br>')} //값:3
-    if(0 || 0){document.write(4+'<br>')} //실행안함
+    if(1 || 1){document.write(1+'<br>')}; //값:1
+    if(1 || 0){document.write(2+'<br>')}; //값:2
+    if(0 || 1){document.write(3+'<br>')}; //값:3
+    if(0 || 0){document.write(4+'<br>')}; //실행안함
 
     //
     let id=prompt('아이디를 입력하세요');
@@ -62,6 +62,14 @@
     } else {
         document.write('인증에 실패했습니다.'+'<br>');
     }
+
+    //!(not)논리부정연산자:블리언의 값을 역전시킴. true => false / false => true
+    if(!true && !true){document.write(1+'<br>')}; // x
+    if(!true && !false){document.write(2+'<br>')}; // x
+    if(!false && !true){document.write(3+'<br>')}; // x
+    if(!false && !false){document.write("논리부정연산자 출력"+'<br>')}; // 출력
+    if(!true){document.write('a'+'<br>')};
+    if(!false){document.write('a'+'<br>')};
 </script>
 </body>
 </html>
