@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택문</title>
+</head>
+<body>
+<h1>switch문</h1>   
+<pre>
+    지정한 변수에 저장된 데이터와 정확히 일치되는 경우가 있는지 검사하여 일치하는 데이터가 있을 경우 해당 실행문을 수행한 뒤 마지막의 break문으로 반복을 종료하여 빠져 나옴.
+
+    break는 반복문을 즉시 중단을 시킬 때 사용.
+    break 다르게 continue는 중단후에도 반복되는 조건이 남아있을 경우 반복문을 실행함.
+
+    <b>기본형식</b>
+    let 변수명=값;
+    switch(변수){
+        case 1 : 실행문;
+        break;
+        case 2 : 실행문;
+        break;
+        case 3 : 실행문;
+        break;
+        default:실행문;
+    }
+</pre>
+<script>
+    // let x=1; 
+    // let x="문자열"; 
+    let x=new Date;   
+    // let x;    
+    switch(typeof x){
+        case 'number' : document.write('변수 x의 타입은 숫자입니다.<br>');
+        break;
+        case 'string' : document.write('변수 x의 타입은 문자열입니다.<br>');
+        break;
+        case 'object' : document.write('변수 x의 타입은 객체입니다.<br>');
+        break;
+        default:document.write('변수 x의 타입은 모르겠습니다..<br>');
+    }
+    document.write(x+"<br>")
+    /*
+    //지역번호
+    let MyArea = prompt('서울 경기 부산 중 특정 지역을 입력하세요');
+    let areaNum;
+    switch(MyArea){
+        case '서울':areaNum='02';
+        break;
+        case '경기':areaNum='031';
+        break;
+        case '부산':areaNum='051';
+        break;
+        default:alert('등록되지 않은 지역입니다.');
+    }
+    document.write(MyArea+ ' 지역번호는 ' +areaNum+ ' 입니다.<br>');
+    */
+    
+    /*
+    //사이트 이동
+    let site=prompt('네이버, 다음, 구글 중 즐겨 사용하는 포털 검색 사이트는?');
+    let url;
+    switch(site){
+        case '네이버': url="http://www.naver.com";
+        break;
+        case '다음': url="http://www.daum.com";
+        break;
+        case '구글':url="http://www.google.com";
+        break;
+        default:alert('보기중에 없는 사이트입니다.');
+    }
+    if(url)location.href=url;
+    */
+
+    //입장객과 줄 수
+    let memNum=parseInt(prompt('입장객은 몇 명인가요?'));
+    let colNum=parseInt(prompt('한 줄에 몇 명씩 앉나요?'));
+    if (memNum % colNum ===0 ){
+        rowNum = memNum / colNum;
+    }
+    else{
+        rowNum = parseInt(memNum / colNum)+1;
+    }
+    document.write(`모두 ${rowNum}개의 줄이 필요합니다.<br>`)
+
+</script>
+</body>
+</html>

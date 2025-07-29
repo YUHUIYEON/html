@@ -19,5 +19,33 @@
     <b>쓰는 이유. 장점</b>
     삼항연산자는 if/else문 대신 사용할 수 있으며 코드를 간결하게 만들어줌.
 </pre>
+<script>
+    let a=10;
+    let b=3;
+    let result= a>b ? "javascript" : "hello" 
+    document.write(result+'<br>');
+
+    /*
+    //적정체중 응답
+    let name=prompt('이름?');
+    let height=prompt('키?');
+    let weight=prompt('몸무게?');
+    let normal_w = (height-100)*0.9;
+    document.write(name + " 님의 몸무게는 " + normal_w + "kg 입니다."+'<br>');
+
+    let result1=weight>=normal_w-5 && weight<=normal_w+5;//오차범위
+    result1=result1 ? "적정 몸무게입니다." : "적정 몸무게가 아닙니다.";
+    document.write(name + ' 님은 ' + result1+'<br>');
+    */
+    
+    // 지출내용
+    let price1=parseInt(prompt('교통비?')); //형변환
+    let price2=parseInt(prompt('식비?'));
+    let price3=parseInt(prompt('음료비?'));
+    let total= price1+price2+price3;
+    document.write("교통비+식비+음료비는 " + total + "원 입니다.<br>");
+    let result3 = total > 10000 ? total-10000 + "원 초과 사용했어요." : "돈 관리 잘했어요.";
+    document.write(result3+'<br>');
+</script>
 </body>
 </html>
