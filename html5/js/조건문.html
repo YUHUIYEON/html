@@ -68,13 +68,13 @@
         document.write('당신이 좋아하는 숫자는 홀수입니다.'+'<br>');
     }
     */
-    
+    /*
     let userNumber=prompt('숫자를 입력하세요');
-    /*if(userNumber % 3 === 0){
+    if(userNumber % 3 === 0){
         document.write('3의 배수입니다.'+'<br>');
     }else{
         document.write('3의 배수가 아닙니다.'+'<br>');
-    }*/
+    }
     if(userNumber !== null){
     if(parseInt(userNumber)% 3 === 0){
         document.write('3의 배수입니다.'+'<br>');
@@ -82,6 +82,7 @@
         document.write('3의 배수가 아닙니다.'+'<br>');
     }
     }else{document.write('입력이 취소되었습니다'+'<br>')}
+    */
 
     //3. else if문 : 여러개의 조건을 지정할 때 사용하며, 마지막에 있는 else문은 생략할 수 있음.
     /*
@@ -107,6 +108,19 @@
     }else{
         document.write('e<br>');
     }//조건식이 true면 조건식이 남아있어도 조건문을 끝냄.
+
+
+    //계절
+    let mon=prompt('현재는 몇월입니까?');
+    if(mon >= 9 && mon <= 11){
+        document.write('독서의 계절 가을입니다.<br>');
+    }else if(mon >= 6 && mon <= 8){
+        document.write('여행가기 좋은 여름이네요.<br>');
+    }else if(mon >= 3 && mon <= 5){
+        document.write('햇살이 가득한 봄이네요.<br>');
+    }else{
+        document.write('스키의 계절 겨울이네요.<br>');
+    }
 </script>
 </body>
 </html>
