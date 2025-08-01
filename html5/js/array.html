@@ -112,7 +112,61 @@
     document.write('slice 인수 1개(음수) 일때 | '+colors.slice(-2)+'<br>'); //배열의 마지막 두 요소를 추출
     // slice 인수 2개 일때 : start부터 end이전 인덱스까지의 요소를 포함하는 새로운 배열을 반환
     document.write('slice 인수 2개 일때 | '+colors.slice(2,4)+'<br>');
-    document.write('slice 인수 2개 일때 | '+colors.slice(2,-4)+'<br>');
+    document.write('slice 인수 2개 일때 | '+colors.slice(2,-4)+'<br><br>');
+
+    let arr_1=['사당','교대','방배','강남']
+    arr_1.sort(); //배열 요소내 정렬
+    document.write('sort-배열 요소내 정렬(가나다) : '+arr_1+'<br>')
+    arr_1.reverse(); //배열 요소내 정렬
+    document.write('reverse-배열 요소내 정렬(반대) : '+arr_1+'<br><br>')
+
+    let Sample="Hello";
+    let result=Sample.charAt(1); //인덱스에 해당하는 문자열 반환
+    document.write('charAt-인덱스에 해당하는 문자열 반환 : '+result+'<br><br>');
+
+    /*
+    lastIndexOf() 함수의 경우는 IndexOf()와 비슷한 기능을 제공하지만,
+    차이점은 찾을 문자를 문자열 오른쪽에서부터 찾는다는 점.
+    공백도 문자열로 포함함.
+    IndexOf()=string 객체에서 주어진 값과 일치하는 첫번째 인덱스를 반환, 일치하는 값이없으면 -1 반환
+    lastIndexOf()는 주어진 값과 일치하는 부분을 역순으로 탐색하여 최초로 마주치는 인덱스를 반환
+    */
+    let Sample1="Hello World! LKT PROGRAMMER World";
+    let result_indexOf=Sample1.indexOf('World');
+    document.write('indexOf : '+result_indexOf+'<br>');
+    let result_lastIndexOf=Sample1.lastIndexOf('World');
+    document.write('lastIndexOf : '+result_lastIndexOf+'<br><br>');
+
+    //replace('찾을 문자','교체할 문자')
+    //문자열 왼쪽에서부터 최초로 발견된 일치하는 문자열에 대해서만 치환
+    let Sample2="Hello World!";
+    let result1=Sample2.replace('Hello','Hi');
+    document.write('replace : '+result1+'<br><br>');
+
+    /*
+    substring()함수는 첫번째 인자로 전달된 startIndex부터 시작하여 두번째 인자로 전달된 endIndex앞까지의 문자열로 반환해주는 함수.
+    substr()함수는 첫번째 인자로 넘겨준 startIndex부터 시작하여 두번째 인자로 넘겨준 문자갯수만큼 문자열을 잘라서 반환해주는 함수.
+    .substring(startIndex, endIndex이전)
+    .substr(startIndex, 문자갯수)
+    */
+    let Sample3="Hello World";
+    let result_substring=Sample3.substring(0,7);
+    document.write('substring : '+result_substring+'<br>');
+    let result_substr=Sample3.substr(3,5);
+    document.write('substr : '+result_substr+'<br><br>');
+
+    //split(''):넘긴 문자를 기준으로 하여 문자열을 잘라 각 배열 요소에 담은 뒤에 해당 배열 객체를 반환 해주는 함수
+    let Sample4="Hello-World-javascript-every-body"
+    let result2=Sample4.split('-');
+    document.write('split : '+result2[0]+'<br><br>');
+
+    //trim()함수는 문자열을 양쪽 끝에 공백을 제거해주는 함수
+    let Sample5=" Hello  World ";
+    let result_trim=Sample5.trim();
+    document.write('trim : '+Sample5.length+'<br>');
+    document.write('trim : '+Sample5.trim()+'<br>');
+    document.write('trim : '+result_trim.length+'<br><br>');
+
 </script>
 <h3>문서타이틀</h3>
 <ul>
