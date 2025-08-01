@@ -155,6 +155,13 @@
     let result_substr=Sample3.substr(3,5);
     document.write('substr : '+result_substr+'<br><br>');
 
+    /*
+    //연락처 끝에 ****
+    let userNum=prompt('당신의 연락처는?');
+    let result3=userNum.substring(0,userNum.length-4)+'****';
+    document.write('당신의 연락처는 : '+result3+'<br><br>');
+    */
+
     //split(''):넘긴 문자를 기준으로 하여 문자열을 잘라 각 배열 요소에 담은 뒤에 해당 배열 객체를 반환 해주는 함수
     let Sample4="Hello-World-javascript-every-body"
     let result2=Sample4.split('-');
@@ -167,6 +174,26 @@
     document.write('trim : '+Sample5.trim()+'<br>');
     document.write('trim : '+result_trim.length+'<br><br>');
 
+    //이메일 형식 확인
+    let userEmail=prompt('당신의 이메일은?');
+    let arrUrl=['.co.kr','.com','.net','.or.kr','.go.kr'];
+    let check1=false; //초기값
+    let check2=false; //초기값
+    //방문자가 입력한 이메일주소에 '@'포함되어있으면 변수 check1에 true가 저장
+    if(userEmail.indexOf('@')>0)check1=true;
+    document.write('check1-@있는지 : '+check1+'<br>');
+    //이메일에 배열 데이터 포함 여부 검사
+    for(i=0; i<arrUrl.length; i++){
+        if(userEmail.indexOf(arrUrl[i])>0)check2=true;
+    }
+    document.write('check2-arrUrl맞는지 : '+check2+'<br>');
+    //모두 참일 때 참을 반환
+    if(check1 && check2){
+        document.write('형식이 맞을 때 : '+userEmail+'<br>');
+    }else{
+        document.write('형식이 잘못되었습니다.<br>');
+    }
+    
 </script>
 <h3>문서타이틀</h3>
 <ul>
