@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    var sum = 0; //전역변수
+    function addNumber(){
+        // var result; //지역변수
+        sum = 10+20;
+        result = 10*20;
+    }
+    addNumber();
+    document.write(sum);    
+    document.write(result);    
+
+    var x=10;
+    function displayNumber(){
+        console.log('x is' +x);
+        console.log('y is' +y)
+        var y=20;
+    }
+    displayNumber();
+
+    var seed=3;
+    for (let i=1; i<=5; i++){
+        var seed =5;
+        var result=seed*1;
+        console.log(result);
+    }
+
+    function sum1(){
+        let n=10;
+        let result1=0;
+        for(let i=1; i <= n; i++){
+            result1 += i;
+        }
+        console.log(result1);
+    }
+    sum1();
+    // console.log(result1);
+
+    function doit(){
+        let x=1;
+        console.log(x);
+        let y=2;
+        console.log(y);
+    }
+    doit();
+</script>    
+</body>
+</html>

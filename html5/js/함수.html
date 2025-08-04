@@ -107,7 +107,24 @@
     if (userNumber !== null){
         calcSum(parseInt(userNumber));
     }
+    
+    //즉시 실행함수 : 매개변수가 없는 경우
+    (function(){
+        let userName = prompt("이름을 입력하세요.");
+        document.write(`<p>안녕하세요? ${userName}님 <br>`);
+    }());
+    //즉시 실행함수 : 매개변수가 있는 경우
+    (function(a, b){
+        sum = a + b;
+    }(100, 200));
+    document.write(`함수 실행 결과 : ${sum} <br>`)
 
+    /*
+    화살표 함수 : 익명함수에서 주로 사용.
+    - 매개변수가 하나일 때 : let hi=user=> 실행할 문장;
+    - 매개변수가 하나 이상일 때 : let hi=(a,b)=>실행할 문장;
+
+    */
 </script>
 </body>
 </html>
