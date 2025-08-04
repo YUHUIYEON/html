@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수를 알아보자</title>
+    <script>
+        function greet(){
+            alert('함수입니다.');
+        }
+    </script>   
+</head>
+<body>
+<h1>함수(function,method)</h1>
+<pre>
+    1.일련의 로직을 다시 사용할 수 있도록 <mark>묶어둠(모듈화)</mark>
+    2.입력(인자, ,argument), 출력(반환, return)으로 이루어짐
+    3.내장함수, 사용자 함수로 구분함
+
+    //기본형식
+    function 함수명(인자1, 인자2, 인자3, ...){
+        실행할 내용;
+    }
+    함수명 호출(인자1값, 인자2값, 인자3값, ...)
+
+    //익명함수 : 함수명이 없는것을 말하고 함수선언문을 변수에 할당함
+    let sum=function(a,b){
+        return a+b;
+    }
+    document.write(sum(10,20));
+
+    //일회성함수 : 한번만 실행할 수 있음
+    (function(인자){
+        실행할 내용;
+    }(인자값));
+
+    <b>함수의 정의</b>
+    함수명은 함수를 호출할 때 사용하는 이름.(함수는 변수에 저장된다.)
+    인자는 함수에 저장되는 변수이고, 콤마로 구분되고 없을수도 있고 무한히 많을 수도 있다.
+    
+    return  : 함수가 결과값으로 출력하는 값
+            : 함수의 종료조건이 됨
+</pre>    
+<button onclick="greet();">click!</button><br>
+<script>
+    let sum=function(a,b){
+        return a+b;
+    }
+    document.write(sum(10,20)+'<br>');
+    
+    numbering();
+    function numbering(){
+        document.write(1+'<br>')
+    }
+    numbering();
+    numbering();
+    numbering();
+    numbering();
+
+    function get_member1(){
+        return 'egoing';
+    }
+    document.write(get_member1()+'<br>')
+    function get_member2(){
+        return 'k8805';
+        return 'sorialki';
+    }
+    document.write(get_member2()+'<br>')
+    //함수명은 함수명을 호출해야 출력이 된다.
+    //return은 출력한후에 종료를 하기때문에 그 이하는 어떠한 경우에도 실행하지않는다.
+
+    //입력 알아보기
+    //함수에 매개변수 지정한 입력: 함수명 뒤에 매개변ㅇ수를 가질때는 함수 호출시에 안자값을 주어야함.
+    function get_argument(arg){
+        return arg;
+    }
+    document.write(get_argument(170)+'<br>');
+    document.write(get_argument('egoing')+'<br>');
+
+    function get_arguments(arg1,arg2,arg3){
+        return arg1+arg2+arg3;
+    }
+    document.write(get_arguments(10,20,30)+'<br>');
+
+    function addNumber(num1, num2){
+        // let sum = num1 + num2;
+        return num1 + num2;
+    }
+    let result=addNumber(2, 3);
+    document.write(`두 수를 더한 값 : ${result} <br>`)
+
+    function multiple(a, b = 5, c = 10){
+        return a*b+c;
+    }
+    document.write(multiple(5,10,20) +'<br>');
+    document.write(multiple(10,20) +'<br>');
+    document.write(multiple(30) +'<br>');
+
+    function calcSum(n){
+        let sum = 0;
+        for(let i=1; i <= n; i++){
+            sum += i;
+        }
+        document.write(`1부터 ${n}까지 더하면 ${sum} <br>`)
+    }
+    let userNumber = prompt("얼마까지 더할까요?");
+    if (userNumber !== null){
+        calcSum(parseInt(userNumber));
+    }
+
+</script>
+</body>
+</html>
