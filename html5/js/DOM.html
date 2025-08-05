@@ -24,6 +24,7 @@ let img=document.createElement('img');
 
 //attr 지정
 img.src='images/kitty-2.png';
+img.title="고양이 귀여워";
 img.alt="귀여운 고양이";
 img.width=197;
 img.height=250;
@@ -32,6 +33,33 @@ img.height=250;
 document.body.appendChild(h2);
 h2.appendChild(textNode);
 document.body.appendChild(img);
+</script>
+<div id="detail">
+    <ul>
+        <li>원산지 : 에디오피아</li>
+        <li style="display: none">지역 : 이르가체프 코체레</li>
+        <li style="display: none">농장 : 게뎁</li>
+    </ul>
+</div>
+<script>
+    let detail = document.querySelector('#detail > ul');
+    console.log(detail.innerText); //화면에 보이는 내용만 가져옴(tag를 인식안함)
+    console.log(detail.innerHTML); //html코드를 가져오고 화면에 보이는것과 상관없이 코드에 있는 모두를 가져옴(tag와 텍스트를 인식)
+    console.log(detail.textContent); //화면에 보이는것과 상과없이 내용 모두를 그대로 가져옴
+</script>
+<div class="container" style="overflow: hidden;">
+    <h1 id="heading">에디오피아 게뎁</h1>
+    <img src="images/coffee-pink.jpg" alt="커피잔" id="cup" width="200" height="200">
+</div>
+<script>
+    let heading=document.querySelector('#heading');
+    let cup =document.querySelector('#cup');
+    // heading.onclick = () => heading.innerText = '추천! 오늘의 커피';
+    // cup.onclick = () => cup.src ="images/coffee-blue.jpg";
+    cup.onclick=function(){
+        heading.innerText = '추천! 오늘의 커피';
+        cup.src ="images/coffee-blue.jpg";
+    }
 </script>
 </body>
 </html>
