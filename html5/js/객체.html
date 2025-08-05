@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체를 알아보자</title>
+</head>
+<body>
+<h1>자바스크립트 객체(Object)</h1>
+<pre>
+    1.이름과 값으로 이루어진 속성들을 담아 놓은 컨테이너
+    2.객체안에 변수를 선언하면 속성(property)라고 한다.
+    3.객체안에 함수를 선언하면 메서드(method)라고 한다.
+
+    ECMAScript는 객체 지향 언어.
+    자바스크립트안에 내장객체, 브라우저객체모델이 있다.
+    내장객체와 브라우저 객체안에 자료형으로 객체 종류
+    -> Array, String, Number, Math, Date, window, screen, location, history, navigator 
+
+    자료구조로 본 객체는 배열과 유사함
+    배열은 인덱스와 요소가 있음
+    각각배열을 사용하려면 각 배열에 할당된 인덱스 번호로 접근함
+    객체는 접근을 인덱스로 접근하는 것이 아니라 키(Key)를 사용해서 접근함
+
+    구문형식
+    배열 : let array = ['a','b','c','d'];
+    객체 : 
+    1) let product = {'제품명':'망고', '유형':'당절임', '원산지':'필리핀'};
+    2) let product = new Object();
+            product ['제품명'] = '망고';
+            product ['유형'] = '당절임';
+            product ['원산지'] = '필리핀';
+</pre>
+<script>
+    let grades={'egoing':10, 'k8805':20, 'sorialgi':80};
+    document.write(grades['sorialgi']+'<br>');
+    document.write(grades['egoing']+'<br>');
+    document.write(grades['k8805']+'<br>');
+
+    //변수명 key
+    for(key in grades){
+        document.write(key+'<br>'); //key -> 이름에 해당하는 값
+    }
+
+    //변수명 [key] -> key안에 있는 값을 출력
+    for(key in grades){
+        document.write(grades[key]+'<br>');
+    }
+
+    //이름과 값을 동시에 불러올 때
+    for(key in grades){
+        document.write(key+grades[key]+'<br>');
+    }
+
+    //객체안에 객체를 담았을 때
+    let grades1={
+        'list' : {'egoing':10, 'k8805':20, 'sorialgi':80}
+    };
+    console.log(grades1['list']);
+    console.log(grades1['list']['sorialgi']);
+
+    //객체안에 함수를 적용하는 경우
+    let grades2={
+        'list' : {'egoing':10, 'k8805':20, 'sorialgi':80},
+        'show' : function(){
+            console.log(this.list);
+        }
+    };
+    grades2['show'](); 
+
+
+</script>
+</html>
