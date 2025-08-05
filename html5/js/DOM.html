@@ -15,5 +15,23 @@
     =>노드의 집합이라고 할 수 있음
     구성 : 요소노드(tag), 속성노드(attr), 텍스트(text=>내용)
 </pre>
+<script>
+//요소를 생성하고 노드에 연결하기
+//1.요소 생성하기 
+let h2=document.createElement('h2');
+let textNode=document.createTextNode('DOM Tree 구조 생성');
+let img=document.createElement('img');
+
+//attr 지정
+img.src='images/kitty-2.png';
+img.alt="귀여운 고양이";
+img.width=197;
+img.height=250;
+
+//2.노드에 연결하기 append(뒤에 넣는다), prepend(앞에 넣는다)
+document.body.appendChild(h2);
+h2.appendChild(textNode);
+document.body.appendChild(img);
+</script>
 </body>
 </html>
