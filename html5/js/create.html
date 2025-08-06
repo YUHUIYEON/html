@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Web Programming</h1>    
+<p>공부할 주제를 기록해 보세요.</p>
+<div>
+    <form method="post">
+        <label for="subject">주제</label>
+        <input type="text" id="subject" autofocus>
+        <button>추가</button>
+    </form>
+    <hr>
+    <ul id="itemList"></ul>
+</div>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        let button = document.querySelector("button");
+        button.addEventListener("click", function(event){
+            event.preventDefault();
+            newRegister();    
+        });
+        let itemList = document.querySelector("#itemList");
+        itemList.addEventListener("click", (event)=>{
+            if(event.target.tagName === "LI"){ //이때만 태그 이름은 대문자로
+                if(confirm("삭제하시겠습니까?")){
+                    event.target.remove();
+                }
+            }
+        });
+    });
+    function newRegister(){
+        let newItem = document.createElement('li');
+        let subject = document.querySelector('#subject');
+        let newText =document.createTextNode(subject.value);
+        newItem.appendChild(newText);
+        let itemList = document.querySelector('#itemList');
+        itemList.appendChild(newItem);
+        subject.value='';
+    };
+    let heading = document.querySelector('h1');
+    heading.remove();
+
+</script>
+</html>
