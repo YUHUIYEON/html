@@ -10,9 +10,36 @@
             list_zone=작은 이미지를 묶고 있는 대상
             list_a=작은 이미지
         2.>버튼을 눌렀을때 사진목록이 왼쪽으로 100px 이동되어 맨앞에 사진이 나가고 새 사진이 뒤부분에 들어오게 합니다.<버튼도 눌렀을때 마찬가지 입니다
+            b_btn -> next_btn
+            m_btn -> before_btn
         */
         window.onload=function(){
+            let list_zone = document.querySelector('#inner_list');
+            let list_a = list_zone.querySelectorAll('a');
+            console.log(list_a);
 
+            for(i=0; i<list_a.length; i++){
+                list_a[i].onclick = function(e){
+                    e.preventDefault();
+                    let ph = document.querySelector('#photo').children[0];
+                    ph.src=this.href;
+                    console.log(ph);
+                }
+            }
+            let b_btn = document.querySelector("#next_btn");
+            let m_btn = document.querySelector("#before_btn");
+            let m_num=0;
+
+            b_btn.onclick=function(e){
+                e.preventDefault();
+                m_num++;
+                list_zone.style.marginLeft=-100*m_num+'px';
+            }
+            m_btn.onclick=function(e){
+                e.preventDefault();
+                m_num--;
+                list_zone.style.marginLeft=-100*m_num+'px';
+            }
         }
     </script>
     <style>
@@ -103,7 +130,7 @@
     </div>
     <p class="btn-wrap">
         <a href="#" id="before_btn">&lt;</a>
-        <a href="#" id="before_btn">&gt;</a>
+        <a href="#" id="next_btn">&gt;</a>
     </p>
 </div>    
 </body>
