@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트</title>
+    <style>
+        .container{
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+<!-- 이벤트 발생 위치 알아보기 -->    
+<div class="container"></div>    
+
+<!-- this 예약어 사용해서 이미지 파일 경로 출력  -->
+<div class="container2">
+    <img src="images/cat.jpg" id="cat">
+</div>
+
+<!-- 마우스 포인터를 올리면 이미지 바꾸기  -->
+<div class="container3">
+    <img src="images/kitty-1.png" id="cat1">
+</div>
+</body>
+<script>
+    let container = document.querySelector(".container");
+    container.onclick =(event) => {
+        alert(`이벤트 발생 위치 : ${event.pageX}, ${event.pageY}`);
+    }
+</script>
+<script>
+    let cat = document.querySelector("#cat");
+    cat.onclick=function(event){
+        alert(`이미지 파일 : ${this.src}`);
+    }
+</script>
+<script>
+    let cat1 = document.querySelector("#cat1");
+    cat1.addEventListener("mouseover", () => {
+        cat1.src="images/kitty-2.png";
+    });
+    cat1.addEventListener("mouseout", () => {
+        cat1.src="images/kitty-1.png";
+    });
+</script>
+</html>

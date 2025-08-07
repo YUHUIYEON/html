@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>갤러리</title>
+    <script>
+        /*
+        1.작은 이미지를 클릭했을때 href경로가 photo의 src값으로 변경하도록 지정(attr(속성,값))
+            list_zone=작은 이미지를 묶고 있는 대상
+            list_a=작은 이미지
+        2.>버튼을 눌렀을때 사진목록이 왼쪽으로 100px 이동되어 맨앞에 사진이 나가고 새 사진이 뒤부분에 들어오게 합니다.<버튼도 눌렀을때 마찬가지 입니다
+        */
+        window.onload=function(){
+
+        }
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}        
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        #gallery{
+            width: 350px;
+            margin: 50px auto;
+            border: 1px solid #999;
+            box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+        }
+        #gallery h1{
+            text-align: center;
+            margin: 20px 0;
+        }
+        #gallery img{border: 1px solid#666;}
+        #photo{text-align: center;}
+        #photo_list{
+            width: 300px;
+            margin: 10px auto;
+        }
+        #inner_list{
+            width: 800px;
+            margin: 10px auto;
+        }
+        #inner_list li{
+            width: 100px;
+            float: left;
+            text-align: center;
+        }
+        .btn-wrap{text-align: center;}
+        .btn-wrap>a{
+            font-style: bold;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div id="gallery">
+    <h1>동해안 갤러리</h1>
+    <p id="photo">
+        <img src="image/pic_1.jpg" width="320" alt="동해바다">
+    </p>
+    <div id="photo_list"> <!--view frame 300px-->
+        <ul id="inner_list"> <!--전체 가로 800px-->
+            <li>
+                <a href="image/pic_1.jpg">
+                    <img src="image/pic_t1.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_2.jpg">
+                    <img src="image/pic_t2.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_3.jpg">
+                    <img src="image/pic_t3.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_4.jpg">
+                    <img src="image/pic_t4.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_5.jpg">
+                    <img src="image/pic_t5.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_6.jpg">
+                    <img src="image/pic_t6.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_7.jpg">
+                    <img src="image/pic_t7.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="image/pic_8.jpg">
+                    <img src="image/pic_t8.jpg">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <p class="btn-wrap">
+        <a href="#" id="before_btn">&lt;</a>
+        <a href="#" id="before_btn">&gt;</a>
+    </p>
+</div>    
+</body>
+</html>
