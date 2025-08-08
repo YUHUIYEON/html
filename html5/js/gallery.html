@@ -32,11 +32,13 @@
 
             b_btn.onclick=function(e){
                 e.preventDefault();
+                if(m_num>=list_a.length-3)return;
                 m_num++;
                 list_zone.style.marginLeft=-100*m_num+'px';
             }
             m_btn.onclick=function(e){
                 e.preventDefault();
+                if(m_num<=0)return;
                 m_num--;
                 list_zone.style.marginLeft=-100*m_num+'px';
             }
@@ -61,10 +63,12 @@
         #photo_list{
             width: 300px;
             margin: 10px auto;
+            overflow: hidden;
         }
         #inner_list{
             width: 800px;
             margin: 10px auto;
+            overflow: hidden;
         }
         #inner_list li{
             width: 100px;

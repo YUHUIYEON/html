@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math객체를 알아보자</title>
+    <style>
+        .container{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px solid #222;
+            background-color: skyblue;
+            text-align: center;
+        }
+        h2{margin-top: 70px;}
+        .accent{
+            font-size: 1.8em;
+            font-weight: bold;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<h1>Math Object</h1>
+<pre>
+    1. 수학과  관련된 기능과 속성을 제공하는 수학객체
+    2. 더하기, 곱하기, 나누기 등 산술연산자를 사용한다. 하지만 최댓값, 최솟값, 반올림값 등은 산술연산자로 구할 수 없다. 그래서 이런 경우 수학객체메서드를 이용하면 쉽게 처리할 수 있다.
+</pre>
+<script>
+    let num = 2.6234;
+    let maxNum = Math.max(10,5,8,30); //최대값
+    document.write(maxNum +'<br>');
+
+    let minNum = Math.min(10,5,8,30); //최소값
+    document.write(minNum +'<br>');
+
+    let roundNum = Math.round(num); //소수 첫째 자리 반올림
+    document.write(roundNum +'<br>');
+
+    let floorNum = Math.floor(num); //소수 첫째 자리 내림
+    document.write(floorNum +'<br>');
+
+    let ceilNum = Math.ceil(num); //소수 첫째 자리 올림
+    document.write(ceilNum +'<br>');
+
+    mdNum = Math.random(); // 0과 1사이의 랜덤 수(난수)
+    document.write(mdNum +'<br>');
+
+    mdNum1 = Math.round(Math.random()*100+1); //무작위의 정수
+    document.write(mdNum1 +'<br>');
+
+    piNum = Math.PI;
+    document.write(piNum +'<br>');
+
+    let seed = prompt("전체 응모자 수 : "," ");
+    let picked = Math.floor((Math.random() * seed)+1);
+    document.write(`<p>전체 응모자 수 : ${seed}명</p>`);
+    document.write(`<p>당첨자 : ${picked}번</p>`);
+</script>
+<div class="container">
+    <h2>책 읽기</h2>
+    <p>
+        <span class="accent" id="result"></span>
+        일 연속으로<br> 
+        책 읽기를 달성했어요.
+    </p>
+    <p>축하합니다!</p>
+</div>
+<script>
+    let now = new Date();
+    document.write(now+'</p>');
+
+    let firstDay = new Date("2025-05-02");
+    document.write(firstDay+'</p>');
+
+    let toNow =now.getTime();
+    document.write(toNow+'</p>');
+
+    let toFirst = firstDay.getTime();
+    document.write(toFirst+'</p>');
+
+    let passedTime = toNow - toFirst;
+    document.write(passedTime+'</p>');
+
+    passedTime = Math.round(passedTime/(1000*60*60*24));
+    document.write(passedTime+'</p>');
+    
+    document.querySelector(`#result`).innerText = passedTime;
+</script>
+</body>
+</html>

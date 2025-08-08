@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이트 박스 효과 만들기</title>    
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        .row{
+            width:420px;
+            margin:50px auto;
+        } 
+        .row ul{list-style: none;}
+        .row ul li{display: inline-block;}
+        #lightbox{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.7);
+            top:0;
+            left:0;
+            display:none;
+        }
+        #lightbox img{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            border:5px solid #eee;
+        }
+    </style>
+</head>
+<body>  
+    <div class="row">
+        <ul>
+            <li>
+                <img src="images/tree-1-thumb.jpg" data-src="images/tree-1.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/tree-2-thumb.jpg" data-src="images/tree-2.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/tree-3-thumb.jpg" data-src="images/tree-3.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/tree-4-thumb.jpg" data-src="images/tree-4.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/tree-5-thumb.jpg" data-src="images/tree-5.jpg" class="pic">
+            </li>
+            <li>
+                <img src="images/tree-6-thumb.jpg" data-src="images/tree-6.jpg" class="pic">
+            </li>
+        </ul>
+    </div>
+    <div id="lightbox">
+        <img src="images/tree-1.jpg" alt="나무 사진" id="lightboxImage">
+    </div>
+    <script>
+        let pics =document.querySelectorAll('.pic');
+        let lightbox = document.querySelector('#lightbox');
+        let lightboxImage = document.querySelector('#lightboxImage');
+
+        for (let i=0; i<pics.length; i++){
+            pics[i].addEventListener("click", showLightbox);
+        }
+
+        function showLightbox(){
+            let bigLocation = this.dataset.src;
+            lightboxImage.src = bigLocation;
+            lightbox.style.display = 'block';
+        }
+
+        lightbox.onclick = function(){
+            lightbox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+<!--
+this.data-src -> x
+this.dataset.src -> o
+this.getAttribute('data-src');  
+    -> DOM요소에서 속성값을 가져오는 함수 주어진 요소에서 속성이 존재할 경우 그속성의 값을 문자열로 반환
+    -> 일치하는 속성이 없으면 NULL 반환
+-->
