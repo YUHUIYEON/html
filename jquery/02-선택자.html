@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제이쿼리 선택자</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--CDN-->
+    
+</head>
+<body>
+    <h1>[제이쿼리 선택자]</h1>
+    <p>제이쿼리의 다양한 선택자들을 사용하기</p>
+        <ol>
+            <li class="list1">당근</li>
+            <li class="list1">양파</li>
+            <li class="list1">양배추</li>
+            <li class="list1">피망</li>
+            <li class="list2">여우</li>
+            <li class="list2" id="cat" >고양이</li>
+            <li class="list2">물고기</li>
+            <li class="list2" id="dog">강아지</li>
+            <li class="list2">새</li>
+        </ol>
+    <p>웹디자인 영상 플랫폼 <span>UIUX 기획개발자</span>과정</p>
+    <div>
+        <p>제이쿼리의 다양한 <span>선택자</span>들을 알아보고 있습니다.</p>
+    </div>
+    <form method="post">
+        <label form="t1">메세지 : </label>
+        <input type="text" name="text" id="t1"><br>
+        <label for="t2">비밀번호 : </label>
+        <input type="password" name="pw" id="t2"><br>
+    </form>
+    <hr>
+    <h2>인접관계선택자 : 부모요소선택자 <br>
+        부모요소선택자는 선택한 요소를 감싸고 있는 부모요소를 선택한다.</h2>
+    <ul id="wrap">
+        <li>리스트1
+            <ul>
+                <li id="list_1">리스트1-1</li>
+                <li >리스트1-2</li>
+            </ul>
+        </li>
+        <li>리스트2</li>
+        <li>리스트3</li>
+    </ul>
+    <hr>
+    <div id="wrap1">
+        <h2>인접관계선택자 : 자식선택자 .children(), .children('자식요소선택') </h2>
+        <p>내용</p>
+        <section>
+            <h2>자식요소선택자</h2>
+            <p>내용</p>
+        </section>
+    </div>
+    <script>
+        $(function(){
+            // 1. class 선택자는 .(점)을 붙인다.
+            $('.list1').css('background','#33ccff');
+            $('.list2').css('background','#ff0000');
+
+            // 2. id 선택자는 #을 붙인다. + 그룹선택자
+            $('#cat, #dog').css({
+                'background':'#33ff66',
+                'color':'#ff0000'
+            });
+
+            // 3. 하위(한칸 스페이스 띄우기)선택자를 이용해서 홀짝으로 문자색상 바꾸기
+            $('ol li:nth-child(odd)').css('color','blue');
+            $('ol li:nth-child(even)').css('color','yellow');
+
+            // 4. 자손선택자(하위)를 이용해서 body p를 선택해서 문자색을 바꾸기
+            $('body p').css('color','#9900ff');
+
+            // 5. 자식선택자를 이용해서 body>p를 선택해서 문자색을 바꾸기
+            $('body>p').css('color','#990000');
+
+            // 6. input 속성 텍스트를 선택해서 테두리, 배경, 아래 마진 30px
+            $('input[type="text"]').css({
+                'border':'2px solid blue',
+                'background':'skyblue',
+                'margin-bottom':'30px'
+            });
+
+            // 7. label선택해서 인라인블록, 가로너비 80px, 오른쪽마진 10px
+            $('label').css({
+                'display':'inline-block',
+                'width':'80px',
+                'margin-right':'20px'
+            });
+
+            // 8. 부모요소선택자는 선택한 요소를 감싸고 있는 부모요소를 선택한다.
+            $('#list_1').parent().css('border','2px, dashed, red'); // #list_1의 부모 ul
+            $('#list_1').parent().parent().css('border','2px, dashed, orange'); // #list_1의 부모,부모인 li
+            $('#list_1').parent().parent().parent().css('border','2px, dashed, yellow'); //#list_1의 부모,부모인 ul
+
+            // 9. children() 선택한 요소를 기준으로 모든 자식요소를 선택
+            //children('자식요소선택') 선택한 요소를 기준으로 지정한 자식 요소만 선택 
+            $('#wrap1>section').children('p').css({
+                'background':'yellow',
+                'border':'2px, dashed, red'
+            }); 
+        });
+    </script>
+</body>
+</html>

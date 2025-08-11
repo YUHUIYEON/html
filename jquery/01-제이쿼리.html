@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제이쿼리</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> <!--CDN-->
 </head>
 <body>
 <h1>제이쿼리란?</h1>
@@ -26,5 +27,40 @@
         플로그인에서 많이 사용
         누구누구를 선택해서 무엇을 할 것이냐? 는 뜻
 </pre>
+<h2>제이쿼리 작성 순서</h2>
+<pre>
+    1. 제이쿼리 라이블리 다운로드해서 경로잡기(CDN으로 경로 잡아주기)
+        //맨위 상단에 있어야한다.
+
+    2. 제이쿼리 랩퍼 선언하기
+        -(document.ready(function(){실행문작성;}); -> 표준형식(요즘은 잘 쓰지않음)
+        -$(function(){실행할 문장;}); -> 간략형식
+        -jQuery(function(){실행할문장;}); -> 일회성
+        -(function(){}(jQuery)); -> 일회성
+        
+        // 랩퍼를 생략하는 경우 : 플로그인을 문서내의 특정요소에 연결할 때
+        // 랩퍼를 한번만 선언을 한다.
+
+    3. 랩퍼안에 제이쿼리 형식으로 실행할 내용을 작성한다.
+</pre>
+<h2>제이쿼리 부호($)의 역할</h2>
+<pre>
+    제이쿼리에서 $()는 괄호안에 넣는 요소들을 선택하는 역할
+    브라우저가 html tag를 모두 인식한 후 자동으로 실행되게 하는 역할 
+    스크립트 코드가 꼬이는 오류를 방지하는 역할 
+</pre>
 </body>
+<script>
+    $(function(){
+        //속성이 하나일 때
+        // $('h2').css('color','#ff9900');
+
+        //속성이 여러개일 때
+        $('h2').css({
+            'color':'#ff9900',
+            'font-weight':'normal',
+            'background':'gray'
+        });
+    })
+</script>
 </html>

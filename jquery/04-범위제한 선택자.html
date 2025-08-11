@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>범위제한 선택자</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            let style_1={
+                'background':'#0ff',
+                'border':'2px solid #f00'
+            }
+            let style_2={
+                'background':'#ff0',
+                'border':'2px dashed #f00'
+            }
+            $('.txt3').prevUntil('.title').css(style_1);
+            $('.txt3').nextUntil('.txt6').css(style_2);
+        });    
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <h1 class="title">선택자</h1>
+    <p>내용1</p>
+    <p>내용2</p>
+    <p class="txt3">내용3</p>
+    <p>내용4</p>
+    <p>내용5</p>
+    <p class="txt6">내용6</p>
+</div>    
+</body>
+</html>
+<!-- 
+범위제한전체형 / 동생요소 선택자(제외된 나머지)
+
+$('선택자').prevUntil('범위제한요소'); 
+    -> 선택한 요소를 기준으로 범위제안요소까지 전체 형 요소를 선택한다.
+
+$('선택자').nextUntil('범위제한요소');
+    -> 선택한 요소를 기준으로 범위제안요소까지 전체 동생 요소를 선택한다.
+-->

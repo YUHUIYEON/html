@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=g, initial-scale=1.0">
+    <title>인접선택자(형/동생)</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            let style_1={
+                'background':'#0ff',
+                'border':'2px solid #f00'
+            }
+            let style_2={
+                'background':'#ff0',
+                'border':'2px dashed #f00'
+            }
+            let style_3={
+                'background':'lightgreen',
+                'border':'2px dashed #ff0'
+            }
+            // $('.txt').prev().css(style_1);
+            // $('.txt+p').css(style_2);
+            // $('.txt').next().next().css(style_3);
+
+            // 전체형/동생요소선택자
+            // prevAll(), nextAll()
+            $('.txt').prevAll().css(style_1);
+            $('.txt').nextAll().css(style_2);
+
+            //.siblings() : 자신을 제외한 형제 요소 모두를 찾는 함수
+            $('.txt').siblings().css(style_3);
+        });
+    </script>
+</head>
+<body>
+<div id="wrap">
+    <h1>인접관계선택자</h1>
+    <p>내용1</p>
+    <p class="txt">내용2</p>
+    <p>내용3</p>
+    <p>내용4</p>
+</div>   
+</body>
+</html>
+<!-- 
+$('선택자').prev();
+$('선택자').next();
+$('선택자1+선택자2');
+
+형요소선택자는 선택한 요소를 기준으로 바로 이전 형제요소만 선택
+동생요소섡택자는 선택한 요소를 기준으로 바로 다음 형제 요소만 선택
+-->
