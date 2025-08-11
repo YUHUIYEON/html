@@ -1,0 +1,34 @@
+/* CSS for Chapter 10 Example 3 */
+
+#credits	{ border-top:1px solid #eee8d5;margin:30px 10px 10px 10px;padding:10px; }
+#credits p	{ font-size:12px;margin:0;padding:0; }
+
+#featured-carousel li	{ overflow:hidden;list-style-type:none;position:relative;width:600px;height:400px; }
+#featured-carousel h4	{ position:absolute;top:0;left:0; padding:10px;margin:0;color:#000;font-size:36px;text-shadow:#fff 0 0 1px; }
+#featured-carousel div	{ position:absolute;bottom:0;left:0;padding:10px;margin:0;color:#fff;background:rgba(0,0,0,0.7); }
+
+.jcarousel-skin-slider .jcarousel-container {  }
+.jcarousel-skin-slider .jcarousel-container-horizontal { width: 600px; }
+.jcarousel-skin-slider .jcarousel-clip { overflow: hidden; }
+.jcarousel-skin-slider .jcarousel-clip-horizontal { width:600px;height:425px; }
+.jcarousel-skin-slider .jcarousel-item { width:600px;height:400px; }
+
+/* 추가수정부분 */
+#page-controls	{ 
+  line-height:25px;height:0; width:600px; position:relative; background:red;
+  z-index:1;  
+}
+#page-controls a	{ margin:0 4px 0 0;padding:0 5px;border:1px solid #859900; }
+#page-controls a:hover	{ border-color: #D33682; }
+#page-controls a.current	{ color:#333;border-color:#333; }
+
+
+/* 새로 추가된 소스 */
+#content{width:650px; margin:auto; padding:15px 0 40px 50px; height:450px; background:yellow;}
+
+#page-controls #next{
+  position:absolute; top:200px; right:10px;  background:#900; color:#fff
+}
+#page-controls #prev{
+  position:absolute; top:200px; left:10px;  background:#900; color:#fff
+}
