@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상위요소선택자</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $('.txt1').parents().css({'border':'2px dashed #00f'});
+            $('.txt2').parents('div').css({'border':'2px solid #fff'});
+            $('.txt1').closest('div').css({'background':'skyblue'});
+        });
+
+    </script>
+</head>
+<body style="background :lightsalmon;">
+<h1 class="title" style="background :lightgreen;">선택자</h1>    
+<section>
+    <div>
+        <p class="txt1">내용</p>
+    </div>
+</section>
+<section>
+    <div>
+        <p class="txt2">내용</p>
+    </div>
+</section>
+</body>
+</html>
+<!--
+상위요소선택자
+상위요소 선택자는 선택한 요소를 기준으로 모든 상위 요소 중 선택하고자하는 요소만 선택할 때 사용
+
+$('선택자').parents(); -> 선택한 요소를 기준으로 상위 요소를 모두 선택한다.(html, body 포함)
+
+$('선택자').parents('요소 선택'); -> 선택한 요소를 기준으로 상위요소 중 선택한 요소만 선택한다.
+
+$('선택자').closest('요소 선택'); -> 가장 가까운 상위 요소 선택자 : 선택한 요소를 기준으로 가장 가까운 상위 요소만 선택할 때 사용한다.
+-->

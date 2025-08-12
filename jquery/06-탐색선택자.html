@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탐색선택자</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            $('#menu li').eq(2).css({'background':'skyblue'}); //index 2
+            $('#menu li:lt(2)').css({'background':'#0ff'}); //index 1,0 
+            $('#menu li:gt(2)').css({'background':'#f0f'}); //index 3,4 
+        });
+    </script>
+</head>
+<body>
+<h1>탐색선택자</h1>    
+<ul id="menu">
+    <li>내용1</li> <!--index 0-->
+    <li>내용2</li> <!--index 1-->
+    <li>내용3</li> <!--index 2-->
+    <li>내용4</li> <!--index 3-->
+    <li>내용5</li> <!--index 4-->
+</ul>
+</body>
+</html>
+
+<!-- 
+index 넘버를 받는다.
+eq(index) -> 해당 인덱스를 찾는다.
+lt(index) -> 작은 인덱스 / 선택자에 작성하고 미만(선택된 대상의 이하를 선택)
+gt(index) -> 큰 인덱스 / 선택자에 작성하고 선택자를 기준으로 이상을 선택
+-->
