@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>배열</title>
+    <title>배열 메서드</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            let obj=[
+                //   0             1                2
+                {'area':'서울'},{'area':'부산'},{'area':'전주'}
+            ];
+            $(obj).each(function(i,o){
+                console.log(i+':',o);
+            });
+            console.log('========The End======');
+            
+            $.each($('#menu1 li'),function(i,o){
+                console.log(i+':',o);
+            });
+            console.log('========The End======');
+
+            $.each($('#menu2 li'),function(i){
+                console.log(i+':',$(this)); 
+                //배열에 요소만큼 매서드를 반복실행한다.
+                //배열에 저장된 요소는 인덱스 오름차순으로 
+            });
+
+        });
+    </script>  
 </head>
 <body>
-    
+<h1>탐색선택자2</h1>    
+<ul id="menu1">
+    <li>내용1-1</li>
+    <li>내용1-2</li>
+    <li>내용1-3</li>
+</ul>
+<ul id="menu2">
+    <li>내용2-1</li>
+    <li>내용2-2</li>
+    <li>내용2-3</li>
+    <li>내용2-4</li>
+    <li>내용2-5</li>
+</ul>    
 </body>
 </html>
+<!-- 
+each() / $(each()
+
+1. $('선택자').each(function(매개변수1, 매개변수2){실행문;});
+2. $each($('선택자'),function(매개변수1, 매개변수2){실행문;});
+-> 배열에 저장된 요소의 갯수만큼 매서드를 반복 실행함
+    매서드를 실행할 때마다 매개변수1, 매개변수2에는 배열에 저장된 요소와 인덱스의 값이 배열에 오름차순으로 대입된다.
+
+3. $('선택자').each(function(){$(this)});
+4. $each($('선택자'),function(){$(this)});
+-> 배열에 저장된 요소의 갯수만큼 메서드를 반복 실행한다.
+    메서드를 실행할 때마다 $(this)에는 배열에 저장된 요소가 오름차순으로 대입된다.
+-->
