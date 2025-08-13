@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열3-each실습/inArray</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            //목록에 내용을 리스트0,리스트1,리스트2으로 each()메서드를 이용해서 순차적으로 바꾸기
+            $('#m>li').each(function(i){
+                $(this).text('리스트'+i);
+            });
+            //for(i=0; i<=10; i++){실행문;}
+
+            //each메서드를 활용해서 검색엔진(이름)에 링크걸기(값)
+            //1.배열선언[{},{},{}]네이버,네이트,다음
+            let array=[
+                {name:'Naver',link:'http://naver.com'},//0
+                {name:'Nate',link:'http://nate.com'},//1
+                {name:'Daum',link:'http://daum.net'}//2
+            ];
+            //$.each()
+            $.each(array,function(index,item){
+                let output='';
+                output+='<a href="'+item.link+'">';
+                output+='<h1>'+item.name+'</h1>';   
+                output+='</a>'; 
+                document.body.innerHTML+=output;
+            });
+            
+            //$.inArray() / $.isArray() / $.merge() 메서드
+            /*
+            
+            $.inArray(data,Array(변수명),start index) 
+            -> 배열에 저장된 데이터 중 지정한 데이터를 오름차순으로 찾아 먼저 찾은 데이터의 인덱스값을 반환
+            ->start index는 생략 가능
+
+            $.isArray(object)
+            -> 지정한 객체가 배열 객체면 true를 반환, 아니면 false를 반환
+            
+            $.merge(Array1, Array2) / 변수가 2개
+            -> 두 배열 객체를 하나의 배열객체로 묶는다.
+            */
+            
+            let arr1=['서울','대전','부산','전주'];
+            let arr2=['한국','미국','중국','일본'];
+            let obj={
+                'name':'정부장',
+                'area':'서울'
+            }
+            let indexNum=$.inArray('전주',arr1);
+            console.log(indexNum);
+
+            let okArray1=$.isArray(arr1); //배열데이터
+            let okArray2=$.isArray(obj); //객체데이터
+            console.log(okArray1);
+            console.log(okArray2);
+
+            $.merge(arr1, arr2);
+            console.log(arr1); //앞의 객체를 써야한다. 뒤에꺼를 쓰면 다 안나옴
+        });
+    </script>
+</head>
+<body>
+<ul id="m">
+	<li>내용1</li>
+	<li>내용2</li>
+	<li>내용3</li>
+</ul>    
+</body>
+</html>
+<!--
+자바스크립트에서 innerHTML(태그넣기),innerText(텍스트넣기)
+제이쿼리에서는 .html(태그넣기),.text(텍스트넣기)
+-->
