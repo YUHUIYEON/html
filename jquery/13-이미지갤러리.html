@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지갤러리</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(function(){
+            let smallImg=$('ul>li>a');
+            let bigImg=$('div>img');
+
+            $(smallImg).click(function(e){
+                e.preventDefault();
+                let path=$(this).attr('href');
+                bigImg.attr('src',path);
+                bigImg.css({'opacity':'0'}).stop().animate({'opacity':'1'},1000);
+            })
+        });
+    </script>
+    <style>
+        ul{
+            width: 280px;
+            height: 80px;
+            list-style: none;
+        }
+        ul li{
+            width: 70px;
+            height: 70px;
+            float: left;
+            margin-right: 20px;
+            border:  1px solid #e3e3e3;
+        }
+        ul li img{
+            width: 70px;
+            height: 70px;
+        }
+        div img{
+            width: 430px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li><a href="image/img1.jpg"><img src="image/img1.jpg"></a></li>
+    <li><a href="image/img2.jpg"><img src="image/img2.jpg"></a></li>
+    <li><a href="image/img3.jpg"><img src="image/img3.jpg"></a></li>
+</ul>  
+<div>
+    <img src="image/img1.jpg">
+</div>  
+</body>
+</html>

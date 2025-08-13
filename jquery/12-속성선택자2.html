@@ -11,6 +11,12 @@
                 'display':'block',
                 'background':'#ff0'
             });
+            let z1=$('#zone1 :selected').val();
+            console.log(z1);//opt2
+            let z2=$('#zone2 :checked').val();
+            console.log(z2);//등산
+            let z3=$('#zone3 :checked').val();
+            console.log(z3);//여성
         });
     </script>
 </head>
@@ -22,22 +28,22 @@
 </div> 
 <form action="#">
     <p id="zone1">
-        <section name="course" id="course">
+        <select name="course" id="course">
             <option value="opt1">옵션1</option>
             <option value="opt2" selected>옵션2</option>
             <option value="opt3">옵션3</option>
-        </section>
+        </select>
     </p>
     <p id="zone2">
-        <input type="checkbox" name="happy1" value="독서">독서
-        <input type="checkbox" name="happy2" value="자전서">자전거
-        <input type="checkbox" name="happy3" value="등산">등산
+        <input type="checkbox" name="habby1" value="독서">독서
+        <input type="checkbox" name="habby2" value="자전거">자전거
+        <input type="checkbox" name="habby3" value="등산" checked>등산
     </p>
     <p id="zone3">
         <input type="radio" name="gender" value="male">남성
-        <input type="radio" name="gender" value="female">여성
+        <input type="radio" name="gender" value="female" checked>여성
     </p>
-</form>   
+</form>  
 </body>
 </html>
 <!-- 
