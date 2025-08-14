@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval/clearInterval알아보기</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            //setInterval(실행내용,시간):자동실행함수 
+            //clearInterval(함수명,변수명:):자동실행함수를 종료시킴
+            let visual=$('#brandVisual>ul>li'); //슬라이드 될 대상
+            let button=$('#buttonList li'); //클릭이벤트를 실행하는 대상
+            let current=0; //현재화면의 초기값을 0으로 설정
+            let setIntervalId; //변수명만 지정
+
+            //1.버튼에 클릭이벤트 적용하고 index()부여 button.on('이벤트',function(){실행할 내용 작성})
+            button.on({
+                click:function(){
+                    let tg=$(this);
+                    let i=tg.index();
+                    // console.log(i);
+
+                    // button click시 배경색 바꾸기
+                    button.removeClass('on');
+                    tg.addClass('on');
+                    move(i);
+                }
+            });
+
+            // 4.wrap에 마우스오버를 하면 clearInterval(변수명), 아웃하면 timer()자동실행
+            // setInterval에 setIntervalId 할당 하고
+            $('#wrap').on({
+                mouseover:function(){
+                    clearInterval(setIntervalId);
+                },mouseout:function(){
+                    timer();
+                }
+            });
+
+            // 3. 자동실행
+            function timer(){
+                setIntervalId=setInterval(function(){
+                    let n=current+1;
+                    if(n==visual.length){n=0;}
+                    button.eq(n).trigger('click');
+                },2000);
+            }
+            timer();
+
+            //2.move함수정의
+            /*
+            function 함수명(인자){
+                실행할 문장;
+            })
+            함수명호출(인자값);
+            */
+
+            function move(i){
+                let currentE1=visual.eq(current);
+                let nextE1=visual.eq(i);
+                currentE1.css({left:0}).stop().animate({left:'-100%'});
+                                                     //{속성:값, 속성:값},시간,실행문,가속도
+                nextE1.css({left:'100%'}).stop().animate({left:0});
+                current=i;
+                console.log(currentE1);
+            }    
+        });
+
+    </script>
+    <style>
+        /*basic style*/
+        *{margin:0; padding:0;}
+        html{
+            width:100%;
+            height:100%;
+            overflow-y:scroll;
+        }
+        a{text-decoration:none; color:#74767a;}
+        ul{list-style:none;} 
+
+        /*slide area style*/
+        #brandVisual{
+            position: relative;
+            width:100%;
+            min-width:1000px;
+            height:918px;
+            margin:0 auto;
+            overflow: hidden;
+        } 
+        #brandVisual>ul{
+            position: relative;
+            width: 100%;
+            height:918px;
+        } 
+        #brandVisual>ul>li{
+            position:absolute;
+            width:100%;
+            height:918px;
+        }
+        #brandVisual>ul>li>a{display: block; text-indent: -99999px;} 
+        #brandVisual>ul>li.visual_0{
+            left:0;
+            background:url(img/keyVisual_0.jpg)no-repeat 50% 0;
+        }
+        #brandVisual>ul>li.visual_1{
+            left:100%;
+            background:url(img/keyVisual_1.jpg)no-repeat 50% 0;
+        } 
+        #brandVisual>ul>li.visual_2{
+            left:200%;
+            background:url(img/keyVisual_2.jpg)no-repeat 50% 0;
+        }
+        #buttonList li{
+            width: 14px;
+            height: 15px;
+            float: left;
+            position: relative;
+            left: 50%;
+            top: -466px;
+            cursor: pointer;
+            margin: 0 5px;
+            background: url(img/btnVisual.png)no-repeat 0 -16px;
+        }
+        #buttonList li.on{background-position: 0 0;}
+        #buttonList li a{text-indent: -99999px; display: block;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+	<div id="brandVisual">
+		<ul>
+			<li class="visual_0"><a href="#">이미지1</a></li>
+			<li class="visual_1"><a href="#">이미지2</a></li>
+			<li class="visual_2"><a href="#">이미지3</a></li>
+		</ul>
+	</div>
+	<ul id="buttonList">
+		<li class="on"><a href="#">배너1</a></li><!--0-->
+		<li><a href="#">배너2</a></li><!--1-->
+		<li><a href="#">배너3</a></li><!--2-->
+	</ul>
+</div>    
+</body>
+</html>
