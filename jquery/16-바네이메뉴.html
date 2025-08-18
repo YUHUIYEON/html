@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바네이메뉴 만들기</title>
+    <style>
+        #container{
+            width: 800px;
+            height: 500px;
+            padding: 10px;
+            position: relative;
+            border: 1px solid #000;
+        }
+        .contents>div{
+            width: 800px;
+            height: 500px;
+            position: absolute;
+            top: 0;
+        }
+        .box1{
+            left: 0;
+            background: red;
+        }
+        .box2{
+            left: 800px;
+            background: green;
+        }
+        .box3{
+            left: 1600px;
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <div class="view">
+        <div class="contents">
+            <div class="box1">box1</div>
+            <div class="box2">box2</div>
+            <div class="box3">box3</div>
+        </div>
+    </div>
+</div>    
+<!-- 전체크기 800*500  -->
+</body>
+</html>
