@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>바네이메뉴 만들기</title>
+    <title>바네이메뉴슬라이드</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            //메뉴를 클릭했을 때 contents가 800px씩 이동한다.
+            let menu=$('.gnb>li');
+            let contents=$('.contents');
+            // each -> 선택한 요소가 여러개일 때 각각에 대하여 반복하여 함수를 실행
+            menu.each(function(){
+                $(this).click(function(){
+                    let strName=$(this).attr('id'); //메뉴 id를 불러옴
+                    console.log(strName);  
+                    slideTarget(strName.substr(1,1)); //해당 함수를 호출하여 실행
+                    console.log(strName.substr(1,1));
+                });
+                function slideTarget(n){ //새로운 함수 정의
+                    //800씩 이동시키기
+                    let pos=Number(n)*-800;
+                    contents.animate({left:pos},1000);
+                }
+            });
+        });
+    </script>
     <style>
         #container{
             width: 800px;
@@ -11,6 +33,18 @@
             padding: 10px;
             position: relative;
             border: 1px solid #000;
+            margin: 30px auto;
+        }
+        .view{
+            width: 800px;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+        .contents{
+            width: 2400px;
+            height: 500px;
+            position: relative;
         }
         .contents>div{
             width: 800px;
@@ -30,6 +64,31 @@
             left: 1600px;
             background: blue;
         }
+        ul{list-style: none;}
+        .gnb{
+            width: 400px;
+            height: 30px;
+            position: absolute;
+            z-index: 1;
+            top: 50px;
+            left: 50px;
+        }
+        .gnb>li{
+            float: left;
+            margin-right: 30px;
+        }
+        .gnb>li>a{
+            width: 80px;
+            height: 30px;
+            display: block;
+            line-height: 30px;
+            font-size: 13px;
+            color: #000;
+            text-decoration: none;
+            background: #fc0;
+            text-align: center;
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -41,6 +100,11 @@
             <div class="box3">box3</div>
         </div>
     </div>
+    <ul class="gnb"> <!--400*30 position:absolute-->
+        <li id="m0"><a href="#">menu1</a></li>
+        <li id="m1"><a href="#">menu2</a></li>
+        <li id="m2"><a href="#">menu3</a></li>
+    </ul>
 </div>    
 <!-- 전체크기 800*500  -->
 </body>

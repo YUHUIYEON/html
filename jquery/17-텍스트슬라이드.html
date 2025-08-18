@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 슬라이드</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            /*
+            1.텍스트 data-index(사용자 작성의 태그 속성)할당=>.attr()
+            2.컨트롤버튼의 위치를 알 수 있게 data-index를 할당
+            3.moveSlider()함수 만들기(이동 함수)
+            4.이미지,텍스트 슬라이더 지정
+            */
+
+            //3.moveSlider()함수 만들기(이동 함수)
+            function moveSlider(index){
+                //이미지슬라이더
+                let willMoveLeft=-(index*600);    
+                $('.slider_panel').animate({'left':willMoveLeft},'slow');
+
+                //텍스트슬라이더
+                $('.slider_text[data-index='+index+']').show().animate({left:50},'slow');
+                $('.slider_text[data-index!='+index+']').hide('slow',function(){
+                    $(this).css('left',-300);
+                });
+
+                //컨트롤버튼
+                $('.control_btn[data-index='+index+']').addClass('active');
+                $('.control_btn[data-index!='+index+']').removeClass('active');
+            }
+
+            //1.텍스트 data-index(사용자 작성의 태그 속성)할당=>.attr()
+            $('.text1').show().animate({left:50},'slow');
+            $('.slider_text').css('left',-300).each(function(index){
+                $(this).attr('data-index',index);
+            });
+
+            //2.컨트롤버튼의 위치를 알 수 있게 data-index를 할당,클릭했으르 때 이동 슬라이드 호출
+            $('.control_btn').each(function(index){
+                $(this).attr('data-index',index);
+            }).click(function(){
+                let index=$(this).attr('data-index') //일반 변수
+                console.log(index); //0,1,2,3,4,5
+                moveSlider(index); //0,1,2,3,4,5
+            });
+        });
+    </script>
+    <style>
+        .animation_canvers{
+            width: 600px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .slider_panel{
+            width: 3600px;
+            position: relative;
+        }
+        .slider_image{
+            width: 600px;
+            height: 400px;
+            float: left;
+        }
+        .slider_text_panel{
+            position: absolute;
+            top: 100px;
+            left: 50px;
+        }
+        .slider_text{
+            position: absolute;
+            width: 250px;
+            height: 150px;
+            color: #fff;
+        }
+        .btn{
+            position: absolute;
+            left: 250px;
+            bottom: 30px;
+            height: 13px;
+            overflow: hidden;
+        }
+        .control_btn{
+            width: 12px;
+            height: 46px;
+            float: left;
+            margin-right: 3px;
+            cursor: pointer;
+            background: url(image/point_button.png)no-repeat 0 0;
+        }
+        .control_btn:hover{background-position: 0 -16px;}
+        .control_btn.active{background-position: 0 -31px;}
+    </style>
+</head>
+<body>
+<div class="animation_canvers">
+    <div class="slider_panel">
+        <img src="image/Australia.jpg" class="slider_image">
+        <img src="image/Canada.jpg" class="slider_image">
+        <img src="image/Chrysanthemum.jpg" class="slider_image">
+        <img src="image/CostaRica.jpg" class="slider_image">
+        <img src="image/Desert.jpg" class="slider_image">
+        <img src="image/Hydrangeas.jpg" class="slider_image">
+    </div>
+    <div class="slider_text_panel">
+        <div class="slider_text text1">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. 
+            </p>
+        </div>
+        <div class="slider_text text2">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus.
+            </p>
+        </div>
+        <div class="slider_text text3">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. 
+            </p>
+        </div>
+        <div class="slider_text text4">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus.
+            </p>
+        </div>
+        <div class="slider_text text5">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc.
+            </p>
+        </div>
+        <div class="slider_text text6">
+            <h2>Lorem ipsum dolor sit amet</h2>
+            <p>
+                consectetur adipiscing elit. Curabitur in magna libero. Sed nec pharetra nunc. Proin eget magna id ipsum eleifend cursus sit amet nec lectus.
+            </p>
+        </div>
+    </div>
+    <div class="btn">
+        <div class="control_btn"></div>
+        <div class="control_btn"></div>
+        <div class="control_btn"></div>
+        <div class="control_btn"></div>
+        <div class="control_btn"></div>
+        <div class="control_btn"></div>
+    </div>
+</div>
+</body>
+</html>
