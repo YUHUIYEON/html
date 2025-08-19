@@ -32,6 +32,21 @@
                     wrap.stop().animate({height:th},200);
                 }
             });
+
+            // 3.
+            menu.each(function(i){
+                let tg=$(this);
+                let subList=tg.find('>.sGnbArea>ul>li');
+                subList.on({
+                    mouseover:function(){
+                        let tg=$(this);
+                        tg.addClass('on');
+                    },mouseout:function(){
+                        let tg=$(this);
+                        tg.removeClass('on');
+                    }
+                })
+            });
         });
     </script>
     <style>
