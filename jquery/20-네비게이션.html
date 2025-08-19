@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>높이값이 변경되어 나타나는 네비게이션</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            /*
+            1.주메뉴(50)에 마우스 오버하면 글자색 검정색, 아웃하면 원래색으로 돌아가기
+            2.마우스 오버하면 서브메뉴바(35)가 슬라이드 되어 내려오고(50+35=85) 해당되는 서브 메뉴 나타남
+            2-1.마우스 아웃하면 서브메뉴바가 슬라이드 업(50)
+            3.서브메뉴에 마우스 오버를 글자색이 오렌지, 아웃하면 원래색으로 돌아가기
+            */
+            let wrap=$('#gnbWrap');
+            let menu=$('#gnb>li');
+            let menuHeight=menu.find('>a').height();
+            // console.log(menuHeight);
+
+            menu.on({
+                mouseover:function(){
+                    let tg=$(this);
+                    tg.addClass('on');
+                    let th=menuHeight+tg.find('>.sGnbArea').height();
+                    // console.log(th);
+                    wrap.stop().animate({height:th},200);
+                }, mouseout:function(){
+                    let tg=$(this);
+                    tg.removeClass('on');
+                    let th=menuHeight;
+                    wrap.stop().animate({height:th},200);
+                }
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        html,body{
+            width: 100%;
+            height: 100%;
+            background: #fcfcfc;
+        }
+        html{overflow-y:scroll;}
+        body{position: relative;}
+
+        #gnbWrap{
+            width: 100%;
+            height: 50px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #eaeaea;
+        }
+        #gnb{
+            width: 600px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        #gnb>li{
+            float: left;
+            width: 100px;
+            height: 100%;
+            padding-top: 16px;
+        }
+        #gnb>li>a{
+            width: 100%;
+            height: 50px;
+            display: block;
+            color: #8f8f8f;
+        }
+        #gnb>li.on{color: #000;}
+        #gnb>li.on>a{color: #000;}
+        #gnb>li.on .sGnbArea{display: block;}
+        .sGnbArea{
+            display: none;
+            width: 100%;
+            height: 35px;
+            background: #3f3f3f;
+            position: absolute;
+            left: 0;
+            top: 50px;
+            border-top: 1px solid #000;
+            z-index: 99;
+            overflow: hidden;
+        }
+        .sGnbArea>ul{
+            width: 536px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .sGnbArea>ul>li{
+            float: left;
+            width: 70px;
+            height: 100%;
+        }
+        .sGnbArea>ul>li>a{
+            color: #fff;
+            display: block;
+            width: 100%;
+            height: 12px;
+            padding-top: 8px;
+            opacity: .8;
+        }
+        .sGnbArea>ul>li.on{color: #ffcc00;}
+        .sGnbArea>ul>li.on a{color: #ffcc00;}
+        .sGnb_01{padding-right: 70px;}
+        .sGnb_02{padding-left:170px;}
+        .sGnb_03{padding-left:373px;}
+        .sGnb_04{padding-left:383px;}
+        .sGnb_05{padding-left:597px;}
+    </style>
+</head>
+<body>
+<!-- 주메뉴 5*(3~5) -->
+<div id="gnbWrap">
+    <ul id="gnb">
+        <li class="gnb_01">
+            <a href="#">MENU1</a>
+            <div class="sGnbArea">
+                <ul class="sGnb_01">
+                    <li class="sGnb_01a"><a href="">SUB1_1</a></li>
+                    <li class="sGnb_01b"><a href="">SUB1_2</a></li>
+                    <li class="sGnb_01c"><a href="">SUB1_3</a></li>
+                    <li class="sGnb_01d"><a href="">SUB1_4</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="gnb_02">
+            <a href="#">MENU2</a>
+            <div class="sGnbArea">
+                <ul class="sGnb_02">
+                    <li class="sGnb_02a"><a href="">SUB2_1</a></li>
+                    <li class="sGnb_02b"><a href="">SUB2_2</a></li>
+                    <li class="sGnb_02c"><a href="">SUB2_3</a></li>
+                    <li class="sGnb_02d"><a href="">SUB2_4</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="gnb_03">
+            <a href="#">MENU3</a>
+            <div class="sGnbArea">
+                <ul class="sGnb_03">
+                    <li class="sGnb_03a"><a href="">SUB3_1</a></li>
+                    <li class="sGnb_03b"><a href="">SUB3_2</a></li>
+                    <li class="sGnb_03c"><a href="">SUB3_3</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="gnb_04">
+            <a href="#">MENU4</a>
+            <div class="sGnbArea">
+                <ul class="sGnb_04">
+                    <li class="sGnb_04a"><a href="">SUB4_1</a></li>
+                    <li class="sGnb_04a"><a href="">SUB4_2</a></li>
+                    <li class="sGnb_04a"><a href="">SUB4_3</a></li>
+                    <li class="sGnb_04d"><a href="#">SUB4-4</a></li>
+                    <li class="sGnb_04e"><a href="#">SUB4-5</a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="gnb_05">
+            <a href="#">MENU5</a>
+            <div class="sGnbArea">
+                <ul class="sGnb_05">
+                    <li class="sGnb_05a"><a href="">SUB5_1</a></li>
+                    <li class="sGnb_05b"><a href="">SUB5_2</a></li>
+                    <li class="sGnb_05c"><a href="">SUB5_3</a></li>
+                    <li class="sGnb_05c"><a href="">SUB5_4</a></li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

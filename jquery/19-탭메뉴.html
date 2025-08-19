@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭메뉴</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(function(){
+            let tab=$('#wrap>#tab>li');
+            let content=$('#wrap>#content>div');
+
+            tab.on('click',function(){
+                let tg=$(this);
+                let tc=tg.find('>a');
+                tab.find('>a').removeClass('on');
+                tc.addClass('on');
+                i=tg.index();
+                console.log(i);
+
+                content.css('display','none');
+                content.eq(i).css('display','block');
+            });
+        });
+    </script>
+    <style>
+        *{margin: 0; padding: 0;}
+        ul{list-style: none;}
+        a{text-decoration: none; color: #74767a;}
+        html{
+            width: 100%;
+            height: 100%;
+            overflow-y: scroll;
+        }
+        #wrap{
+            width: 487px;
+            margin: 0 auto;
+            overflow: hidden;
+            /* border: 1px solid green; */
+        }
+        #wrap ul{margin-top: 140px;}
+        #wrap ul::after{
+            content: '';
+            clear: both;
+            display: block;
+        }
+        #wrap ul li{
+            float: left;
+            height: 25px;
+            margin-right: 6px;
+            overflow: hidden;
+        }
+        #wrap ul li:last-child{margin-right: 0;}
+        #wrap ul li img{margin-top: 0;}
+        #wrap ul li .on img{margin-top: -25px;}
+        #content{
+            position: relative;
+            width: 487px;
+            height: 333px;
+        }
+        #content>div{ /*이미지를 겹친다*/
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 455px;
+            height: 291px;
+            margin-top: 10px;
+            background: #55aaea;
+            padding: 16px;
+            display: none;
+        }
+    </style>    
+</head>
+<body>
+<div id="wrap">
+    <ul id="tab">
+        <li><a href="#" class="on"><img src="img/tab01.png"></a></li>
+        <li><a href="#"><img src="img/tab02.png"></a></li>
+        <li><a href="#"><img src="img/tab03.png"></a></li>
+        <li><a href="#"><img src="img/tab04.png"></a></li>
+    </ul>
+    <div id="content">
+        <div style="display: block;">
+            <img src="img/img01.png">
+        </div>
+        <div >
+            <img src="img/img02.png">
+        </div>
+        <div >
+            <img src="img/img03.png">
+        </div>
+        <div >
+            <img src="img/img04.png">
+        </div>
+    </div>
+</div>    
+</body>
+</html>
