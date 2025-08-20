@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll 이벤트</title>
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(window).on('scroll',function(){
+            let sc_top=$(this).scrollTop();
+            let sc_left=$(this).scrollLeft();
+            // console.log(sc_left);
+
+            $('.top').text(sc_top);
+            $('.left').text(sc_left);
+        });
+    </script>
+    <style>
+        body{
+            width: 5000px;
+            height: 10000px;
+        }
+        #wrap{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+            background: salmon;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+<h1>scroll 이벤트 메서드</h1>
+<pre>
+    scroll()이벤트 메서드는 
+    대상 요소의 스크롤바가 이동할 때마다 이벤트를 발생시키거나
+    강제로 scroll 이벤트를 발생시키는데 사용
+
+    기본형식
+    scroll 이벤트 등록
+    $('제어대상').scroll(function(){실행할문장;});
+    $('제어대상').on('scroll',function(){실행할문장;});
+
+    scroll 이벤트 강제 발생
+    $('제어대상').scroll();
+</pre>
+<hr>
+<!-- 
+스크롤바를 이동시킬때마다 이벤트가 발생하도록 하면서 문단 태그안에 위치값을 출력하기
+-->
+<div id="wrap">
+    <p>scrollTop:<span class="top">0</span>px</p>
+    <p>scrollLeft:<span class="left">0</span>px</p>
+</div>    
+</body>
+</html>
