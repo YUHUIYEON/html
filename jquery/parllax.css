@@ -135,7 +135,7 @@ a{text-decoration: none;}
 /* mSection02 obj style */
 .mSection02 .arrow{
     width: 49px;
-    height: 28px;
+    height: 60px;
     left: 270px;
     top: 10px;
     z-index: 1500;
@@ -194,7 +194,7 @@ a{text-decoration: none;}
 /* mSection03 obj style */
 .mSection03 .arrow{
     width: 49px;
-    height: 28px;
+    height: 60px;
     left: 380px;
     top: 10px;
     z-index: 2500;
@@ -206,7 +206,7 @@ a{text-decoration: none;}
 }
 .mSection03 .txt{
     left: 634px;
-    top: 158px;
+    top: 308px; /*158에서 수정*/
     z-index: 2400;
 }
 .mSection03 .obj01{
